@@ -18,7 +18,7 @@ header:
 nav:
   navItems:
     - text: Home
-      url: '#'
+      url: '/'
     - text: Shop
       url: '#'
     - text: About
