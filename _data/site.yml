@@ -1,0 +1,43 @@
+# Theme Settings
+title: Basic Theme
+colors:
+  primary: '#cc401c'
+  primaryDark: '#8f2d15'
+  primaryLight: '#cd735b'
+  secondary: '#1ccc94'
+  secondaryDark: '#007f57'
+  secondaryLight: '#5dd4ae'
+  grey: '#999'
+  greyDark: '#444'
+  greyLight: '#f2f2f2'
+fonts:
+  primary: '"Alegreya Sans", sans-serif'
+  secondary: '"Bree Serif", serif;'
+header:
+  headerStyle: basic # Options include: basic, alt, fancy
+nav:
+  navItems:
+    - text: Home
+      url: '#'
+    - text: Shop
+      url: '#'
+    - text: About
+      url: '#'
+    - text: Contact
+      url: '#'
+footer:
+  footerStyle: fancy # Options include: basic, alt, fancy
+
+# Pages
+home:
+  sections: # Options include: banne,r info, text, logos, and cta
+    - type: banner
+      id: section-1
+    - type: info
+      id: section-2
+    - type: text
+      id: section-3
+    - type: text
+      id: section-4
+    - type: cta
+      id: section-5

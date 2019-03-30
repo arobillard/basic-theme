@@ -1,0 +1,9 @@
+<nav>
+  <ol>
+    {% for navItems in data.nav.navItems %}
+      <li>
+        <a href="{{navItems.url}}">{{navItems.text}}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

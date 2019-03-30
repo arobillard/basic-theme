@@ -1,0 +1,10 @@
+{% if data.footer.footerStyle == 'basic' %}
+  <p>basic</p>
+  {% include nav.html %}
+{% elsif data.footer.footerStyle == 'alt' %}
+  <p>alt</p>
+  {% include nav.html %}
+{% elsif data.footer.footerStyle == 'fancy' %}
+  <p>fancy</p>
+  {% include nav.html %}
+{% endif %}

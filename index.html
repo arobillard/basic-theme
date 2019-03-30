@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign data=site.data.site %}
+
+<h1>Hello there</h1>
+
+{% for sections in data.home.sections %}
+  <section id="{{sections.id}}" tabindex="0">
+    {% if sections.type == 'banner' %}
+      <h2>Banner</h2>
+    {% elsif sections.type == 'info' %}
+      <h2>Info</h2>
+    {% elsif sections.type == 'logos' %}
+      <h2>Logos</h2>
+    {% elsif sections.type == 'text' %}
+      <h2>Text</h2>
+    {% elsif sections.type == 'cta' %}
+      <h2>CTA</h2>
+    {% endif %}
+  </section>
+{% endfor %}
