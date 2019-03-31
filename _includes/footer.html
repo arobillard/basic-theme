@@ -1,10 +1,7 @@
 {% if data.footer.footerStyle == 'basic' %}
-  <p>basic</p>
-  {% include nav.html %}
+  {% include patterns/footer/basic.html %}
 {% elsif data.footer.footerStyle == 'alt' %}
-  <p>alt</p>
-  {% include nav.html %}
+  {% include patterns/footer/alt.html %}
 {% elsif data.footer.footerStyle == 'fancy' %}
-  <p>fancy</p>
-  {% include nav.html %}
+  {% include patterns/footer/fancy.html %}
 {% endif %}

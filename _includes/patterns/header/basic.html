@@ -1,0 +1,21 @@
+<header class="masthead{% if data.header.fixed == true %} sticky{% endif %}" role="banner">
+  <div class="wrapper gutter pad-t-1-2 pad-b-1-2">
+    <div class="mobile-navbar m-0">
+      <div class="mobile-logo">
+        {% if data.logos.type == 'wordmark' %}
+          {{data.title}}
+        {% elsif data.logos.type == 'img' %}
+          <img class="img-flex" src="{{data.logos.imgMobile}}" alt="{{data.title}} Logo">
+        {% elsif data.logos.type == 'svg' %}
+          {% include svg/logo.svg %}
+        {% endif %}
+      </div>
+      <a class="tog-nav inline-block" href="#nav-footer">
+        <span class="tog tog-top"></span>
+        <span class="tog tog-middle"></span>
+        <span class="tog tog-bottom"></span>
+      </a>
+    </div>
+    {% include utilities/nav/nav-main.html navClass='nav' listClass='list-group push-0' %}
+  </div>
+</header>

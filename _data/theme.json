@@ -1,0 +1,109 @@
+{
+  "title":"Basic Theme",
+  "logos":{
+    "type":"svg",
+    "img": "https://placehold.it/150x50",
+    "imgMobile": "https://placehold.it/100x100",
+    "svg": "svg/logo.html"
+  },
+  "colors":{
+    "primary":"#cc401c",
+    "primaryDark":"#8f2d15",
+    "primaryLight":"#cd735b",
+    "secondary":"#1ccc94",
+    "secondaryDark":"#007f57",
+    "secondaryLight":"#5dd4ae",
+    "grey":"#999",
+    "greyDark":"#444",
+    "greyLight":"#f2f2f2"
+  },
+  "fonts":{
+    "primary":"'Montserrat', sans-serif",
+    "secondary":"'Montserrat Alternates', sans-serif;"
+  },
+  "shadows":{
+    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
+  },
+  "transitions":{
+    "primary": ".25s ease-in-out"
+  },
+  "header":{
+    "headerStyle": "basic",
+    "fixed": false
+  },
+  "nav":{
+    "navItems":[
+      {
+        "text":"Home"
+      },
+      {
+        "text":"Shop",
+        "url":"shop",
+        "dropdown":[
+          {
+            "text":"Drop 1",
+            "url":"#"
+          },
+          {
+            "text":"Drop 2",
+            "url":"#"
+          },
+          {
+            "text":"Super cool Drop 3",
+            "url":"#"
+          }
+        ]
+      },
+      {
+        "text":"About",
+        "url":"about",
+        "dropdown":[
+          {
+            "text":"Drop 1",
+            "url":"#"
+          },
+          {
+            "text":"Drop 2",
+            "url":"#"
+          },
+          {
+            "text":"Super cool Drop 3",
+            "url":"#"
+          }
+        ]
+      },
+      {
+        "text":"Contact",
+        "url":"contact"
+      }
+    ]
+  },
+  "footer":{
+    "footerStyle":"basic"
+  },
+  "home":{
+    "sections":[
+      {
+        "type":"banner",
+        "id":"section-1",
+        "bgColor":"dark grey"
+      },
+      {
+        "type":"info",
+        "id":"section-2"
+      },
+      {
+        "type":"text",
+        "id":"section-3"
+      },
+      {
+        "type":"logos",
+        "id":"section-4"
+      },
+      {
+        "type":"cta",
+        "id":"section-5"
+      }
+    ]
+  }
+}

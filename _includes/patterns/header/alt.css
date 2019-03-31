@@ -1,0 +1,27 @@
+.masthead {
+  background-color: {{colorSecondary}};
+}
+
+.masthead .current {
+  background-color: #fff;
+}
+
+.masthead .logo-main {
+  color: #fff;
+  transition:
+    color {{transition}};
+}
+
+.masthead .logo-main:hover {
+  color: {{colorPrimary}};
+}
+
+.masthead .logo-main #logo-basic {
+  color: {{colorPrimary}};
+  transition:
+    color {{transition}};
+}
+
+.masthead .logo-main:hover #logo-basic {
+  color: #fff;
+}

@@ -1,0 +1,31 @@
+<nav{% if include.navClass %} class="{{include.navClass}}{% endif %}">
+  <ol{% if include.listClass %} class="{{include.listClass}}{% endif %}">
+    <li class="logo-wrap">
+      <a href="/">
+        {% if data.logos.type == 'wordmark' %}
+          {{data.title}}
+        {% elsif data.logos.type == 'img' %}
+          <img class="img-flex" src="{{data.logos.img}}" alt="{{data.title}} Logo">
+        {% elsif data.logos.type == 'svg' %}
+          {% include svg/logo.svg %}
+        {% endif %}
+      </a>
+    </li>
+    {% for navItems in data.nav.navItems %}
+      <li{% if navItems.dropdown %} class="relative"{% endif %}>
+        {% if navItems.dropdown %}
+          <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{{site.baseurl}}/{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+          <ol class="dropdown list-group push-0">
+            {% for dropItems in navItems.dropdown %}
+              <li>
+                <a class="block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{{dopItems.url}}">{{dropItems.text}}</a>
+              </li>
+            {% endfor %}
+          </ol>
+        {% else %}
+          <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{{site.baseurl}}/{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

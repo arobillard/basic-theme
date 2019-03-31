@@ -1,12 +1,7 @@
-<header role="banner">
-  {% if data.header.headerStyle == 'basic' %}
-    <p>basic</p>
-    {% include nav.html %}
-  {% elsif data.header.headerStyle == 'alt' %}
-    <p>alt</p>
-    {% include nav.html %}
-  {% elsif data.header.headerStyle == 'fancy' %}
-    <p>fancy</p>
-    {% include nav.html %}
-  {% endif %}
-</header>
+{% if data.header.headerStyle == 'basic' %}
+  {% include patterns/header/basic.html %}
+{% elsif data.header.headerStyle == 'alt' %}
+  {% include patterns/header/alt.html %}
+{% elsif data.header.headerStyle == 'fancy' %}
+  {% include patterns/header/fancy.html %}
+{% endif %}

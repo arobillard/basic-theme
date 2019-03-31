@@ -1,0 +1,9 @@
+{% if data.header.headerStyle == 'basic' %}
+  {% include patterns/header/basic.css %}
+{% elsif data.header.headerStyle == 'alt' %}
+  {% include patterns/header/alt.css %}
+{% elsif data.header.headerStyle == 'fancy' %}
+  {% include patterns/header/fancy.css %}
+{% endif %}
+
+{% include patterns/header/tog.css %}

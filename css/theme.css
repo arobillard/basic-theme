@@ -13,6 +13,12 @@
 {% assign fontPrimary=data.fonts.primary %}
 {% assign fontSecondary=data.fonts.secondary %}
 
+/* Shadows */
+{% assign shadow=data.shadows.primary %}
+
+/* Transition */
+{% assign transition=data.transitions.primary %}
+
 html {
   font-family: {{fontPrimary}};
 }
@@ -26,29 +32,29 @@ h1 {
 }
 
 h2 {
-  border-bottom: 1px solid var(--color-grey-medium);
+  border-bottom: 1px solid {{colorGrey}};
 }
 
 /* ---------- Colors ---------- */
 
 a {
-  color: var(--color-primary);
+  color: {{colorPrimary}};
   transition:
-    color var(--transition),
-    background-color var(--transition),
-    border-color var(--transition);
+    color {{transition}},
+    background-color {{transition}},
+    border-color {{transition}};
 }
 
 a:hover {
-  color: var(--color-primary-dark);
+  color: {{colorPrimaryDark}};
 }
 
 .footer a {
-  color: var(--color-grey-medium);
+  color: {{colorGrey}};
 }
 
 .footer a:hover {
-  color: var(--color-primary);
+  color: {{colorPrimary}};
 }
 
 .text-fff {
@@ -56,15 +62,19 @@ a:hover {
 }
 
 .text-mg {
-  color: var(--color-grey-medium);
+  color: {{colorGrey}};
 }
 
 .bg-primary {
-  background-color: var(--color-primary);
+  background-color: {{colorPrimary}};
+}
+
+.bg-mg {
+  background-color: {{colorGrey}};
 }
 
 .bg-dg {
-  background-color: var(--color-grey-dark);
+  background-color: {{colorGreyDark}};
 }
 
 

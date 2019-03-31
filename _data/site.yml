@@ -1,5 +1,9 @@
 # Theme Settings
 title: Basic Theme
+logos:
+  type: 'svg' # Options include 'wordmark', 'img', and 'svg'
+  img: https://placehold.it/150x50
+  svg: svg/logo.html
 colors:
   primary: '#cc401c'
   primaryDark: '#8f2d15'
@@ -11,20 +15,21 @@ colors:
   greyDark: '#444'
   greyLight: '#f2f2f2'
 fonts:
-  primary: '"Alegreya Sans", sans-serif'
-  secondary: '"Bree Serif", serif;'
+  primary: '"Montserrat", sans-serif'
+  secondary: '"Montserrat Alternates", sans-serif;'
+transitions:
+  primary: '.25s ease-in-out'
 header:
-  headerStyle: basic # Options include: basic, alt, fancy
+  headerStyle: alt # Options include: basic, alt, fancy
 nav:
   navItems:
     - text: Home
-      url: '/'
     - text: Shop
-      url: '#'
+      url: 'shop'
     - text: About
-      url: '#'
+      url: 'about'
     - text: Contact
-      url: '#'
+      url: 'contact'
 footer:
   footerStyle: fancy # Options include: basic, alt, fancy
 
@@ -33,11 +38,12 @@ home:
   sections: # Options include: banne,r info, text, logos, and cta
     - type: banner
       id: section-1
+      bgColor: dark grey
     - type: info
       id: section-2
     - type: text
       id: section-3
-    - type: text
+    - type: logos
       id: section-4
     - type: cta
       id: section-5

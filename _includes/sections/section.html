@@ -1,0 +1,11 @@
+{% if sections.type == 'banner' %}
+  {% include sections/banner/banner.html bg=include.bg %}
+{% elsif sections.type == 'info' %}
+  {% include sections/info/info.html %}
+{% elsif sections.type == 'logos' %}
+  {% include sections/logos/logos.html %}
+{% elsif sections.type == 'text' %}
+  {% include sections/text/text.html %}
+{% elsif sections.type == 'cta' %}
+  {% include sections/cta/cta.html %}
+{% endif %}

@@ -1,0 +1,25 @@
+/* ---------- Basic ---------- */
+
+.f-basic {
+  background-color: {{colorPrimary}};
+}
+
+
+/* ---------- Alt ---------- */
+
+.f-alt {
+  background-color: {{colorSecondary}};
+}
+
+
+/* ---------- Fancy ---------- */
+
+.f-fancy {
+  background-color: {{colorGreyDark}};
+}
+
+/* ---------- Universal ---------- */
+
+.footer .dropdown {
+  display: none;
+}

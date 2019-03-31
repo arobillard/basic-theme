@@ -1,9 +1,31 @@
 ---
 ---
 
-{% assign data=site.data.site %}
+{% assign data=site.data.theme %}
+
+
+/* Universal CSS */
 
 {% include_relative modules.css %}
 {% include_relative grid.css %}
 {% include_relative type.css %}
 {% include_relative theme.css %}
+
+
+/* Pattern CSS */
+
+{% include patterns/header/header.css %}
+{% include patterns/footer/footer.css %}
+
+
+/* Section CSS */
+
+{% include sections/banner/banner.css %}
+{% include sections/cta/cta.css %}
+{% include sections/info/info.css %}
+{% include sections/logos/logos.css %}
+{% include sections/text/text.css %}
+
+/* Utilities CSS */
+
+{% include utilities/nav/nav.css %}
