@@ -1,4 +1,8 @@
 ---
 layout: default
 ---
-<h1>About</h1>
+{% assign data=site.data.theme %}
+
+{% for sections in data.about.sections %}
+  {% include sections/section.html bgImage=sections.bgImage bgPosition=sections.bgPosition height=sections.height headline=sections.headline byline=sections.byline btnText=sections.btnText btnUrl=sections.btnUrl contentAlignment=sections.contentAlignment %}
+{% endfor %}

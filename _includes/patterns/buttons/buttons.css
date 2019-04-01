@@ -1,0 +1,15 @@
+.btn {
+  color: #fff;
+  background-color: {{colorPrimary}};
+  border-color: {{colorPrimary}};
+  transition:
+    background-color {{transition}},
+    border-color {{transition}},
+    color {{transition}};
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: {{colorPrimaryDark}};
+  border-color: {{colorPrimaryDark}};
+}

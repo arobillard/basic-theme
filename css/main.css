@@ -16,6 +16,7 @@
 
 {% include patterns/header/header.css %}
 {% include patterns/footer/footer.css %}
+{% include patterns/buttons/buttons.css %}
 
 
 /* Section CSS */

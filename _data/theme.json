@@ -65,6 +65,15 @@
       }
     ]
   },
+  "sections":{
+    "hero":{
+      "height":"100vh",
+      "bgPosition":"center",
+      "bgOverlay": true,
+      "bgOverlayOpacity": ".7",
+      "contentAlignment":"left"
+    }
+  },
   "footer":{
     "footerStyle":"basic"
   },
@@ -73,7 +82,42 @@
       {
         "type":"hero",
         "id":"section-1",
-        "bgColor":"dark grey"
+        "height":"85vh",
+        "bgImage":"https://placehold.it/1600x900",
+        "bgPosition":"center",
+        "bgOverlay": true,
+        "headline":"Introducing the all new ThemeBasic",
+        "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
+        "contentAlignment":"left"
+      },
+      {
+        "type":"info",
+        "id":"section-2"
+      },
+      {
+        "type":"text",
+        "id":"section-3"
+      },
+      {
+        "type":"logos",
+        "id":"section-4"
+      },
+      {
+        "type":"cta",
+        "id":"section-5"
+      }
+    ]
+  },
+  "about":{
+    "sections":[
+      {
+        "type":"hero",
+        "id":"section-1",
+        "bgImage":"https://placehold.it/1600x900",
+        "headline":"About the all new ThemeBasic",
+        "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
+        "btnText":"Learn More",
+        "btnUrl":"#",
       },
       {
         "type":"info",

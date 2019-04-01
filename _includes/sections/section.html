@@ -1,5 +1,5 @@
 {% if sections.type == 'hero' %}
-  {% include sections/hero/hero.html bg=include.bg %}
+  {% include sections/hero/hero.html bgImage=include.bgImage bgPosition=include.bgPosition height=include.height headline=include.headline byline=include.byline btnText=include.btnText btnUrl=include.btnUrl contentAlignment=include.contentAlignment %}
 {% elsif sections.type == 'info' %}
   {% include sections/info/info.html %}
 {% elsif sections.type == 'logos' %}

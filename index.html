@@ -4,8 +4,6 @@ layout: default
 
 {% assign data=site.data.theme %}
 
-<h1>Hello there</h1>
-
 {% for sections in data.home.sections %}
-  {% include sections/section.html bg=sections.bgColor %}
+  {% include sections/section.html bgImage=sections.bgImage bgPosition=sections.bgPosition height=sections.height headline=sections.headline byline=sections.byline btnText=sections.btnText btnUrl=sections.btnUrl contentAlignment=sections.contentAlignment %}
 {% endfor %}
