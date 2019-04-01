@@ -1,9 +1,5 @@
 // On load
 
-if ($(this).scrollTop() < 50) {
-  $('.masthead').removeClass('sticky')
-}
-
 // Sticky Nav
 
 // $(function() {
@@ -22,7 +18,6 @@ if ($(this).scrollTop() < 50) {
 $('.tog-nav').on('click', function (e) {
   e.preventDefault();
   $('.masthead').toggleClass('nav-open');
-  $('.notifications').removeClass('notifications-open');
 });
 
 
@@ -32,3 +27,9 @@ $('.tog-nav').on('click', function (e) {
 //
 //
 // console.log(my_json)
+
+$('.nav .icon-link').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('open');
+  $(this).siblings('.dropdown').toggleClass('open');
+});

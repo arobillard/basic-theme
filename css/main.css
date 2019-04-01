@@ -20,7 +20,7 @@
 
 /* Section CSS */
 
-{% include sections/banner/banner.css %}
+{% include sections/hero/hero.css %}
 {% include sections/cta/cta.css %}
 {% include sections/info/info.css %}
 {% include sections/logos/logos.css %}

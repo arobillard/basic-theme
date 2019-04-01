@@ -3,9 +3,7 @@
   "logos":{
     "type":"svg",
     "img": "https://placehold.it/150x50",
-    "imgMobile": "https://placehold.it/100x100",
-    "svg": "svg/logo.html",
-    "widthMobile": "10rem"
+    "svg": "svg/logo.html"
   },
   "colors":{
     "primary":"#cc401c",
@@ -39,7 +37,7 @@
       },
       {
         "text":"Shop",
-        "url":"shop"
+        "url":"shop",
       },
       {
         "text":"About",
@@ -61,7 +59,7 @@
       },
       {
         "text":"Contact",
-        "url":"contact",
+        "url":"contact"
       }
     ]
   },
@@ -70,6 +68,27 @@
   },
   "home":{
     "sections":[
+      {
+        "type":"hero",
+        "id":"section-1",
+        "bgColor":"dark grey"
+      },
+      {
+        "type":"info",
+        "id":"section-2"
+      },
+      {
+        "type":"text",
+        "id":"section-3"
+      },
+      {
+        "type":"logos",
+        "id":"section-4"
+      },
+      {
+        "type":"cta",
+        "id":"section-5"
+      },
       {
         "type":"hero",
         "id":"section-1",

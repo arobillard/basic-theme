@@ -23,6 +23,10 @@
   <script src="{{site.baseurl}}/js/main.js"></script>
   {% if data.header.fixed == true %}
     <script>
+      if ($(this).scrollTop() > 50) {
+        $('.masthead').addClass('sticky')
+      }
+
       $(function() {
          $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {

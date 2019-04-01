@@ -36,7 +36,7 @@ footer:
 # Pages
 home:
   sections: # Options include: banne,r info, text, logos, and cta
-    - type: banner
+    - type: hero
       id: section-1
       bgColor: dark grey
     - type: info
