@@ -1,0 +1,29 @@
+.footer {
+  background-color: {{colorGreyDark}};
+  /* padding-top: {{data.footer.padding}};
+  padding-bottom: {{data.footer.padding}}; */
+}
+
+.footer a {
+  color: {{colorGrey}};
+}
+
+.footer a:hover {
+  color: {{colorPrimary}};
+}
+
+.footer-nav .logo-wrap > a {
+  max-width: 10rem;
+}
+
+.footer-nav .logo-main {
+  width: 100%;
+}
+
+.footer-nav li:last-child a {
+  margin-bottom: 0;
+}
+
+.footer-nav a {
+  text-decoration: none;
+}

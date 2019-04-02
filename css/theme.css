@@ -45,14 +45,6 @@ a:hover {
   color: {{colorPrimaryDark}};
 }
 
-.footer a {
-  color: {{colorGrey}};
-}
-
-.footer a:hover {
-  color: {{colorPrimary}};
-}
-
 .text-fff {
   color: #fff;
 }

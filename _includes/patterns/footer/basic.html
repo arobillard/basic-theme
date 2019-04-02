@@ -1,4 +1,9 @@
-<footer class="footer f-alt" role="contentinfo">
-  <p>Basic Bitch</p>
-  {% include utilities/nav/nav-main.html navClass="f-nav" %}
+<footer class="footer{% if data.footer.padding == 1 %} pad-t pad-b{% elsif data.footer.padding == 2 %} pad-t-2 pad-b-2{% endif %}" role="contentinfo">
+  <div class="wrapper">
+    <div class="grid island-1-2">
+      <div class="unit [ xs-1 m-1-2 ] island-1-2">
+        {% include utilities/nav/nav-main.html navClass="footer-nav" listClass='list-group push-0' %}
+      </div>
+    </div>
+  </div>
 </footer>

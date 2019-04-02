@@ -67,15 +67,18 @@
   },
   "sections":{
     "hero":{
-      "height":"100vh",
+      "height":"90vh",
       "bgPosition":"center",
       "bgOverlay": true,
       "bgOverlayOpacity": ".7",
-      "contentAlignment":"left"
+      "contentAlignment":"left",
+      "headlineColor":"primary",
+      "bylineColor":"white"
     }
   },
   "footer":{
-    "footerStyle":"basic"
+    "footerStyle":"basic",
+    "padding": 2
   },
   "home":{
     "sections":[
@@ -88,7 +91,9 @@
         "bgOverlay": true,
         "headline":"Introducing the all new ThemeBasic",
         "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
-        "contentAlignment":"left"
+        "contentAlignment":"left",
+        "btnText":"Learn More",
+        "btnUrl":"#"
       },
       {
         "type":"info",

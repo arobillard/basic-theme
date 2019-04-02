@@ -1,6 +1,6 @@
 <!-- <h2 class="hero {% if include.bg == 'dark grey' %}bg-mg{% endif %}">hero</h2> -->
 
-<section class="hero" style="background-image: {% if site.data.theme.sections.hero.bgOverlay == 'true' %}linear-gradient(to bottom, rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}}), rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}})), {% endif %}url('{{include.bgImage}}');">
+<section class="hero" style="background-image: {% if data.sections.hero.bgOverlay == true %}linear-gradient(to bottom, rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}}), rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}})), {% endif %}url('{{include.bgImage}}');">
   <div class="wrapper">
     <div class="hero-content gutter max-length-no-center">
       {% if data.home.sections[0].type == 'hero' %}

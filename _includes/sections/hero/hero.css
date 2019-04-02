@@ -15,6 +15,35 @@
   text-align: center;
 }
 
+.hero h1,
+.hero h2 {
+  {% if hero.headlineColor == 'white' %}
+    color: #fff;
+  {% elsif hero.headlineColor == 'primary' %}
+    color: {{colorPrimary}};
+  {% elsif hero.headlineColor == 'secondary' %}
+    color: {{colorSecondary}};
+  {% elsif hero.headlineColor == 'greyDark' %}
+    color: {{colorGreyDark}};
+  {% else %}
+    color: #000;
+  {% endif %}
+}
+
+.hero p {
+  {% if hero.bylineColor == 'white' %}
+    color: #fff;
+  {% elsif hero.bylineColor == 'primary' %}
+    color: {{colorPrimary}};
+  {% elsif hero.bylineColor == 'secondary' %}
+    color: {{colorSecondary}};
+  {% elsif hero.bylineColor == 'greyDark' %}
+    color: {{colorGreyDark}};
+  {% else hero.bylineColor == 'black' %}
+    color: #000;
+  {% endif %}
+}
+
 @media only screen and (min-width: 38em) {
 
   .hero .wrapper {
