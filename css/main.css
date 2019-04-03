@@ -25,6 +25,7 @@
 {% include sections/cta/cta.css %}
 {% include sections/info/info.css %}
 {% include sections/logos/logos.css %}
+{% include sections/markdown/markdown.css %}
 {% include sections/text/text.css %}
 
 /* Utilities CSS */

@@ -1,6 +1,4 @@
-<!-- <h2 class="hero {% if include.bg == 'dark grey' %}bg-mg{% endif %}">hero</h2> -->
-
-<section class="hero" style="background-image: {% if data.sections.hero.bgOverlay == true %}linear-gradient(to bottom, rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}}), rgba(0, 0, 0, {{data.sections.hero.bgOverlayOpacity}})), {% endif %}url('{{include.bgImage}}');">
+<section class="hero" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}">
   <div class="wrapper">
     <div class="hero-content gutter max-length-no-center">
       {% if data.home.sections[0].type == 'hero' %}
@@ -14,12 +12,8 @@
       {% endif %}
       <p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>
       {% if include.btnText %}
-        {% include patterns/buttons/basic.html btnText=include.btnText %}
+        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=data.sections.hero.btnStyle %}
       {% endif %}
     </div>
   </div>
 </section>
-
-{% if data.sections.hero.bgOverlay == 'true' %}
-<h2>hello</h2>
-{% endif %}

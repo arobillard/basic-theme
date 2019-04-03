@@ -1,19 +1,65 @@
 .footer {
-  background-color: {{colorGreyDark}};
-  /* padding-top: {{data.footer.padding}};
-  padding-bottom: {{data.footer.padding}}; */
+  text-align: center;
+  {% if data.footer.bgColor == 'white' %}
+    background-color: #fff;
+  {% elsif data.footer.bgColor == 'primary' %}
+    background-color: {{colorPrimary}};
+  {% elsif data.footer.bgColor == 'secondary' %}
+    background-color: {{colorSecondary}};
+  {% elsif data.footer.bgColor == 'greyDark' %}
+    background-color: {{colorGreyDark}};
+  {% else %}
+    background-color: #000;
+  {% endif %}
+  {% if data.footer.textColor == 'white' %}
+    color: #fff;
+  {% elsif data.footer.textColor == 'primary' %}
+    color: {{colorPrimary}};
+  {% elsif data.footer.textColor == 'secondary' %}
+    color: {{colorSecondary}};
+  {% elsif data.footer.textColor == 'greyDark' %}
+    color: {{colorGreyDark}};
+  {% elsif data.footer.textColor == 'grey' %}
+    color: {{colorGrey}};
+  {% else %}
+    color: #000;
+  {% endif %}
 }
 
 .footer a {
-  color: {{colorGrey}};
+  {% if data.footer.linkColor == 'white' %}
+    color: #fff;
+  {% elsif data.footer.linkColor == 'primary' %}
+    color: {{colorPrimary}};
+  {% elsif data.footer.linkColor == 'secondary' %}
+    color: {{colorSecondary}};
+  {% elsif data.footer.linkColor == 'greyDark' %}
+    color: {{colorGreyDark}};
+  {% elsif data.footer.linkColor == 'grey' %}
+    color: {{colorGrey}};
+  {% else %}
+    color: #000;
+  {% endif %}
 }
 
 .footer a:hover {
-  color: {{colorPrimary}};
+  {% if data.footer.linkHoverColor == 'white' %}
+    color: #fff;
+  {% elsif data.footer.linkHoverColor == 'primary' %}
+    color: {{colorPrimary}};
+  {% elsif data.footer.linkHoverColor == 'secondary' %}
+    color: {{colorSecondary}};
+  {% elsif data.footer.linkHoverColor == 'greyDark' %}
+    color: {{colorGreyDark}};
+  {% else %}
+    color: #000;
+  {% endif %}
 }
 
 .footer-nav .logo-wrap > a {
   max-width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav .logo-main {
@@ -26,4 +72,29 @@
 
 .footer-nav a {
   text-decoration: none;
+}
+
+.icon-list li:not(:last-child) {
+  margin-right: .65rem;
+}
+
+.sub-footer {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+@media only screen and (min-width: 38em) {
+
+  .footer {
+    text-align: left;
+  }
+
+  .footer .unit:last-child {
+    text-align: right;
+  }
+
+  .footer-nav .logo-wrap > a {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 }

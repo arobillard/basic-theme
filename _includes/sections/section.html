@@ -1,11 +1,15 @@
 {% if sections.type == 'hero' %}
-  {% include sections/hero/hero.html bgImage=include.bgImage bgPosition=include.bgPosition height=include.height headline=include.headline byline=include.byline btnText=include.btnText btnUrl=include.btnUrl contentAlignment=include.contentAlignment %}
+  {% include sections/hero/hero.html %}
 {% elsif sections.type == 'info' %}
   {% include sections/info/info.html %}
 {% elsif sections.type == 'logos' %}
   {% include sections/logos/logos.html %}
 {% elsif sections.type == 'text' %}
   {% include sections/text/text.html %}
+{% elsif sections.type == 'html' %}
+  {% include sections/html/html.html %}
+{% elsif sections.type == 'markdown' %}
+  {% include sections/markdown/markdown.html %}
 {% elsif sections.type == 'cta' %}
   {% include sections/cta/cta.html %}
 {% endif %}

@@ -1,6 +1,15 @@
 ---
 ---
 {% assign data=site.data.theme %}
+{% assign colorPrimary=data.colors.primary %}
+{% assign colorPrimaryDark=data.colors.primaryDark %}
+{% assign colorPrimaryLight=data.colors.primaryLight %}
+{% assign colorSecondary=data.colors.secondary %}
+{% assign colorSecondaryDark=data.colors.secondaryDark %}
+{% assign colorSecondaryLight=data.colors.secondaryLight %}
+{% assign colorGrey=data.colors.grey %}
+{% assign colorGreyDark=data.colors.greyDark %}
+{% assign colorGreyLight=data.colors.greyLight %}
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -13,10 +22,15 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>
 <body>
-
+  <ul class="skip-links">
+    <li><a href="#main">Jump to main content</a></li>
+    <li><a class="skip-to-nav" href="#nav">Jump to navigation</a></li>
+  </ul>
   {% include header.html %}
 
-  {{content}}
+  <main id="main" role="main">
+    {{content}}
+  </main>
 
   {% include footer.html %}
 

@@ -8,8 +8,46 @@
     color {{transition}};
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   color: #fff;
   background-color: {{colorPrimaryDark}};
   border-color: {{colorPrimaryDark}};
+}
+
+.btn-secondary {
+  background-color: {{colorSecondary}};
+  border-color: {{colorSecondary}};
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: {{colorSecondaryDark}};
+  border-color: {{colorSecondaryDark}};
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: {{colorPrimary}};
+  border-color: {{colorPrimary}};
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  color: #fff;
+  background-color: {{colorPrimary}};
+  border-color: {{colorPrimary}};
+}
+
+.btn-ghost.btn-secondary {
+  background-color: transparent;
+  color: {{colorSecondary}};
+  border-color: {{colorSecondary}};
+}
+
+.btn-ghost.btn-secondary:hover,
+.btn-ghost.btn-secondary:focus {
+  color: #fff;
+  background-color: {{colorSecondary}};
+  border-color: {{colorSecondary}};
 }

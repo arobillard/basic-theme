@@ -5,9 +5,44 @@
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: {{hero.bgPosition}};
+  /* background-position: {{hero.bgPosition}}; */
   min-height: {{hero.height}};
 }
+
+{% if hero.bgOverlay == true %}
+
+  .hero {
+    position: relative;
+  }
+
+  .hero::after {
+    content: ' ';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: {{hero.bgOverlayOpacity}};
+    {% if hero.bgOverlayColor == 'white' %}
+      background-color: #fff;
+    {% elsif hero.bgOverlayColor == 'primary' %}
+      background-color: {{colorPrimary}};
+    {% elsif hero.bgOverlayColor == 'secondary' %}
+      background-color: {{colorSecondary}};
+    {% elsif hero.bgOverlayColor == 'greyDark' %}
+      background-color: {{colorGreyDark}};
+    {% else %}
+      background-color: #000;
+    {% endif %}
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+{% endif %}
 
 .hero .wrapper {
   display: flex;

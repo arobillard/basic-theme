@@ -33,3 +33,14 @@ $('.nav .icon-link').on('click', function(e) {
   $(this).toggleClass('open');
   $(this).siblings('.dropdown').toggleClass('open');
 });
+
+var x = window.matchMedia("(min-width: 38em)")
+noFocus(x) // Call listener function at run time
+x.addListener(noFocus) // Attach listener function on state changes
+
+function noFocus(x) {
+  if (x.matches) {
+    $('.m-no-focus').attr('tabindex', '-1');
+    console.log('woot');
+  }
+}

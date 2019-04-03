@@ -1,1 +1,9 @@
-<h2 class="cta">CTA</h2>
+<section id="{{include.id}}" class="cta" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}" tabindex="0">
+  <div class="wrapper">
+    <div class="cta-content gutter max-length-no-center">
+      <h2>{{include.headline}}</h2>
+      {% if include.byline %}<p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>{% endif %}
+      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=data.sections.cta.btnStyle %}
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 {
   "title":"Basic Theme",
+  "owner":"Adam Robillard",
   "logos":{
     "type":"svg",
     "img": "https://placehold.it/150x50",
@@ -39,7 +40,8 @@
       },
       {
         "text":"Shop",
-        "url":"shop"
+        "url":"shop",
+        "urlExternal": true
       },
       {
         "text":"About",
@@ -68,27 +70,63 @@
   "sections":{
     "hero":{
       "height":"90vh",
-      "bgPosition":"center",
       "bgOverlay": true,
+      "bgOverlayColor": "greyDark",
       "bgOverlayOpacity": ".7",
       "contentAlignment":"left",
       "headlineColor":"primary",
-      "bylineColor":"white"
+      "bylineColor":"white",
+      "btnStyle":"btn-ghost"
+    },
+    "cta":{
+      "height":"50vh",
+      "bgPosition":"center",
+      "bgOverlay": true,
+      "bgOverlayColor": "secondary",
+      "bgOverlayOpacity": ".7",
+      "contentAlignment":"center",
+      "headlineColor":"primary",
+      "bylineColor":"white",
+      "btnStyle":"btn-ghost"
     }
   },
   "footer":{
     "footerStyle":"basic",
-    "padding": 2
+    "bgColor": "greyDark",
+    "textColor": "grey",
+    "linkColor": "grey",
+    "linkHoverColor": "primary",
+    "paddingExtra": false
   },
+  "links":[
+    {
+      "name":"Github",
+      "url":"#",
+      "icon":"github"
+    },
+    {
+      "name":"Instagram",
+      "url":"#",
+      "icon":"instagram"
+    },
+    {
+      "name":"LinkedIn",
+      "url":"#",
+      "icon":"linkedin"
+    },
+    {
+      "name":"Vimeo",
+      "url":"#",
+      "icon":"vimeo"
+    },
+  ],
   "home":{
     "sections":[
       {
         "type":"hero",
         "id":"section-1",
-        "height":"85vh",
         "bgImage":"https://placehold.it/1600x900",
         "bgPosition":"center",
-        "bgOverlay": true,
         "headline":"Introducing the all new ThemeBasic",
         "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
         "contentAlignment":"left",
@@ -96,20 +134,62 @@
         "btnUrl":"#"
       },
       {
-        "type":"info",
-        "id":"section-2"
-      },
-      {
-        "type":"text",
-        "id":"section-3"
-      },
-      {
         "type":"logos",
+        "id":"company-logos",
+        "width":"full",
+        "logos":[
+          {
+            "img":"https://placehold.it/100x100",
+            "alt":"Company Name",
+            "url":"#"
+          },
+          {
+            "img":"https://placehold.it/200x200",
+            "alt":"Company Name"
+          },
+          {
+            "img":"https://placehold.it/300x300",
+            "alt":"Company Name",
+            "url":"#"
+          },
+          {
+            "img":"https://placehold.it/400x400",
+            "alt":"Company Name",
+            "url":"#"
+          },
+          {
+            "img":"https://placehold.it/500x500",
+            "alt":"Company Name",
+            "url":"#"
+          },
+          {
+            "img":"https://placehold.it/600x600",
+            "alt":"Company Name",
+            "url":"#"
+          },
+        ]
+      },
+      {
+        "type":"markdown",
+        "id":"markdown",
+        "width":"max-length",
+        "bgColor": "greyLight",
+        "contentAlignment": "center",
+        "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)",
+        "paddingExtra": true
+      },
+      {
+        "type":"info",
         "id":"section-4"
       },
       {
         "type":"cta",
-        "id":"section-5"
+        "id":"call-to-action",
+        "bgImage":"https://placehold.it/1600x900",
+        "bgPosition":"center",
+        "headline":"Ready to try it yourself?",
+        "btnText":"Buy now",
+        "btnUrl":"#"
       }
     ]
   },

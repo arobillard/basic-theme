@@ -1,1 +1,15 @@
-<h2 class="logo-bar">Logos</h2>
+<section id="{{include.id}}" class="logo-list" tabindex="0">
+  <div class="grid grid-middle pad-t pad-b{% if include.width == 'container' %} wrapper{% elsif include.width == 'max-length' %} max-length{% endif %}">
+    {% for logos in include.logos %}
+      <div class="unit [ xs-1-2 s-1-3 m-1-4 l-1-6 ] island">
+        {% if logos.url %}
+          <a class="block" href="{{logos.url}}">
+        {% endif %}
+          <img class="img-flex" src="{{logos.img}}" alt="">
+        {% if logos.url %}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
