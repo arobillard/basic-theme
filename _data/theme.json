@@ -1,5 +1,5 @@
 {
-  "title":"Basic Theme",
+  "title":"ThemeBasic",
   "owner":"Adam Robillard",
   "logos":{
     "type":"svg",
@@ -63,7 +63,7 @@
       },
       {
         "text":"Contact",
-        "url":"contact",
+        "url":"contact"
       }
     ]
   },
@@ -118,7 +118,7 @@
       "name":"Vimeo",
       "url":"#",
       "icon":"vimeo"
-    },
+    }
   ],
   "home":{
     "sections":[
@@ -166,7 +166,7 @@
             "img":"https://placehold.it/600x600",
             "alt":"Company Name",
             "url":"#"
-          },
+          }
         ]
       },
       {
@@ -202,7 +202,7 @@
         "headline":"About the all new ThemeBasic",
         "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
         "btnText":"Learn More",
-        "btnUrl":"#",
+        "btnUrl":"#"
       },
       {
         "type":"info",

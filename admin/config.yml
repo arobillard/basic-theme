@@ -1,0 +1,5 @@
+backend:
+  name: github
+  repo: arobillard/basic-theme # Path to your GitHub repository
+
+media_folder: "images/uploads"
