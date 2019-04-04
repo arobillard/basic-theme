@@ -5,6 +5,21 @@ backend:
 media_folder: "images/uploads"
 
 collections:
+  - label: "Theme Settings"
+    name: "theme"
+    files:
+      - label: "Theme Colours"
+        name: "colors"
+        file: _data/theme.json
+        fields:
+          - label: "Theme Colors"
+            name: "colors"
+            widget: "object"
+            fields:
+              - label: "Primary Color"
+                name: "primary"
+                widget: "string"
+                hint: "Use the Google Color picker to get desired HEX value. (https://www.google.com/search?q=color+picker)"
   - label: "Pages"
     name: "pages"
     folder: "_page-generation"
