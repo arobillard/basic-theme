@@ -3,3 +3,137 @@ backend:
   repo: arobillard/basic-theme # Path to your GitHub repository
 
 media_folder: "images/uploads"
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    folder: "_page-generation"
+    create: true
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "generated"
+      - label: "Page Url"
+        name: "title"
+        widget: "string"
+      - label: "Title - SEO"
+        name: "meta-title"
+        widget: "string"
+      - label: "Meta Description"
+        name: "meta-desc"
+        widget: "string"
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        hint: "Different types of sections require filling out different fields. Not all fields will be necessary for every section type."
+        fields:
+          - label: "Section ID"
+            name: "id"
+            widget: "string"
+          - label: "Section Type"
+            name: "type"
+            widget: "select"
+            options:
+              - { label: "Hero Banner", value: "hero" }
+              - { label: "Information", value: "info" }
+              - { label: "Logo Bar", value: "logos" }
+              - { label: "Markdown", value: "markdown" }
+              - { label: "Call to Action Banner", value: "cta" }
+          - label: "Background Image"
+            name: "bgImage"
+            widget: "image"
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Background Position"
+            name: "bgPosition"
+            widget: "select"
+            options:
+              - { label: "Top Left", value: "top left" }
+              - { label: "Top Center", value: "top center" }
+              - { label: "Top Right", value: "top right" }
+              - { label: "Center Left", value: "center left" }
+              - { label: "Center Center", value: "center" }
+              - { label: "Center Right", value: "center right" }
+              - { label: "Bottom Left", value: "bottom left" }
+              - { label: "Bottom Center", value: "bottom center" }
+              - { label: "Bottom Right", value: "bottom right" }
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Background Color"
+            name: "bgPosition"
+            widget: "select"
+            default: { label: "White", value: "white" }
+            options:
+              - { label: "White", value: "white" }
+              - { label: "Primary Color", value: "primary" }
+              - { label: "Secondary Color", value: "secondary" }
+              - { label: "Dark Grey", value: "greyDark" }
+              - { label: "Medium Grey", value: "grey" }
+              - { label: "Light Grey", value: "greyLight" }
+            hint: "Used in: Markdown, Logos"
+            required: false
+          - label: "Headline"
+            name: "headline"
+            widget: "string"
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Byline"
+            name: "byline"
+            widget: "string"
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Button - Text"
+            name: "btnText"
+            widget: "string"
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Button - Link"
+            name: "btnUrl"
+            widget: "string"
+            hint: "Used in: Hero Banner, Call to Action Banner"
+            required: false
+          - label: "Content Alignment"
+            name: "contentAlignment"
+            widget: "select"
+            default: { label: "Left", value: "left" }
+            options:
+              - { label: "Left", value: "left" }
+              - { label: "Right", value: "right" }
+              - { label: "Center", value: "Center" }
+            hint: "Used in: Markdown"
+            required: false
+          - label: "Content Width"
+            name: "content-width"
+            widget: "select"
+            options:
+              - { label: "Container", value: "container" }
+              - { label: "Narrow", value: "max-length" }
+              - { label: "Full", value: "full" }
+            required: false
+            hint: "Used in: Markdown, Logo Bar"
+          - label: "Extra Spacing on Top and Bottom of Section?"
+            name: "paddingExtra"
+            widget: "boolean"
+            hint: "Used in: Markdown"
+            required: false
+          - label: "Content"
+            name: "content"
+            widget: "markdown"
+            hint: "Used in: Markdown"
+            required: false
+          - label: "Logo List"
+            name: "logos"
+            widget: "list"
+            fields:
+              - label: "Image"
+                name: "img"
+                widget: "image"
+              - label: "Logo Name"
+                name: "alt"
+                widget: "string"
+              - label: "Link URL"
+                name: "url"
+                widget: "string"
+                required: false
+            required: false

@@ -1,6 +1,7 @@
 permalinks: pretty
 
 collections:
-  page_generation:
+  page-generation:
     output: true
     permalink: /:path/
+    
