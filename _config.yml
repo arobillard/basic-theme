@@ -3,5 +3,4 @@ permalinks: pretty
 collections:
   page-generation:
     output: true
-    permalink: /:path/
-    
+    permalink: :site/:path/
