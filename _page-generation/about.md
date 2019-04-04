@@ -15,5 +15,14 @@ sections:
     id: hero
     paddingExtra: there
     type: hero
+  - id: logos
+    logos:
+      - alt: Matcalfe Jets
+        img: /images/uploads/logo-met.svg
+        url: 'http://metcalfejets.ca/'
+      - alt: North Star Quidditch
+        img: /images/uploads/logo-ns.svg
+        url: '#'
+    type: logos
 ---
 
