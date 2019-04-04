@@ -9,7 +9,7 @@
 {% assign colorGreyLight=data.colors.greyLight %}
 
 <section id="{{include.id}}" class="markdown pad-t-2 pad-b-2"{% unless include.bgColor == 'white' %} style="background-color: {% if include.bgColor == 'primary' %}{{colorPrimary}}{% elsif include.bgColor == 'secondary' %}{{colorSecondary}}{% elsif include.bgColor == 'greyDark' %}{{colorGreyDark}}{% elsif include.bgColor == 'greyLight' %}{{colorGreyLight}}{% elsif include.bgColor == 'grey' %}{{colorGrey}}{% endif %}"{% endunless %} tabindex="0">
-  <div class="gutter{% if include.width == 'container' %} wrapper{% elsif include.width == 'max-length' %} max-length{% endif %}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
+  <div class="gutter{% if include.contentWidth == 'container' %} wrapper{% elsif include.contentWidth == 'max-length' %} max-length{% endif %}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
     {{include.content | markdownify }}
   </div>
 </section>

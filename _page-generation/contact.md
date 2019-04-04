@@ -11,11 +11,10 @@ sections:
       I truly hope that one day we can be joined in fellowship.
 
       [Contact me.](tel:6133144551)
-    content-width: max-length
+    contentWidth: max-length
     contentAlignment: Center
     id: information
     logos: []
     paddingExtra: true
     type: markdown
 ---
-

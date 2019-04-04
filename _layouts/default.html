@@ -19,6 +19,36 @@
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>
+<style>
+  {% if page.sections[0].type == 'hero' %}
+    .masthead {
+      background-color: transparent;
+      border-bottom: none;
+    }
+  {% elsif page.url == '/' %}
+    {% if data.home.sections[0].type == 'hero' %}
+      .masthead {
+        background-color: transparent;
+        border-bottom: none;
+      }
+    {% endif %}
+  {% endif %}
+  {% if data.sections.hero.bgOverlay == true %}
+    {% if page.sections[0].type == 'hero' %}
+      .masthead:not(.sticky) .nav > ol > li > a,
+      .masthead:not(.sticky) .nav > ol > li > h1 a {
+        color: #fff;
+      }
+    {% elsif page.url == '/' %}
+      {% if data.home.sections[0].type == 'hero' %}
+        .masthead:not(.sticky) .nav > ol > li > a,
+        .masthead:not(.sticky) .nav > ol > li > h1 a {
+          color: #fff;
+        }
+      {% endif %}
+    {% endif %}
+  {% endif %}
+</style>
 <body>
   <ul class="skip-links">
     <li><a href="#main">Jump to main content</a></li>

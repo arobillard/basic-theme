@@ -15,7 +15,7 @@ sections:
     id: hero
     paddingExtra: there
     type: hero
-  - content-width: container
+  - contentWidth: container
     id: logos
     logos:
       - alt: Matcalfe Jets
@@ -26,4 +26,3 @@ sections:
         url: '#'
     type: logos
 ---
-

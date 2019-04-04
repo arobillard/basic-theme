@@ -104,7 +104,7 @@ collections:
             hint: "Used in: Markdown"
             required: false
           - label: "Content Width"
-            name: "content-width"
+            name: "contentWidth"
             widget: "select"
             options:
               - { label: "Container", value: "container" }
