@@ -3,4 +3,4 @@ permalinks: pretty
 collections:
   page-generation:
     output: true
-    permalink: :site/:path/
+    permalink: https://arobillard.github.io/:path/
