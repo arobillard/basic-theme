@@ -8,11 +8,12 @@ sections:
     bgPosition: center
     btnText: Learn More
     btnUrl: 'https://adamrobillard.ca'
-    byline: General Kenobi
-    headline: Hello there
+    byline: >-
+      This is the first section I have fully generated using Netlify, Jekyll,
+      and ThemeBasic!
+    headline: First successful section generation!
     id: hero
     paddingExtra: there
     type: hero
-    width: hello
 ---
 
