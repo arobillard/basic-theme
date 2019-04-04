@@ -15,7 +15,8 @@ sections:
     id: hero
     paddingExtra: there
     type: hero
-  - id: logos
+  - content-width: container
+    id: logos
     logos:
       - alt: Matcalfe Jets
         img: /images/uploads/logo-met.svg
