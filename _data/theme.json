@@ -1,225 +1,118 @@
 {
-  "title":"ThemeBasic",
-  "owner":"Adam Robillard",
-  "logos":{
-    "type":"svg",
-    "img": "https://placehold.it/150x50",
-    "imgMobile": "https://placehold.it/100x100",
-    "svg": "svg/logo.html",
-    "widthMobile": "10rem"
-  },
-  "colors":{
-    "primary":"#cc401c",
-    "primaryDark":"#8f2d15",
-    "primaryLight":"#cd735b",
-    "secondary":"#1ccc94",
-    "secondaryDark":"#007f57",
-    "secondaryLight":"#5dd4ae",
-    "grey":"#999",
-    "greyDark":"#444",
-    "greyLight":"#f2f2f2"
-  },
-  "fonts":{
-    "primary":"'Montserrat', sans-serif",
-    "secondary":"'Montserrat Alternates', sans-serif;"
-  },
-  "shadows":{
-    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
-  },
-  "transitions":{
-    "primary": ".25s ease-in-out"
-  },
-  "header":{
-    "headerStyle": "basic",
-    "fixed": true
-  },
-  "nav":{
-    "navItems":[
+  "nav": {
+    "navItems": [
       {
-        "text":"Home"
+        "text": "Home"
       },
       {
-        "text":"Shop",
-        "url":"shop",
+        "text": "Shop",
+        "url": "shop",
         "urlExternal": true
       },
       {
-        "text":"About",
-        "url":"about",
-        "dropdown":[
+        "text": "About",
+        "url": "about",
+        "dropdown": [
           {
-            "text":"Drop 1",
-            "url":"#"
+            "text": "Drop 1",
+            "url": "#"
           },
           {
-            "text":"Drop 2",
-            "url":"#"
+            "text": "Drop 2",
+            "url": "#"
           },
           {
-            "text":"Super cool Drop 3",
-            "url":"#"
+            "text": "Super cool Drop 3",
+            "url": "#"
           }
         ]
       },
       {
-        "text":"Contact",
-        "url":"contact"
+        "text": "Contact",
+        "url": "contact"
       }
     ]
   },
-  "sections":{
-    "hero":{
-      "height":"90vh",
+  "fonts": {
+    "primary": "'Montserrat', sans-serif",
+    "secondary": "'Montserrat Alternates', sans-serif;"
+  },
+  "logos": {
+    "type": "svg",
+    "img": "https://placehold.it/150x50",
+    "imgMobile": "https://placehold.it/100x100",
+    "svg": "svg/logo.html"
+  },
+  "header": {
+    "headerStyle": "basic"
+  },
+  "sections": {
+    "hero": {
+      "height": "90vh",
       "bgOverlay": true,
       "bgOverlayColor": "greyDark",
       "bgOverlayOpacity": ".7",
-      "contentAlignment":"right",
-      "headlineColor":"primary",
-      "bylineColor":"white",
-      "btnStyle":"btn-ghost"
+      "headlineColor": "primary",
+      "bylineColor": "white",
+      "btnStyle": "btn-ghost"
     },
-    "cta":{
-      "height":"50vh",
-      "bgPosition":"center",
+    "cta": {
+      "height": "50vh",
       "bgOverlay": true,
       "bgOverlayColor": "secondary",
       "bgOverlayOpacity": ".7",
-      "contentAlignment":"center",
-      "headlineColor":"primary",
-      "bylineColor":"white",
-      "btnStyle":"btn-ghost"
+      "headlineColor": "primary",
+      "bylineColor": "white",
+      "btnStyle": "btn-ghost"
     }
   },
-  "footer":{
-    "footerStyle":"basic",
+  "colors": {
+    "secondaryLight": "#5dd4ae",
+    "primary": "#393",
+    "secondaryDark": "#007f57",
+    "primaryLight": "#cd735b",
+    "secondary": "#1ccc94",
+    "greyDark": "#444",
+    "greyLight": "#f2f2f2",
+    "primaryDark": "#8f2d15",
+    "grey": "#999"
+  },
+  "owner": "Adam Robillard",
+  "shadows": {
+    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
+  },
+  "title": "ThemeBasic",
+  "links": [
+    {
+      "name": "Github",
+      "url": "#",
+      "icon": "github"
+    },
+    {
+      "name": "Instagram",
+      "url": "#",
+      "icon": "instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "#",
+      "icon": "linkedin"
+    },
+    {
+      "name": "Vimeo",
+      "url": "#",
+      "icon": "vimeo"
+    }
+  ],
+  "footer": {
+    "footerStyle": "basic",
     "bgColor": "greyDark",
     "textColor": "grey",
     "linkColor": "grey",
     "linkHoverColor": "primary",
     "paddingExtra": false
   },
-  "links":[
-    {
-      "name":"Github",
-      "url":"#",
-      "icon":"github"
-    },
-    {
-      "name":"Instagram",
-      "url":"#",
-      "icon":"instagram"
-    },
-    {
-      "name":"LinkedIn",
-      "url":"#",
-      "icon":"linkedin"
-    },
-    {
-      "name":"Vimeo",
-      "url":"#",
-      "icon":"vimeo"
-    }
-  ],
-  "home":{
-    "sections":[
-      {
-        "type":"hero",
-        "id":"section-1",
-        "bgImage":"https://placehold.it/1600x900",
-        "bgPosition":"center",
-        "headline":"Introducing the all new ThemeBasic",
-        "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
-        "contentAlignment":"left",
-        "btnText":"Learn More",
-        "btnUrl":"#"
-      },
-      {
-        "type":"logos",
-        "id":"company-logos",
-        "width":"full",
-        "logos":[
-          {
-            "img":"https://placehold.it/100x100",
-            "alt":"Company Name",
-            "url":"#"
-          },
-          {
-            "img":"https://placehold.it/200x200",
-            "alt":"Company Name"
-          },
-          {
-            "img":"https://placehold.it/300x300",
-            "alt":"Company Name",
-            "url":"#"
-          },
-          {
-            "img":"https://placehold.it/400x400",
-            "alt":"Company Name",
-            "url":"#"
-          },
-          {
-            "img":"https://placehold.it/500x500",
-            "alt":"Company Name",
-            "url":"#"
-          },
-          {
-            "img":"https://placehold.it/600x600",
-            "alt":"Company Name",
-            "url":"#"
-          }
-        ]
-      },
-      {
-        "type":"markdown",
-        "id":"markdown",
-        "contentWidth":"max-length",
-        "bgColor": "greyLight",
-        "contentAlignment": "center",
-        "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)",
-        "paddingExtra": true
-      },
-      {
-        "type":"info",
-        "id":"section-4"
-      },
-      {
-        "type":"cta",
-        "id":"call-to-action",
-        "bgImage":"https://placehold.it/1600x900",
-        "bgPosition":"center",
-        "headline":"Ready to try it yourself?",
-        "btnText":"Buy now",
-        "btnUrl":"#"
-      }
-    ]
-  },
-  "about":{
-    "sections":[
-      {
-        "type":"hero",
-        "id":"section-1",
-        "bgImage":"https://placehold.it/1600x900",
-        "headline":"About the all new ThemeBasic",
-        "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
-        "btnText":"Learn More",
-        "btnUrl":"#"
-      },
-      {
-        "type":"info",
-        "id":"section-2"
-      },
-      {
-        "type":"text",
-        "id":"section-3"
-      },
-      {
-        "type":"logos",
-        "id":"section-4"
-      },
-      {
-        "type":"cta",
-        "id":"section-5"
-      }
-    ]
+  "transitions": {
+    "primary": ".25s ease-in-out"
   }
 }
