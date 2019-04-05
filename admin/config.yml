@@ -8,10 +8,16 @@ collections:
   - label: "Theme Settings"
     name: "theme"
     files:
-      - label: "Theme Colours"
-        name: "colors"
+      - label: "Theme Setting"
+        name: "theme-settings"
         file: _data/theme.json
         fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Site Owner"
+            name: "owner"
+            widget: "string"
           - label: "Theme Colors"
             name: "colors"
             widget: "object"
