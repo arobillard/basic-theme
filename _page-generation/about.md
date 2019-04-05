@@ -11,7 +11,7 @@ sections:
     byline: >-
       This is the first section I have fully generated using Netlify, Jekyll,
       and ThemeBasic!
-    headline: First successful section generation!
+    headline: Hi Hannah
     id: hero
     paddingExtra: there
     type: hero
@@ -26,3 +26,4 @@ sections:
         url: '#'
     type: logos
 ---
+
