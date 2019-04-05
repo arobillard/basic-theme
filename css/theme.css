@@ -24,7 +24,11 @@ html {
 }
 
 h1, h2, h3, .font-alt {
-  font-family: {{fontSecondary}};
+  {% if fontsecondary %}
+    font-family: {{fontSecondary}};
+  {% else %}
+    font-family: {{fontPrimary}};
+  {% endif %}
 }
 
 h1 {

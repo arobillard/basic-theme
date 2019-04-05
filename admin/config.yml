@@ -18,6 +18,37 @@ collections:
           - label: "Site Owner"
             name: "owner"
             widget: "string"
+          - label: "Site Logos"
+            name: "logos"
+            widget: "object"
+            fields:
+              - label: "Logo Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Wordmark", value: "wordmark"}
+                  - { label: "SVG File", value: "svg"}
+                  - { label: "Image", value: "img"}
+              - label: "Desktop Size Image Logo"
+                name: "img"
+                widget: "image"
+                hint: "If 'Image' option is selected for logo type, select logo image file for DESKTOP sized browser."
+                required: false
+              - label: "Mobile Size Image Logo"
+                name: "imgMobile"
+                widget: "image"
+                hint: "If 'Image' option is selected for logo type, select logo image file for MOBILE sized browser."
+                required: false
+              - label: "Desktop SVG Logo"
+                name: "svg"
+                widget: "image"
+                hint: "If 'SVG File' option is selected for logo type, select svg file for DESKTOP sized browser."
+                required: false
+              - label: "Mobile SVG Logo"
+                name: "svg"
+                widget: "image"
+                hint: "If 'SVG File' option is selected for logo type, select svg file for MOBILE sized browser."
+                required: false
           - label: "Theme Colors"
             name: "colors"
             widget: "object"
@@ -30,10 +61,12 @@ collections:
                 name: "primaryDark"
                 widget: "string"
                 hint: "Use the Google Color Picker (https://www.google.com/search?q=color+picker) to get desired HEX value."
+                required: false
               - label: "Primary Light Color"
                 name: "primaryLight"
                 widget: "string"
                 hint: "Use the Google Color Picker (https://www.google.com/search?q=color+picker) to get desired HEX value."
+                required: false
               - label: "Secondary Color"
                 name: "secondary"
                 widget: "string"
@@ -42,10 +75,12 @@ collections:
                 name: "secondaryDark"
                 widget: "string"
                 hint: "Use the Google Color Picker (https://www.google.com/search?q=color+picker) to get desired HEX value."
+                required: false
               - label: "Secondary Light Color"
                 name: "secondaryLight"
                 widget: "string"
                 hint: "Use the Google Color Picker (https://www.google.com/search?q=color+picker) to get desired HEX value."
+                required: false
               - label: "Grey Color"
                 name: "grey"
                 widget: "string"
@@ -58,6 +93,268 @@ collections:
                 name: "greyLight"
                 widget: "string"
                 hint: "Use the Google Color Picker (https://www.google.com/search?q=color+picker) to get desired HEX value."
+          - label: "Fonts"
+            name: "fonts"
+            widget: "object"
+            fields:
+              - label: "Primary Font"
+                name: "primary"
+                widget: "string"
+                hint: "This font will be used across the majority of the website."
+              - label: "Secondary Font"
+                name: "secondary"
+                widget: "string"
+                hint: "This font will be used for headings and other specific use cases."
+                required: false
+          - label: "Shadows"
+            name: "shadows"
+            widget: "object"
+            fields:
+              - label: "Primary Shadow"
+                name: "primary"
+                widget: "string"
+          - label: "Transitions"
+            name: "transitions"
+            widget: "object"
+            fields:
+              - label: "Primary Transition"
+                name: "primary"
+                widget: "string"
+                hint: "This will determine the speed and easing of transitions on site."
+          - label: "Header"
+            name: "header"
+            widget: "object"
+            fields:
+              - label: "Header Style"
+                name: "headerStyle"
+                widget: "select"
+                default: { label: "Basic", value: "basic" }
+                options:
+                  - { label: "Basic", value: "basic" }
+                  - { label: "Alternate", value: "alt" }
+                  - { label: "Fancy", value: "fancy" }
+                hint: "This will determine the design of the navbar"
+          - label: "Navigation"
+            name: "nav"
+            widget: "object"
+            fields:
+              - label: "Navigation Items"
+                name: "navItems"
+                widget: "list"
+                fields:
+                  - label: "Text"
+                    name: "text"
+                    widget: "string"
+                  - label: "Link URL"
+                    name: "url"
+                    widget: "string"
+                    required: false
+                  - label: "Link to external page"
+                    name: "urlExternal"
+                    widget: "boolean"
+                    required: false
+                  - label: "Dropdown Items"
+                    name: "dropdown"
+                    widget: "list"
+                    required: false
+                    fields:
+                    - label: "Text"
+                      name: "text"
+                      widget: "string"
+                    - label: "Link URL"
+                      name: "url"
+                      widget: "string"
+                    - label: "Link to external page"
+                      name: "urlExternal"
+                      widget: "boolean"
+                      required: false
+          - label: "Sections"
+            name: "sections"
+            widget: "object"
+            fields:
+              - label: "Hero Banner"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - label: "Banner Height"
+                    name: "height"
+                    widget: "string"
+                  - label: "Image Overlay"
+                    name: "bgOverlay"
+                    widget: "boolean"
+                  - label: "Image Overlay Color"
+                    name: "bgOverlayColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    required: false
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Image Overlay Opacity"
+                    name: "bgOverlayOpacity"
+                    widget: "string"
+                    hint: "Must be decimal value between 0 and 1. Ex: .7"
+                    required: false
+                  - label: "Headline Color"
+                    name: "headlineColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Byline Color"
+                    name: "bylineColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Button Style"
+                    name: "btnStyle"
+                    widget: "select"
+                    default: { label: "Primary", value: "" }
+                    options:
+                      - { label: "Primary", value: "" }
+                      - { label: "Primary Outline", value: "btn-ghost" }
+                      - { label: "Secondary", value: "btn-secondary" }
+                      - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+              - label: "Call to Action Banner"
+                name: "cta"
+                widget: "object"
+                fields:
+                  - label: "Banner Height"
+                    name: "height"
+                    widget: "string"
+                  - label: "Image Overlay"
+                    name: "bgOverlay"
+                    widget: "boolean"
+                  - label: "Image Overlay Color"
+                    name: "bgOverlayColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    required: false
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Image Overlay Opacity"
+                    name: "bgOverlayOpacity"
+                    widget: "string"
+                    hint: "Must be decimal value between 0 and 1. Ex: .7"
+                    required: false
+                  - label: "Headline Color"
+                    name: "headlineColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Byline Color"
+                    name: "bylineColor"
+                    widget: "select"
+                    default: { label: "Black", value: "black" }
+                    options:
+                      - { label: "Black", value: "black" }
+                      - { label: "White", value: "white" }
+                      - { label: "Primary Color", value: "primary" }
+                      - { label: "Secondary Color", value: "secondary" }
+                      - { label: "Dark Grey", value: "greyDark" }
+                  - label: "Button Style"
+                    name: "btnStyle"
+                    widget: "select"
+                    default: { label: "Primary", value: "" }
+                    options:
+                      - { label: "Primary", value: "" }
+                      - { label: "Primary Outline", value: "btn-ghost" }
+                      - { label: "Secondary", value: "btn-secondary" }
+                      - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - label: "Footer Style"
+                name: "footerStyle"
+                widget: "select"
+                default: { label: "Basic", value: "basic" }
+                options:
+                  - { label: "Basic", value: "basic" }
+                  - { label: "Alternate", value: "alt" }
+                  - { label: "Fancy", value: "fancy" }
+                hint: "This will determine the design of the navbar"
+              - label: "Background Colour"
+                name: "bgColor"
+                widget: "select"
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Text Colour"
+                name: "textColor"
+                widget: "select"
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Grey", value: "grey" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Link Colour"
+                name: "linkColor"
+                widget: "select"
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Grey", value: "grey" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Link Hover Colour"
+                name: "linkHoverColor"
+                widget: "select"
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Grey", value: "grey" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Extra padding on footer?"
+                name: "paddingExtra"
+                widget: "boolean"
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Link URL"
+                name: "url"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options:
+                  - { label: "Github", value: "github" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "LinkedIn", value: "linkedin" }
+                  - { label: "Vimeo", value: "vimeo" }
   - label: "Pages"
     name: "pages"
     folder: "_page-generation"
@@ -114,7 +411,7 @@ collections:
             hint: "Used in: Hero Banner, Call to Action Banner"
             required: false
           - label: "Background Color"
-            name: "bgPosition"
+            name: "bgColor"
             widget: "select"
             default: { label: "White", value: "white" }
             options:

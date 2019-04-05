@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign data=site.data.theme %}
+{% assign data=site.data.home %}
 
 {% for sections in data.home.sections %}
   {% include sections/section.html id=sections.id bgImage=sections.bgImage bgPosition=sections.bgPosition bgColor=sections.bgColor height=sections.height headline=sections.headline byline=sections.byline btnText=sections.btnText btnUrl=sections.btnUrl contentAlignment=sections.contentAlignment content=sections.content contentWidth=sections.contentWidth paddingExtra=sections.paddingExtra logos=sections.logos %}

@@ -5,9 +5,17 @@
         {% if data.logos.type == 'wordmark' %}
           {{data.title}}
         {% elsif data.logos.type == 'img' %}
-          <img class="img-flex" src="{{site.baseurl}}/{{data.logos.imgMobile}}" alt="{{data.title}} Logo">
+          {% if data.logos.imgMobile %}
+            <img class="img-flex" src="{{site.baseurl}}/{{data.logos.imgMobile}}" alt="{{data.title}} Logo">
+          {% else %}
+            <img class="img-flex" src="{{site.baseurl}}/{{data.logos.img}}" alt="{{data.title}} Logo">
+          {% endif %}
         {% elsif data.logos.type == 'svg' %}
-          {% include svg/logo.svg %}
+          {% if data.logos.svgMobile %}
+            {% include svg/logo.svg %}
+          {% else %}
+            {% include svg/logo.svg %}
+          {% endif %}
         {% endif %}
       </a>
       <a class="tog-nav inline-block" href="#nav-footer">

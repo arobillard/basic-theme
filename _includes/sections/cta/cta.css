@@ -50,7 +50,6 @@
   text-align: center;
 }
 
-.cta h1,
 .cta h2 {
   {% if cta.headlineColor == 'white' %}
     color: #fff;

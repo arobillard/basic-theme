@@ -11,8 +11,13 @@
 .btn:hover,
 .btn:focus {
   color: #fff;
-  background-color: {{colorPrimaryDark}};
-  border-color: {{colorPrimaryDark}};
+  {% if colorPrimaryDark %}
+    background-color: {{colorPrimaryDark}};
+    border-color: {{colorPrimaryDark}};
+  {% else %}
+    background-color: {{colorSecondary}};
+    border-color: {{colorSecondary}};
+  {% endif %}
 }
 
 .btn-secondary {
@@ -22,8 +27,13 @@
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background-color: {{colorSecondaryDark}};
-  border-color: {{colorSecondaryDark}};
+  {% if colorSecondaryDark %}
+    background-color: {{colorSecondaryDark}};
+    border-color: {{colorSecondaryDark}};
+  {% else %}
+    background-color: {{colorPrimary}};
+    border-color: {{colorPrimary}};
+  {% endif %}
 }
 
 .btn-ghost {

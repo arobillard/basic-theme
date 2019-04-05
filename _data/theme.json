@@ -1,118 +1,123 @@
 {
-  "nav": {
-    "navItems": [
+  "title":"ThemeBasic",
+  "owner":"Adam Robillard",
+  "logos":{
+    "type":"svg",
+    "img": "https://placehold.it/150x50",
+    "imgMobile": "https://placehold.it/100x100",
+    "svg": "svg/logo.html",
+    "widthMobile": "10rem"
+  },
+  "colors":{
+    "primary":"#cc401c",
+    "primaryDark":"#8f2d15",
+    "primaryLight":"#cd735b",
+    "secondary":"#1ccc94",
+    "secondaryDark":"#007f57",
+    "secondaryLight":"#5dd4ae",
+    "grey":"#999",
+    "greyDark":"#444",
+    "greyLight":"#f2f2f2"
+  },
+  "fonts":{
+    "primary":"'Montserrat', sans-serif",
+    "secondary":"'Montserrat Alternates', sans-serif;"
+  },
+  "shadows":{
+    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
+  },
+  "transitions":{
+    "primary": ".25s ease-in-out"
+  },
+  "header":{
+    "headerStyle": "basic",
+    "fixed": true
+  },
+  "nav":{
+    "navItems":[
       {
-        "text": "Home"
+        "text":"Home"
       },
       {
-        "text": "Shop",
-        "url": "shop",
+        "text":"Shop",
+        "url":"shop",
         "urlExternal": true
       },
       {
-        "text": "About",
-        "url": "about",
-        "dropdown": [
+        "text":"About",
+        "url":"about",
+        "dropdown":[
           {
-            "text": "Drop 1",
-            "url": "#"
+            "text":"Drop 1",
+            "url":"#"
           },
           {
-            "text": "Drop 2",
-            "url": "#"
+            "text":"Drop 2",
+            "url":"#"
           },
           {
-            "text": "Super cool Drop 3",
-            "url": "#"
+            "text":"Super cool Drop 3",
+            "url":"#"
           }
         ]
       },
       {
-        "text": "Contact",
-        "url": "contact"
+        "text":"Contact",
+        "url":"contact"
       }
     ]
   },
-  "fonts": {
-    "primary": "'Montserrat', sans-serif",
-    "secondary": "'Montserrat Alternates', sans-serif;"
-  },
-  "logos": {
-    "type": "svg",
-    "img": "https://placehold.it/150x50",
-    "imgMobile": "https://placehold.it/100x100",
-    "svg": "svg/logo.html"
-  },
-  "header": {
-    "headerStyle": "basic"
-  },
-  "sections": {
-    "hero": {
-      "height": "90vh",
+  "sections":{
+    "hero":{
+      "height":"90vh",
       "bgOverlay": true,
       "bgOverlayColor": "greyDark",
       "bgOverlayOpacity": ".7",
-      "headlineColor": "primary",
-      "bylineColor": "white",
-      "btnStyle": "btn-ghost"
+      "contentAlignment":"right",
+      "headlineColor":"primary",
+      "bylineColor":"white",
+      "btnStyle":"btn-ghost"
     },
-    "cta": {
-      "height": "50vh",
+    "cta":{
+      "height":"50vh",
+      "bgPosition":"center",
       "bgOverlay": true,
       "bgOverlayColor": "secondary",
       "bgOverlayOpacity": ".7",
-      "headlineColor": "primary",
-      "bylineColor": "white",
-      "btnStyle": "btn-ghost"
+      "contentAlignment":"center",
+      "headlineColor":"primary",
+      "bylineColor":"white",
+      "btnStyle":"btn-ghost"
     }
   },
-  "colors": {
-    "secondaryLight": "#5dd4ae",
-    "primary": "#393",
-    "secondaryDark": "#007f57",
-    "primaryLight": "#cd735b",
-    "secondary": "#1ccc94",
-    "greyDark": "#444",
-    "greyLight": "#f2f2f2",
-    "primaryDark": "#8f2d15",
-    "grey": "#999"
-  },
-  "owner": "Adam Robillard",
-  "shadows": {
-    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
-  },
-  "title": "ThemeBasic",
-  "links": [
-    {
-      "name": "Github",
-      "url": "#",
-      "icon": "github"
-    },
-    {
-      "name": "Instagram",
-      "url": "#",
-      "icon": "instagram"
-    },
-    {
-      "name": "LinkedIn",
-      "url": "#",
-      "icon": "linkedin"
-    },
-    {
-      "name": "Vimeo",
-      "url": "#",
-      "icon": "vimeo"
-    }
-  ],
-  "footer": {
-    "footerStyle": "basic",
+  "footer":{
+    "footerStyle":"basic",
     "bgColor": "greyDark",
     "textColor": "grey",
     "linkColor": "grey",
     "linkHoverColor": "primary",
     "paddingExtra": false
   },
-  "transitions": {
-    "primary": ".25s ease-in-out"
-  }
+  "links":[
+    {
+      "name":"Github",
+      "url":"#",
+      "icon":"github"
+    },
+    {
+      "name":"Instagram",
+      "url":"#",
+      "icon":"instagram"
+    },
+    {
+      "name":"LinkedIn",
+      "url":"#",
+      "icon":"linkedin"
+    },
+    {
+      "name":"Vimeo",
+      "url":"#",
+      "icon":"vimeo"
+    }
+  ]
 }
