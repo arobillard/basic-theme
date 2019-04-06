@@ -1,0 +1,3 @@
+Sitemap: https://themebasic.ca/sitemap.xml
+
+User-agent: *

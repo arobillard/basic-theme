@@ -376,6 +376,7 @@ collections:
                 options:
                   - { label: "Hero Banner", value: "hero" }
                   - { label: "Call to Action Banner", value: "cta" }
+                  - { label: "Code Block", value: "html" }
                   - { label: "Image Block with Text", value: "half-img-text" }
                   - { label: "Logo Bar", value: "logos" }
                   - { label: "Markdown", value: "markdown" }
@@ -485,6 +486,10 @@ collections:
                     name: "url"
                     widget: "string"
                     required: false
+                required: false
+              - label: "Code Upload"
+                name: "file"
+                widget: "file"
                 required: false
   - label: "Pages"
     name: "pages"
