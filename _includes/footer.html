@@ -1,7 +1,7 @@
-{% if data.footer.footerStyle == 'basic' %}
+{% if themeData.footer.footerStyle == 'basic' %}
   {% include patterns/footer/basic.html %}
-{% elsif data.footer.footerStyle == 'alt' %}
+{% elsif themeData.footer.footerStyle == 'alt' %}
   {% include patterns/footer/alt.html %}
-{% elsif data.footer.footerStyle == 'fancy' %}
+{% elsif themeData.footer.footerStyle == 'fancy' %}
   {% include patterns/footer/fancy.html %}
 {% endif %}

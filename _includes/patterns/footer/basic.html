@@ -1,12 +1,12 @@
 <footer class="footer" role="contentinfo">
-  <div class="wrapper{% if data.footer.paddingExtra == true %} pad-t-2 pad-b-2{% else %} pad-t pad-b{% endif %}">
+  <div class="wrapper{% if themeData.footer.paddingExtra == true %} pad-t-2 pad-b-2{% else %} pad-t pad-b{% endif %}">
     <div class="grid island-1-2">
       <div class="unit [ xs-1 m-1-2 ] island-1-2">
         {% include utilities/nav/nav-main.html navId='footer-nav' navClass="footer-nav" listClass='list-group push-0' %}
       </div>
       <div class="unit [ xs-1 m-1-2 ] island-1-2">
         <ul class="icon-list push-0 list-group-inline">
-          {% for links in data.links %}
+          {% for links in themeData.links %}
             <li>
               <a class="icon-link" href="{{links.url}}">
                 <i class="icon i-1">
@@ -23,7 +23,7 @@
   <div class="sub-footer">
     <div class="grid island-1-2 wrapper">
       <div class="unit [ xs-1 m-1-2 ] island-1-2">
-        <small>© {{data.owner}}</small>
+        <small>© {{themeData.owner}}</small>
       </div>
       <div class="unit [ xs-1 m-1-2 ] island-1-2">
         <small><strong>ThemeBasic</strong> is designed by <a href="https://adamrobillard.ca">Adam Robillard</a></small>

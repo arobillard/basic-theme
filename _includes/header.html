@@ -1,7 +1,7 @@
-{% if data.header.headerStyle == 'basic' %}
+{% if themeData.header.headerStyle == 'basic' %}
   {% include patterns/header/basic.html %}
-{% elsif data.header.headerStyle == 'alt' %}
+{% elsif themeData.header.headerStyle == 'alt' %}
   {% include patterns/header/alt.html %}
-{% elsif data.header.headerStyle == 'fancy' %}
+{% elsif themeData.header.headerStyle == 'fancy' %}
   {% include patterns/header/fancy.html %}
 {% endif %}

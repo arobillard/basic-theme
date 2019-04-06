@@ -1,8 +1,8 @@
-{% if data.footer.footerStyle == 'basic' %}
+{% if themeData.footer.footerStyle == 'basic' %}
   {% include patterns/footer/basic.css %}
-{% elsif data.footer.footerStyle == 'alt' %}
+{% elsif themeData.footer.footerStyle == 'alt' %}
   {% include patterns/footer/alt.css %}
-{% elsif data.footer.footerStyle == 'fancy' %}
+{% elsif themeData.footer.footerStyle == 'fancy' %}
   {% include patterns/footer/fancy.css %}
 {% endif %}
 

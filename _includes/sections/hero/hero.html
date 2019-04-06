@@ -1,7 +1,7 @@
 <section class="hero" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}">
   <div class="wrapper">
     <div class="hero-content gutter max-length-no-center">
-      {% if data.home.sections[0].type == 'hero' %}
+      {% if themeData.home.sections[0].type == 'hero' %}
         {% if page.url == '/' %}
           <h2>{{include.headline}}</h2>
         {% else %}
@@ -12,7 +12,7 @@
       {% endif %}
       <p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>
       {% if include.btnText %}
-        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=data.sections.hero.btnStyle %}
+        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=themeData.sections.hero.btnStyle %}
       {% endif %}
     </div>
   </div>

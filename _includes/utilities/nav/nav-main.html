@@ -7,11 +7,11 @@
         {% endif %}
       {% endif %}
         <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
-          {% if data.logos.type == 'wordmark' %}
-            {{data.title}}
-          {% elsif data.logos.type == 'img' %}
-            <img class="img-flex" src="{{site.baseurl}}/{{data.logos.img}}" alt="{{data.title}} Logo">
-          {% elsif data.logos.type == 'svg' %}
+          {% if themeData.logos.type == 'wordmark' %}
+            {{themeData.title}}
+          {% elsif themeData.logos.type == 'img' %}
+            <img class="img-flex" src="{{site.baseurl}}/{{themeData.logos.img}}" alt="{{themeData.title}} Logo">
+          {% elsif themeData.logos.type == 'svg' %}
             {% include svg/logo.svg %}
           {% endif %}
         </a>
@@ -21,7 +21,7 @@
         {% endif %}
       {% endif %}
     </li>
-    {% for navItems in data.nav.navItems %}
+    {% for navItems in themeData.nav.navItems %}
       <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}

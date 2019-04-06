@@ -1,23 +1,23 @@
 /* Color Variables */
-{% assign colorPrimary=data.colors.primary %}
-{% assign colorPrimaryDark=data.colors.primaryDark %}
-{% assign colorPrimaryLight=data.colors.primaryLight %}
-{% assign colorSecondary=data.colors.secondary %}
-{% assign colorSecondaryDark=data.colors.secondaryDark %}
-{% assign colorSecondaryLight=data.colors.secondaryLight %}
-{% assign colorGrey=data.colors.grey %}
-{% assign colorGreyDark=data.colors.greyDark %}
-{% assign colorGreyLight=data.colors.greyLight %}
+{% assign colorPrimary=themeData.colors.primary %}
+{% assign colorPrimaryDark=themeData.colors.primaryDark %}
+{% assign colorPrimaryLight=themeData.colors.primaryLight %}
+{% assign colorSecondary=themeData.colors.secondary %}
+{% assign colorSecondaryDark=themeData.colors.secondaryDark %}
+{% assign colorSecondaryLight=themeData.colors.secondaryLight %}
+{% assign colorGrey=themeData.colors.grey %}
+{% assign colorGreyDark=themeData.colors.greyDark %}
+{% assign colorGreyLight=themeData.colors.greyLight %}
 
 /* Font Variables */
-{% assign fontPrimary=data.fonts.primary %}
-{% assign fontSecondary=data.fonts.secondary %}
+{% assign fontPrimary=themeData.fonts.primary %}
+{% assign fontSecondary=themeData.fonts.secondary %}
 
 /* Shadows */
-{% assign shadow=data.shadows.primary %}
+{% assign shadow=themeData.shadows.primary %}
 
 /* Transition */
-{% assign transition=data.transitions.primary %}
+{% assign transition=themeData.transitions.primary %}
 
 html {
   font-family: {{fontPrimary}};
@@ -53,19 +53,91 @@ a:hover {
   color: #fff;
 }
 
-.text-mg {
+.text-primary {
+  color: {{colorPrimary}};
+}
+
+{% if colorPrimaryLight %}
+  .text-primary-light {
+    color: {{colorPrimaryLight}}
+  }
+{% endif %}
+
+{% if colorPrimaryDark %}
+  .text-primary-dark {
+    color: {{colorPrimaryDark}}
+  }
+{% endif %}
+
+.text-secondary {
+  color: {{colorSecondary}};
+}
+
+{% if colorSecondaryLight %}
+  .text-secondary-light {
+    color: {{colorSecondaryLight}}
+  }
+{% endif %}
+
+{% if colorSecondaryDark %}
+  .text-secondary-dark {
+    color: {{colorSecondaryDark}}
+  }
+{% endif %}
+
+.text-grey {
   color: {{colorGrey}};
+}
+
+.text-grey-light {
+  color: {{colorGreyLight}};
+}
+
+.text-grey-dark {
+  color: {{colorGreyDark}};
 }
 
 .bg-primary {
   background-color: {{colorPrimary}};
 }
 
-.bg-mg {
+{% if colorPrimaryLight %}
+  .bg-primary-light {
+    background-color: {{colorPrimaryLight}}
+  }
+{% endif %}
+
+{% if colorPrimaryDark %}
+  .bg-primary-dark {
+    background-color: {{colorPrimaryDark}}
+  }
+{% endif %}
+
+.bg-secondary {
+  background-color: {{colorSecondary}};
+}
+
+{% if colorSecondaryLight %}
+  .bg-secondary-light {
+    background-color: {{colorSecondaryLight}}
+  }
+{% endif %}
+
+{% if colorSecondaryDark %}
+  .bg-secondary-dark {
+    background-color: {{colorSecondaryDark}}
+  }
+{% endif %}
+
+.bg-grey {
   background-color: {{colorGrey}};
 }
 
-.bg-dg {
+.bg-grey-light {
+  background-color: {{colorGreyLight}};
+}
+
+.bg-grey-dark {
   background-color: {{colorGreyDark}};
 }
 

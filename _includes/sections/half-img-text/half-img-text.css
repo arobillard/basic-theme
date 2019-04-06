@@ -1,0 +1,18 @@
+.half-img-text .half-img {
+  padding-top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .half-img-text .half-img {
+    padding-top: 90vh;
+  }
+
+  .half-img-text .half-text {
+    display: flex;
+    align-items: center;
+  }
+
+}

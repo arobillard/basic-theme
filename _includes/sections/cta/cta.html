@@ -3,7 +3,7 @@
     <div class="cta-content gutter max-length-no-center">
       <h2>{{include.headline}}</h2>
       {% if include.byline %}<p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>{% endif %}
-      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=data.sections.cta.btnStyle %}
+      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=themeData.sections.cta.btnStyle %}
     </div>
   </div>
 </section>

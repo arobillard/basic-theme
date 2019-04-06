@@ -1,25 +1,25 @@
 .footer {
   text-align: center;
-  {% if data.footer.bgColor == 'white' %}
+  {% if themeData.footer.bgColor == 'white' %}
     background-color: #fff;
-  {% elsif data.footer.bgColor == 'primary' %}
+  {% elsif themeData.footer.bgColor == 'primary' %}
     background-color: {{colorPrimary}};
-  {% elsif data.footer.bgColor == 'secondary' %}
+  {% elsif themeData.footer.bgColor == 'secondary' %}
     background-color: {{colorSecondary}};
-  {% elsif data.footer.bgColor == 'greyDark' %}
+  {% elsif themeData.footer.bgColor == 'greyDark' %}
     background-color: {{colorGreyDark}};
   {% else %}
     background-color: #000;
   {% endif %}
-  {% if data.footer.textColor == 'white' %}
+  {% if themeData.footer.textColor == 'white' %}
     color: #fff;
-  {% elsif data.footer.textColor == 'primary' %}
+  {% elsif themeData.footer.textColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif data.footer.textColor == 'secondary' %}
+  {% elsif themeData.footer.textColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif data.footer.textColor == 'greyDark' %}
+  {% elsif themeData.footer.textColor == 'greyDark' %}
     color: {{colorGreyDark}};
-  {% elsif data.footer.textColor == 'grey' %}
+  {% elsif themeData.footer.textColor == 'grey' %}
     color: {{colorGrey}};
   {% else %}
     color: #000;
@@ -27,15 +27,15 @@
 }
 
 .footer a {
-  {% if data.footer.linkColor == 'white' %}
+  {% if themeData.footer.linkColor == 'white' %}
     color: #fff;
-  {% elsif data.footer.linkColor == 'primary' %}
+  {% elsif themeData.footer.linkColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif data.footer.linkColor == 'secondary' %}
+  {% elsif themeData.footer.linkColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif data.footer.linkColor == 'greyDark' %}
+  {% elsif themeData.footer.linkColor == 'greyDark' %}
     color: {{colorGreyDark}};
-  {% elsif data.footer.linkColor == 'grey' %}
+  {% elsif themeData.footer.linkColor == 'grey' %}
     color: {{colorGrey}};
   {% else %}
     color: #000;
@@ -43,13 +43,13 @@
 }
 
 .footer a:hover {
-  {% if data.footer.linkHoverColor == 'white' %}
+  {% if themeData.footer.linkHoverColor == 'white' %}
     color: #fff;
-  {% elsif data.footer.linkHoverColor == 'primary' %}
+  {% elsif themeData.footer.linkHoverColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif data.footer.linkHoverColor == 'secondary' %}
+  {% elsif themeData.footer.linkHoverColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif data.footer.linkHoverColor == 'greyDark' %}
+  {% elsif themeData.footer.linkHoverColor == 'greyDark' %}
     color: {{colorGreyDark}};
   {% else %}
     color: #000;

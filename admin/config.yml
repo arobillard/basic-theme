@@ -355,6 +355,149 @@ collections:
                   - { label: "Instagram", value: "instagram" }
                   - { label: "LinkedIn", value: "linkedin" }
                   - { label: "Vimeo", value: "vimeo" }
+  - label: "Home Page"
+    name: "home"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: _data/home.json
+        fields:
+          - label: "Layout"
+            name: "layout"
+            widget: "hidden"
+            default: "generated"
+          - label: "Page Url"
+            name: "title"
+            widget: "string"
+          - label: "Title - SEO"
+            name: "meta-title"
+            widget: "string"
+          - label: "Meta Description"
+            name: "meta-desc"
+            widget: "string"
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            hint: "Different types of sections require filling out different fields. Not all fields will be necessary for every section type."
+            fields:
+              - label: "Section ID"
+                name: "id"
+                widget: "string"
+              - label: "Section Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Hero Banner", value: "hero" }
+                  - { label: "Information", value: "info" }
+                  - { label: "Logo Bar", value: "logos" }
+                  - { label: "Markdown", value: "markdown" }
+                  - { label: "Call to Action Banner", value: "cta" }
+              - label: "Background Image"
+                name: "bgImage"
+                widget: "image"
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Background Position"
+                name: "bgPosition"
+                widget: "select"
+                options:
+                  - { label: "Top Left", value: "top left" }
+                  - { label: "Top Center", value: "top center" }
+                  - { label: "Top Right", value: "top right" }
+                  - { label: "Center Left", value: "center left" }
+                  - { label: "Center Center", value: "center" }
+                  - { label: "Center Right", value: "center right" }
+                  - { label: "Bottom Left", value: "bottom left" }
+                  - { label: "Bottom Center", value: "bottom center" }
+                  - { label: "Bottom Right", value: "bottom right" }
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Background Color"
+                name: "bgColor"
+                widget: "select"
+                default: { label: "White", value: "bg-white" }
+                options:
+                  - { label: "White", value: "bg-white" }
+                  - { label: "Primary Color", value: "bg-primary" }
+                  - { label: "Secondary Color", value: "bg-secondary" }
+                  - { label: "Dark Grey", value: "bg-grey-dark" }
+                  - { label: "Medium Grey", value: "bg-grey" }
+                  - { label: "Light Grey", value: "bg-grey-light" }
+                hint: "Used in: Markdown, Logos"
+                required: false
+              - label: "Headline"
+                name: "headline"
+                widget: "string"
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Byline"
+                name: "byline"
+                widget: "string"
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Button - Text"
+                name: "btnText"
+                widget: "string"
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Button - Link"
+                name: "btnUrl"
+                widget: "string"
+                hint: "Used in: Hero Banner, Call to Action Banner"
+                required: false
+              - label: "Button - Style"
+                name: "btnStyle"
+                widget: "select"
+                default: { label: "Primary", value: "" }
+                options:
+                  - { label: "Primary", value: "" }
+                  - { label: "Primary Outline", value: "btn-ghost" }
+                  - { label: "Secondary", value: "btn-secondary" }
+                  - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+              - label: "Content Alignment"
+                name: "contentAlignment"
+                widget: "select"
+                default: { label: "Left", value: "left" }
+                options:
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+                  - { label: "Center", value: "Center" }
+                hint: "Used in: Markdown"
+                required: false
+              - label: "Content Width"
+                name: "contentWidth"
+                widget: "select"
+                options:
+                  - { label: "Container", value: "wrapper" }
+                  - { label: "Narrow", value: "max-length" }
+                  - { label: "Full", value: "full-width" }
+                required: false
+                hint: "Used in: Markdown, Logo Bar"
+              - label: "Extra Spacing on Top and Bottom of Section?"
+                name: "paddingExtra"
+                widget: "boolean"
+                hint: "Used in: Markdown"
+                required: false
+              - label: "Content"
+                name: "content"
+                widget: "markdown"
+                hint: "Used in: Markdown"
+                required: false
+              - label: "Logo List"
+                name: "logos"
+                widget: "list"
+                fields:
+                  - label: "Image"
+                    name: "img"
+                    widget: "image"
+                  - label: "Logo Name"
+                    name: "alt"
+                    widget: "string"
+                  - label: "Link URL"
+                    name: "url"
+                    widget: "string"
+                    required: false
+                required: false
   - label: "Pages"
     name: "pages"
     folder: "_page-generation"
@@ -413,14 +556,14 @@ collections:
           - label: "Background Color"
             name: "bgColor"
             widget: "select"
-            default: { label: "White", value: "white" }
+            default: { label: "White", value: "bg-white" }
             options:
-              - { label: "White", value: "white" }
-              - { label: "Primary Color", value: "primary" }
-              - { label: "Secondary Color", value: "secondary" }
-              - { label: "Dark Grey", value: "greyDark" }
-              - { label: "Medium Grey", value: "grey" }
-              - { label: "Light Grey", value: "greyLight" }
+              - { label: "White", value: "bg-white" }
+              - { label: "Primary Color", value: "bg-primary" }
+              - { label: "Secondary Color", value: "bg-secondary" }
+              - { label: "Dark Grey", value: "bg-grey-dark" }
+              - { label: "Medium Grey", value: "bg-grey" }
+              - { label: "Light Grey", value: "bg-grey-light" }
             hint: "Used in: Markdown, Logos"
             required: false
           - label: "Headline"
@@ -443,6 +586,15 @@ collections:
             widget: "string"
             hint: "Used in: Hero Banner, Call to Action Banner"
             required: false
+          - label: "Button - Style"
+            name: "btnStyle"
+            widget: "select"
+            default: { label: "Primary", value: "" }
+            options:
+              - { label: "Primary", value: "" }
+              - { label: "Primary Outline", value: "btn-ghost" }
+              - { label: "Secondary", value: "btn-secondary" }
+              - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
           - label: "Content Alignment"
             name: "contentAlignment"
             widget: "select"
@@ -457,9 +609,9 @@ collections:
             name: "contentWidth"
             widget: "select"
             options:
-              - { label: "Container", value: "container" }
+              - { label: "Container", value: "wrapper" }
               - { label: "Narrow", value: "max-length" }
-              - { label: "Full", value: "full" }
+              - { label: "Full", value: "full-width" }
             required: false
             hint: "Used in: Markdown, Logo Bar"
           - label: "Extra Spacing on Top and Bottom of Section?"

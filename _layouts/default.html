@@ -1,13 +1,14 @@
-{% assign data=site.data.theme %}
-{% assign colorPrimary=data.colors.primary %}
-{% assign colorPrimaryDark=data.colors.primaryDark %}
-{% assign colorPrimaryLight=data.colors.primaryLight %}
-{% assign colorSecondary=data.colors.secondary %}
-{% assign colorSecondaryDark=data.colors.secondaryDark %}
-{% assign colorSecondaryLight=data.colors.secondaryLight %}
-{% assign colorGrey=data.colors.grey %}
-{% assign colorGreyDark=data.colors.greyDark %}
-{% assign colorGreyLight=data.colors.greyLight %}
+{% assign homeData=site.data.home %}
+{% assign themeData=site.data.theme %}
+{% assign colorPrimary=themeData.colors.primary %}
+{% assign colorPrimaryDark=themeData.colors.primaryDark %}
+{% assign colorPrimaryLight=themeData.colors.primaryLight %}
+{% assign colorSecondary=themeData.colors.secondary %}
+{% assign colorSecondaryDark=themeData.colors.secondaryDark %}
+{% assign colorSecondaryLight=themeData.colors.secondaryLight %}
+{% assign colorGrey=themeData.colors.grey %}
+{% assign colorGreyDark=themeData.colors.greyDark %}
+{% assign colorGreyLight=themeData.colors.greyLight %}
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -26,21 +27,21 @@
       border-bottom: none;
     }
   {% elsif page.url == '/' %}
-    {% if data.home.sections[0].type == 'hero' %}
+    {% if homeData.sections[0].type == 'hero' %}
       .masthead {
         background-color: transparent;
         border-bottom: none;
       }
     {% endif %}
   {% endif %}
-  {% if data.sections.hero.bgOverlay == true %}
+  {% if themeData.sections.hero.bgOverlay == true %}
     {% if page.sections[0].type == 'hero' %}
       .masthead:not(.sticky) .nav > ol > li > a,
       .masthead:not(.sticky) .nav > ol > li > h1 a {
         color: #fff;
       }
     {% elsif page.url == '/' %}
-      {% if data.home.sections[0].type == 'hero' %}
+      {% if homeData.sections[0].type == 'hero' %}
         .masthead:not(.sticky) .nav > ol > li > a,
         .masthead:not(.sticky) .nav > ol > li > h1 a {
           color: #fff;
@@ -63,7 +64,7 @@
   {% include footer.html %}
 
   <script src="{{site.baseurl}}/js/main.js"></script>
-  {% if data.header.fixed == true %}
+  {% if themeData.header.fixed == true %}
     <script>
       if ($(this).scrollTop() > 50) {
         $('.masthead').addClass('sticky')

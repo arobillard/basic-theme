@@ -1,7 +1,8 @@
 ---
 ---
 
-{% assign data=site.data.theme %}
+{% assign themeData=site.data.theme %}
+{% assign homeData=site.data.home %}
 
 
 /* Universal CSS */
@@ -27,6 +28,7 @@
 {% include sections/logos/logos.css %}
 {% include sections/markdown/markdown.css %}
 {% include sections/text/text.css %}
+{% include sections/half-img-text/half-img-text.css %}
 
 /* Utilities CSS */
 

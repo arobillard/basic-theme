@@ -1,15 +1,17 @@
-{% assign colorPrimary=data.colors.primary %}
-{% assign colorPrimaryDark=data.colors.primaryDark %}
-{% assign colorPrimaryLight=data.colors.primaryLight %}
-{% assign colorSecondary=data.colors.secondary %}
-{% assign colorSecondaryDark=data.colors.secondaryDark %}
-{% assign colorSecondaryLight=data.colors.secondaryLight %}
-{% assign colorGrey=data.colors.grey %}
-{% assign colorGreyDark=data.colors.greyDark %}
-{% assign colorGreyLight=data.colors.greyLight %}
+{% assign themeData=site.data.theme %}
 
-<section id="{{include.id}}" class="markdown pad-t-2 pad-b-2"{% unless include.bgColor == 'white' %} style="background-color: {% if include.bgColor == 'primary' %}{{colorPrimary}}{% elsif include.bgColor == 'secondary' %}{{colorSecondary}}{% elsif include.bgColor == 'greyDark' %}{{colorGreyDark}}{% elsif include.bgColor == 'greyLight' %}{{colorGreyLight}}{% elsif include.bgColor == 'grey' %}{{colorGrey}}{% endif %}"{% endunless %} tabindex="0">
-  <div class="gutter{% if include.contentWidth == 'container' %} wrapper{% elsif include.contentWidth == 'max-length' %} max-length{% endif %}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
+{% assign colorPrimary=themeData.colors.primary %}
+{% assign colorPrimaryDark=themeData.colors.primaryDark %}
+{% assign colorPrimaryLight=themeData.colors.primaryLight %}
+{% assign colorSecondary=themeData.colors.secondary %}
+{% assign colorSecondaryDark=themeData.colors.secondaryDark %}
+{% assign colorSecondaryLight=themeData.colors.secondaryLight %}
+{% assign colorGrey=themeData.colors.grey %}
+{% assign colorGreyDark=themeData.colors.greyDark %}
+{% assign colorGreyLight=themeData.colors.greyLight %}
+
+<section id="{{include.id}}" class="markdown pad-t-2 pad-b-2 {{include.bgColor}}" tabindex="0">
+  <div class="gutter {{include.contentWidth}}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
     {{include.content | markdownify }}
   </div>
 </section>

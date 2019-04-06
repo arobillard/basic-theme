@@ -1,4 +1,4 @@
-{% assign cta=data.sections.cta %}
+{% assign cta=themeData.sections.cta %}
 
 .cta {
   display: flex;

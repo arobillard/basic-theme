@@ -1,0 +1,15 @@
+<section id="{{include.id}}" class="half-img-text" tabindex="0">
+  <div class="grid grid-stretch">
+    <div class="unit [ xs-1 m-1-2 ] half-img" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}};">
+      <img class="hidden" src="{{site.baseurl}}{{include.bgImage}}" alt="">
+    </div>
+    <div class="unit [ xs-1 m-1-2 ] half-text {{include.bgColor}}">
+      <div class="half-text-content max-length">
+        {{include.content | markdownify }}
+        {% if include.btnText %}
+          {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
