@@ -375,10 +375,10 @@ collections:
                 widget: "select"
                 options:
                   - { label: "Hero Banner", value: "hero" }
-                  - { label: "Information", value: "info" }
+                  - { label: "Call to Action Banner", value: "cta" }
+                  - { label: "Image Block with Text", value: "half-img-text" }
                   - { label: "Logo Bar", value: "logos" }
                   - { label: "Markdown", value: "markdown" }
-                  - { label: "Call to Action Banner", value: "cta" }
               - label: "Background Image"
                 name: "bgImage"
                 widget: "image"
@@ -517,10 +517,10 @@ collections:
             widget: "select"
             options:
               - { label: "Hero Banner", value: "hero" }
-              - { label: "Information", value: "info" }
+              - { label: "Call to Action Banner", value: "cta" }
+              - { label: "Image Block with Text", value: "half-img-text" }
               - { label: "Logo Bar", value: "logos" }
               - { label: "Markdown", value: "markdown" }
-              - { label: "Call to Action Banner", value: "cta" }
           - label: "Background Image"
             name: "bgImage"
             widget: "image"
