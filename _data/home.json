@@ -1,18 +1,79 @@
 {
-  "title": "Home",
-  "meta-title": "dfghjk",
-  "meta-desc": "fgh",
-  "sections": [
+  "sections":[
     {
-      "btnText": "'Tis true.",
-      "byline": "I like her a whole lot, she be cool, but a nerd.",
-      "bgPosition": "center left",
-      "btnUrl": "#",
-      "headline": "Hannah is da bomb",
-      "btnStyle": "btn-ghost",
+      "type":"hero",
+      "id":"section-1",
+      "bgImage":"https://placehold.it/1600x900",
+      "bgPosition":"center",
+      "headline":"Introducing the all new ThemeBasic",
+      "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
+      "btnText":"Learn Less",
+      "btnUrl":"#"
+    },
+    {
+      "type":"logos",
+      "id":"company-logos",
+      "contentWidth":"container",
+      "logos":[
+        {
+          "img":"https://placehold.it/100x100",
+          "alt":"Company Name",
+          "url":"#"
+        },
+        {
+          "img":"https://placehold.it/200x200",
+          "alt":"Company Name"
+        },
+        {
+          "img":"https://placehold.it/300x300",
+          "alt":"Company Name",
+          "url":"#"
+        },
+        {
+          "img":"https://placehold.it/400x400",
+          "alt":"Company Name",
+          "url":"#"
+        },
+        {
+          "img":"https://placehold.it/500x500",
+          "alt":"Company Name",
+          "url":"#"
+        },
+        {
+          "img":"https://placehold.it/600x600",
+          "alt":"Company Name",
+          "url":"#"
+        }
+      ]
+    },
+    {
+      "type":"markdown",
+      "id":"markdown",
+      "contentWidth":"max-length",
+      "bgColor": "bg-grey-light",
+      "contentAlignment": "center",
+      "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)",
+      "paddingExtra": true
+    },
+    {
+      "type":"half-img-text",
+      "id":"section-4",
+      "bgColor": "bg-white",
       "bgImage": "/images/uploads/skate-canada-banner-angled.jpg",
-      "type": "hero",
-      "id": "hero"
+      "bgPosition":"center left",
+      "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "btnText":"Button Times",
+      "btnUrl":"#",
+      "btnStyle":"btn-ghost"
+    },
+    {
+      "type":"cta",
+      "id":"call-to-action",
+      "bgImage":"https://placehold.it/1600x900",
+      "bgPosition":"center",
+      "headline":"Ready to try it yourself?",
+      "btnText":"Buy now",
+      "btnUrl":"#"
     }
   ]
 }
