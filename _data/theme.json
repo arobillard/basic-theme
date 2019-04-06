@@ -35,6 +35,7 @@
     "fixed": true
   },
   "nav":{
+    "includeHome": true,
     "navItems":[
     ]
   },

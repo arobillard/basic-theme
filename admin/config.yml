@@ -138,6 +138,9 @@ collections:
             name: "nav"
             widget: "object"
             fields:
+              - label: "Include 'Home' link in navbar?"
+                name: "includeHome"
+                widget: "boolean"
               - label: "Navigation Items"
                 name: "navItems"
                 widget: "list"

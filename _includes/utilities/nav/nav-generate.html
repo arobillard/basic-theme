@@ -21,11 +21,16 @@
         {% endif %}
       {% endif %}
     </li>
+    {% if themeData.nav.includeHome == true %}
+      <li>
+        <a {% if page.url == '/' %}class="current" {% endif %}href="/">Home</a>
+      </li>
+    {% endif %}
     {% for navItems in themeData.nav.navItems %}
       <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}
-            <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+            <a class="inline-block island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
             <a class="icon-link m-no-focus" href="#">
               <i class="icon i-1">
                 <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
