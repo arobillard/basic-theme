@@ -4,7 +4,7 @@
       <img class="hidden" src="{{site.baseurl}}{{include.bgImage}}" alt="">
     </div>
     <div class="unit [ xs-1 m-1-2 ] half-text {{include.bgColor}}">
-      <div class="half-text-content max-length">
+      <div class="half-text-content max-length pad-t-2 pad-b-2">
         {{include.content | markdownify }}
         {% if include.btnText %}
           {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}

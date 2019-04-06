@@ -34,21 +34,50 @@
       }
     {% endif %}
   {% endif %}
-  {% if themeData.sections.hero.bgOverlay == true %}
-    {% if page.sections[0].type == 'hero' %}
-      .masthead:not(.sticky) .nav > ol > li > a,
-      .masthead:not(.sticky) .nav > ol > li > h1 a {
-        color: #fff;
-      }
-    {% elsif page.url == '/' %}
-      {% if homeData.sections[0].type == 'hero' %}
+  @media only screen and (min-width: 38em) {
+
+    {% if themeData.sections.hero.bgOverlay == true %}
+      {% if page.sections[0].type == 'hero' %}
         .masthead:not(.sticky) .nav > ol > li > a,
         .masthead:not(.sticky) .nav > ol > li > h1 a {
           color: #fff;
         }
+
+        .masthead:not(.sticky) .nav > ol > li > a:hover {
+          color: {{colorPrimary}};
+        }
+
+        .masthead:not(.sticky) .nav > ol > li > a.current {
+          color: {{colorPrimary}};
+        }
+
+        .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+          color: {{colorSecondary}};
+        }
+      {% elsif page.url == '/' %}
+        {% if homeData.sections[0].type == 'hero' %}
+          .masthead:not(.sticky) .nav > ol > li > a,
+          .masthead:not(.sticky) .nav > ol > li > h1 a {
+            color: #fff;
+          }
+
+          .masthead:not(.sticky) .nav > ol > li > h1 > a:hover,
+          .masthead:not(.sticky) .nav > ol > li > a:hover {
+            color: {{colorPrimary}};
+          }
+
+          .masthead:not(.sticky) .nav > ol > li > a.current {
+            color: {{colorPrimary}};
+          }
+
+          .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+            color: {{colorSecondary}};
+          }
+        {% endif %}
       {% endif %}
     {% endif %}
-  {% endif %}
+
+  }
 </style>
 <body>
   <ul class="skip-links">

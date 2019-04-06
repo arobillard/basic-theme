@@ -1,5 +1,6 @@
 {
   "title":"ThemeBasic",
+  "meta":"ThemeBasic is a simple template for creating a website. With a number of styling and section options, ThemeBasic allows users to create beautiful, unique websites.",
   "owner":"Adam Robillard",
   "logos":{
     "type":"svg",
@@ -9,12 +10,12 @@
     "widthMobile": "10rem"
   },
   "colors":{
-    "primary":"#cc401c",
-    "primaryDark":"#8f2d15",
-    "primaryLight":"#cd735b",
-    "secondary":"#1ccc94",
-    "secondaryDark":"#007f57",
-    "secondaryLight":"#5dd4ae",
+    "primary":"#2c8Bd9",
+    "primaryDark":"#1a5c93",
+    "primaryLight":"#70ADDF",
+    "secondary":"#DF4843",
+    "secondaryDark":"#AB3733",
+    "secondaryLight":"#E38B88",
     "grey":"#999",
     "greyDark":"#444",
     "greyLight":"#f2f2f2"
@@ -73,7 +74,7 @@
       "bgOverlay": true,
       "bgOverlayColor": "greyDark",
       "bgOverlayOpacity": ".7",
-      "contentAlignment":"right",
+      "contentAlignment":"left",
       "headlineColor":"primary",
       "bylineColor":"white",
       "btnStyle":"btn-ghost"

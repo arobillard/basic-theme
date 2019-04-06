@@ -362,19 +362,6 @@ collections:
         name: "home"
         file: _data/home.json
         fields:
-          - label: "Layout"
-            name: "layout"
-            widget: "hidden"
-            default: "generated"
-          - label: "Page Url"
-            name: "title"
-            widget: "string"
-          - label: "Title - SEO"
-            name: "meta-title"
-            widget: "string"
-          - label: "Meta Description"
-            name: "meta-desc"
-            widget: "string"
           - label: "Sections"
             name: "sections"
             widget: "list"
@@ -454,6 +441,7 @@ collections:
                   - { label: "Primary Outline", value: "btn-ghost" }
                   - { label: "Secondary", value: "btn-secondary" }
                   - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+                required: false
               - label: "Content Alignment"
                 name: "contentAlignment"
                 widget: "select"
@@ -595,6 +583,7 @@ collections:
               - { label: "Primary Outline", value: "btn-ghost" }
               - { label: "Secondary", value: "btn-secondary" }
               - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+            required: false
           - label: "Content Alignment"
             name: "contentAlignment"
             widget: "select"

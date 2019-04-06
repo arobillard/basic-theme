@@ -4,7 +4,7 @@ title: about
 meta-title: About
 meta-desc: Test description
 sections:
-  - bgImage: /images/uploads/skatae-canada-banner-angled.jpg
+  - bgImage: /images/uploads/skate-canada-banner-angled.jpg
     bgPosition: center
     btnText: Learn More
     btnUrl: 'https://adamrobillard.ca'
@@ -26,4 +26,3 @@ sections:
         url: '#'
     type: logos
 ---
-

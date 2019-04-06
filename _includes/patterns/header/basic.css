@@ -234,10 +234,10 @@
       background-color {{transition}};
   }
 
-  .dropdown a:hover
+  .dropdown a:hover,
   .dropdown a:focus {
     color: #fff;
-    background-color: {{colorPrimary}}
+    background-color: {{colorPrimary}};
   }
 
   li:hover .dropdown,

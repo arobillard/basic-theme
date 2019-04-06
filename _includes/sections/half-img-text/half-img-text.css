@@ -4,6 +4,11 @@
   background-repeat: no-repeat;
 }
 
+.half-img-text .half-text {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
 @media only screen and (min-width: 38em) {
 
   .half-img-text .half-img {
@@ -13,6 +18,27 @@
   .half-img-text .half-text {
     display: flex;
     align-items: center;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+  }
+
+  .half-img-text .half-text-content {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .half-img-text .half-text {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .half-img-text .half-text-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
 }
