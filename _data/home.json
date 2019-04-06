@@ -1,79 +1,79 @@
 {
-  "sections":[
+  "sections": [
     {
-      "type":"hero",
-      "id":"section-1",
-      "bgImage":"https://placehold.it/1600x900",
-      "bgPosition":"center",
-      "headline":"Introducing the all new ThemeBasic",
+      "id": "hero",
+      "type": "hero",
+      "bgImage": "https://placehold.it/1600x900",
+      "bgPosition": "center",
+      "headline": "Introducing the all new ThemeBasic",
       "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
-      "btnText":"Learn Less",
-      "btnUrl":"#"
+      "btnText": "Learn Less",
+      "btnUrl": "#"
     },
     {
-      "type":"logos",
-      "id":"company-logos",
-      "contentWidth":"container",
-      "logos":[
+      "id": "company-logos",
+      "type": "logos",
+      "contentWidth": "container",
+      "logos": [
         {
-          "img":"https://placehold.it/100x100",
-          "alt":"Company Name",
-          "url":"#"
+          "img": "https://placehold.it/100x100",
+          "alt": "Company Name",
+          "url": "#"
         },
         {
-          "img":"https://placehold.it/200x200",
-          "alt":"Company Name"
+          "img": "https://placehold.it/200x200",
+          "alt": "Company Name"
         },
         {
-          "img":"https://placehold.it/300x300",
-          "alt":"Company Name",
-          "url":"#"
+          "img": "https://placehold.it/300x300",
+          "alt": "Company Name",
+          "url": "#"
         },
         {
-          "img":"https://placehold.it/400x400",
-          "alt":"Company Name",
-          "url":"#"
+          "img": "https://placehold.it/400x400",
+          "alt": "Company Name",
+          "url": "#"
         },
         {
-          "img":"https://placehold.it/500x500",
-          "alt":"Company Name",
-          "url":"#"
+          "img": "https://placehold.it/500x500",
+          "alt": "Company Name",
+          "url": "#"
         },
         {
-          "img":"https://placehold.it/600x600",
-          "alt":"Company Name",
-          "url":"#"
+          "img": "https://placehold.it/600x600",
+          "alt": "Company Name",
+          "url": "#"
         }
       ]
     },
     {
-      "type":"markdown",
-      "id":"markdown",
-      "contentWidth":"max-length",
+      "id": "markdown",
+      "type": "markdown",
       "bgColor": "bg-grey-light",
       "contentAlignment": "center",
-      "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)",
-      "paddingExtra": true
+      "contentWidth": "max-length",
+      "paddingExtra": true,
+      "content": "\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)"
     },
     {
-      "type":"half-img-text",
-      "id":"section-4",
-      "bgColor": "bg-white",
+      "btnText": "Button Times",
+      "bgPosition": "center left",
+      "btnUrl": "#",
+      "btnStyle": "btn-ghost",
       "bgImage": "/images/uploads/skate-canada-banner-angled.jpg",
-      "bgPosition":"center left",
-      "content":"\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "btnText":"Button Times",
-      "btnUrl":"#",
-      "btnStyle":"btn-ghost"
+      "content": "## This shit is dope!\n\n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "type": "half-img-text",
+      "id": "hype-section",
+      "bgColor": "bg-white"
     },
     {
-      "type":"cta",
-      "id":"call-to-action",
-      "bgImage":"https://placehold.it/1600x900",
-      "bgPosition":"center",
-      "headline":"Ready to try it yourself?",
-      "btnText":"Buy now",
-      "btnUrl":"#"
+      "id": "call-to-action",
+      "type": "cta",
+      "bgImage": "https://placehold.it/1600x900",
+      "bgPosition": "center",
+      "headline": "Ready to try it yourself?",
+      "btnText": "Buy now",
+      "btnUrl": "#"
     }
   ]
 }
