@@ -74,6 +74,11 @@
       "headline": "Ready to try it yourself?",
       "btnText": "Buy now",
       "btnUrl": "#"
+    },
+    {
+      "id": "code-block",
+      "type": "html",
+      "file": "/images/uploads/test-grid.html"
     }
   ]
 }
