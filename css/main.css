@@ -27,7 +27,6 @@
 {% include sections/info/info.css %}
 {% include sections/logos/logos.css %}
 {% include sections/markdown/markdown.css %}
-{% include sections/text/text.css %}
 {% include sections/half-img-text/half-img-text.css %}
 
 /* Utilities CSS */
