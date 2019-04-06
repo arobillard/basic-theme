@@ -36,36 +36,6 @@
   },
   "nav":{
     "navItems":[
-      {
-        "text":"Home"
-      },
-      {
-        "text":"Shop",
-        "url":"shop",
-        "urlExternal": true
-      },
-      {
-        "text":"About",
-        "url":"about",
-        "dropdown":[
-          {
-            "text":"Drop 1",
-            "url":"#"
-          },
-          {
-            "text":"Drop 2",
-            "url":"#"
-          },
-          {
-            "text":"Super cool Drop 3",
-            "url":"#"
-          }
-        ]
-      },
-      {
-        "text":"Contact",
-        "url":"contact"
-      }
     ]
   },
   "sections":{

@@ -3,6 +3,8 @@ layout: generated
 title: contact
 meta-title: Contact
 meta-desc: Contact information for ThemeBasic
+nav:
+  inNavbar: true
 sections:
   - bgPosition: greyLight
     content: |-

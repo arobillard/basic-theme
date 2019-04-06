@@ -3,6 +3,16 @@ layout: generated
 title: about
 meta-title: About
 meta-desc: Test description
+nav:
+  inNavbar: true
+  dropdown:
+    - label: Drop 5
+      link: 'https://adamrobillard.ca'
+      external: true
+    - label: Drop 2
+      link: '#'
+    - label: Super Cool Drop Time
+      link: '#'
 sections:
   - bgImage: /images/uploads/skate-canada-banner-angled.jpg
     bgPosition: center

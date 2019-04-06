@@ -22,6 +22,10 @@ GitHub:
 Twitter: @thomasjbradley
 Location: Ottawa, Canada
 
+W3 Schools
+For: HTML file include code.
+Site: https://www.w3schools.com/howto/howto_html_include.asp
+
 ---
 
 # TECHNOLOGY
