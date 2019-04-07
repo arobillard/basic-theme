@@ -31,7 +31,7 @@
     "primary": ".25s ease-in-out"
   },
   "buttons": {
-    "styleOption":"option-1"
+    "styleOption":"rounded"
   },
   "header":{
     "headerStyle": "basic",

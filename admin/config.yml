@@ -360,6 +360,14 @@ collections:
                   - { label: "Instagram", value: "instagram" }
                   - { label: "LinkedIn", value: "linkedin" }
                   - { label: "Vimeo", value: "vimeo" }
+      - label: "Custom CSS"
+        name: "user-css"
+        file: _data/user-css.json
+        fields:
+          - label: "Upload a custom CSS file."
+            name: "css"
+            widget: "file"
+            hint: "Note: uploading your own CSS file may cause unwanted changes and glitches to theme."
   - label: "Home Page"
     name: "home"
     files:
