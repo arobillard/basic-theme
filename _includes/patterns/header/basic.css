@@ -11,14 +11,17 @@
   border-bottom: 1px solid {{colorPrimary}};
 }
 
-.nav a {
+.nav .nav-link {
   text-decoration: none;
   color: {{colorGreyDark}};
 }
 
 .nav .icon-link {
   transition:
-    transform {{transition}};
+    transform {{transition}},
+    background-color {{transition}},
+    border-color {{transition}},
+    color {{transition}};
 }
 
 .dropdown {
@@ -84,14 +87,17 @@
   }
 
   .nav a {
-    display: block;
-    padding: .65rem 1.3rem;
     font-size: 1.44rem;
     line-height: 1.95rem;
   }
 
-  .nav a:hover,
-  .nav a:focus {
+  .nav .nav-link {
+    display: block;
+    padding: .65rem 1.3rem;
+  }
+
+  .nav .nav-link:hover,
+  .nav .nav-link:focus {
     color: #fff;
     background-color: {{colorPrimary}};
   }
@@ -100,14 +106,31 @@
     max-height: 10rem;
   }
 
-  .dropdown a {
+  .dropdown .nav-link {
     padding: .65rem 2.6rem;
   }
 
-  .nav .icon-link {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .has-dropdown {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+  .has-dropdown > a:first-child {
+    flex-grow: 2;
+    display: flex;
+  }
+
+  .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1.3rem;
+    padding-left: 1.3rem;
+  }
+
+  .dropdown {
+    width: 100%;
   }
 
   .nav .icon-link.open {
@@ -124,7 +147,12 @@
   .nav a:hover + .icon-link,
   .nav a:focus + .icon-link {
     color: #fff;
-    background-color: transparent;
+    background-color: {{colorPrimary}};
+  }
+
+  .nav .btn-wrap {
+    padding-left: 1.3rem;
+    padding-top: .65rem;
   }
 
 }
@@ -178,8 +206,8 @@
     }
   {% endif %} */
 
-  .nav a:hover,
-  .nav a:focus {
+  .nav .nav-link:hover,
+  .nav .nav-link:focus {
     color: {{colorPrimary}};
   }
 
@@ -234,8 +262,8 @@
       background-color {{transition}};
   }
 
-  .dropdown a:hover,
-  .dropdown a:focus {
+  ol.dropdown li a:hover,
+  ol.dropdown li a:focus {
     color: #fff;
     background-color: {{colorPrimary}};
   }

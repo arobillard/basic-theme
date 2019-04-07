@@ -138,11 +138,13 @@ collections:
             name: "nav"
             widget: "object"
             fields:
-              - label: "Include 'Home' link in navbar?"
+              - label: "Include 'Home' link in main navigation?"
                 name: "includeHome"
                 widget: "boolean"
-              - label: "Navigation Items"
+                required: false
+              - label: "Extra Navigation Items"
                 name: "navItems"
+                hint: "This section is generally meant for adding secondary links to external pages such as a separate store website To include pages you have created in the main navigation, you must activate it in the individual page settings."
                 widget: "list"
                 fields:
                   - label: "Text"

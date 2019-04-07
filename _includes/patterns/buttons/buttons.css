@@ -1,5 +1,8 @@
 .btn {
   color: #fff;
+  {% if themeData.buttons.styleOption == 'option-1' %}
+    padding: .375em 1.5em .42em;
+  {% endif %}
   background-color: {{colorPrimary}};
   border-color: {{colorPrimary}};
   transition:

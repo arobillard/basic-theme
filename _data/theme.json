@@ -30,12 +30,20 @@
   "transitions":{
     "primary": ".25s ease-in-out"
   },
+  "buttons": {
+    "styleOption":"option-1"
+  },
   "header":{
     "headerStyle": "basic",
     "fixed": true
   },
   "nav":{
     "includeHome": true,
+    "button":{
+      "btnText":"Log In",
+      "btnUrl":"#",
+      "btnStyle":""
+    },
     "navItems":[
     ]
   },

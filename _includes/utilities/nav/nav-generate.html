@@ -23,14 +23,14 @@
     </li>
     {% if themeData.nav.includeHome == true %}
       <li>
-        <a {% if page.url == '/' %}class="current" {% endif %}href="/">Home</a>
+        <a class="nav-link{% if page.url == '/' %} current{% endif %}" href="/">Home</a>
       </li>
     {% endif %}
     {% for navItems in themeData.nav.navItems %}
       <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}
-            <a class="inline-block island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
+            <a class="nav-link inline-block island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
             <a class="icon-link m-no-focus" href="#">
               <i class="icon i-1">
                 <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
@@ -40,24 +40,24 @@
             <ol class="dropdown list-group push-0">
               {% for dropItems in navItems.dropdown %}
                 <li>
-                  <a class="block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{{site.baseurl}}/{{dopItems.url}}">{{dropItems.text}}</a>
+                  <a class="nav-link block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{{site.baseurl}}/{{dopItems.url}}">{{dropItems.text}}</a>
                 </li>
               {% endfor %}
             </ol>
           {% else %}
-            <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+            <a class="nav-link nline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
           {% endif %}
         {% else %}
-          <a class="inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+          <a class="nav-link inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
         {% endif %}
       </li>
     {% endfor %}
     {% for navItems in site.page-generation %}
       {% if navItems.nav.inNavbar == true %}
-        <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
+        <li{% if navItems.nav.dropdown %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
           {% if include.navClass == 'nav' %}
             {% if navItems.nav.dropdown %}
-              <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+              <a class="nav-link{% unless navItems.nav.dropdown %} inline-block{% endunless %} island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
               <a class="icon-link m-no-focus" href="#">
                 <i class="icon i-1">
                   <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
@@ -67,18 +67,23 @@
               <ol class="dropdown list-group push-0">
                 {% for dropItems in navItems.nav.dropdown %}
                   <li>
-                    <a class="block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{% unless dropItems.external == true %}{{site.baseurl}}/{% endunless %}{{dropItems.link}}">{{dropItems.label}}</a>
+                    <a class="nav-link block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{% unless dropItems.external == true %}{{site.baseurl}}/{% endunless %}{{dropItems.link}}">{{dropItems.label}}</a>
                   </li>
                 {% endfor %}
               </ol>
             {% else %}
-              <a class="inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+              <a class="nav-link inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
             {% endif %}
           {% else %}
-            <a class="inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+            <a class="nav-link inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
           {% endif %}
         </li>
       {% endif %}
     {% endfor %}
+    {% if include.navClass == 'nav' %}
+      {% if themeData.nav.button %}
+        {% include patterns/buttons/basic.html btnText=themeData.nav.button.btnText btnUrl=themeData.nav.button.btnUrl btnStyle=themeData.nav.button.btnStyle %}
+      {% endif %}
+    {% endif %}
   </ol>
 </nav>
