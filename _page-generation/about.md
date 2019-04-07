@@ -14,7 +14,7 @@ nav:
     - label: Super Cool Drop Time
       link: '#'
 sections:
-  - bgImage: /images/uploads/skate-canada-banner-angled.jpg
+  - bgImage: /uploads/skate-canada-banner-angled.jpg
     bgPosition: center
     btnText: Learn More
     btnUrl: 'https://adamrobillard.ca'
@@ -29,10 +29,10 @@ sections:
     id: logos
     logos:
       - alt: Matcalfe Jets
-        img: /images/uploads/logo-met.svg
+        img: /uploads/logo-met.svg
         url: 'http://metcalfejets.ca/'
       - alt: North Star Quidditch
-        img: /images/uploads/logo-ns.svg
+        img: /uploads/logo-ns.svg
         url: '#'
     type: logos
 ---
