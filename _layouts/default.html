@@ -18,6 +18,9 @@
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+  {% if site.data.user-css.css %}
+    <link href="{{site.baseurl}}/{{site.data.user-css.css}}" rel="stylesheet">
+  {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>
 <style>
@@ -91,7 +94,7 @@
   </main>
 
   {% include footer.html %}
-
+  <h2 class="import-test">Hello</h2>
   <script src="{{site.baseurl}}/js/main.js"></script>
   {% if themeData.header.fixed == true %}
     <script>
