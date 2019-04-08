@@ -1,7 +1,17 @@
 ---
 layout: default
 ---
-{% assign data=site.data.theme %}
+{% assign homeData=site.data.home %}
+{% assign siteData=site.data.site %}
+{% assign logoData=site.data.logos %}
+{% assign colorData=site.data.colors %}
+{% assign fontData=site.data.fonts %}
+{% assign headerData=site.data.header %}
+{% assign navData=site.data.nav %}
+{% assign sectionData=site.data.sections %}
+{% assign footerData=site.data.footer %}
+{% assign otherStylesData=site.data.other-styles %}
+{% assign socialLinksData=site.data.social-links %}
 
 {% for sections in page.sections %}
   {% include sections/section.html id=sections.id bgImage=sections.bgImage bgPosition=sections.bgPosition bgColor=sections.bgColor height=sections.height headline=sections.headline byline=sections.byline btnText=sections.btnText btnUrl=sections.btnUrl btnStyle=sections.btnStyle contentAlignment=sections.contentAlignment content=sections.content contentWidth=sections.contentWidth paddingExtra=sections.paddingExtra logos=sections.logos file=sections.file %}

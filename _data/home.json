@@ -3,7 +3,7 @@
     {
       "id": "hero",
       "type": "hero",
-      "bgImage": "https://placehold.it/1600x900",
+      "bgImage": "https://cdn.pixabay.com/photo/2018/03/19/10/47/e-mail-3239670_1280.jpg",
       "bgPosition": "center",
       "headline": "Introducing the all new ThemeBasic",
       "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
@@ -16,31 +16,21 @@
       "contentWidth": "container",
       "logos": [
         {
-          "img": "https://placehold.it/100x100",
+          "img": "https://arobillard.github.io/polished-plus/images/logo-ns.svg",
           "alt": "Company Name",
           "url": "#"
         },
         {
-          "img": "https://placehold.it/200x200",
+          "img": "https://arobillard.github.io/polished-plus/images/logo-tt.svg",
           "alt": "Company Name"
         },
         {
-          "img": "https://placehold.it/300x300",
+          "img": "https://arobillard.github.io/polished-plus/images/logo-qc.svg",
           "alt": "Company Name",
           "url": "#"
         },
         {
-          "img": "https://placehold.it/400x400",
-          "alt": "Company Name",
-          "url": "#"
-        },
-        {
-          "img": "https://placehold.it/500x500",
-          "alt": "Company Name",
-          "url": "#"
-        },
-        {
-          "img": "https://placehold.it/600x600",
+          "img": "https://arobillard.github.io/polished-plus/images/logo-met.svg",
           "alt": "Company Name",
           "url": "#"
         }
@@ -49,36 +39,20 @@
     {
       "id": "markdown",
       "type": "markdown",
-      "bgColor": "bg-grey-light",
+      "bgColor": "bg-white",
       "contentAlignment": "center",
       "contentWidth": "max-length",
       "paddingExtra": true,
-      "content": "\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://placehold.it/1600x900)"
-    },
-    {
-      "btnText": "Button Times",
-      "bgPosition": "center left",
-      "btnUrl": "#",
-      "btnStyle": "btn-ghost",
-      "bgImage": "/uploads/skate-canada-banner-angled.jpg",
-      "content": "## This shit is dope!\n\n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "type": "half-img-text",
-      "id": "hype-section",
-      "bgColor": "bg-white"
+      "content": "\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://adamrobillard.ca/images/polished/laptop-polished-home.jpg)"
     },
     {
       "id": "call-to-action",
       "type": "cta",
-      "bgImage": "https://placehold.it/1600x900",
+      "bgImage": "https://cdn.pixabay.com/photo/2016/01/19/16/49/laptop-1149412_1280.jpg",
       "bgPosition": "center",
       "headline": "Ready to try it yourself?",
       "btnText": "Buy now",
       "btnUrl": "#"
-    },
-    {
-      "id": "code-block",
-      "type": "html",
-      "file": "/uploads/test-grid.html"
     }
   ]
 }

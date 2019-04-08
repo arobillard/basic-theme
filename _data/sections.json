@@ -7,16 +7,16 @@
     "contentAlignment":"left",
     "headlineColor":"primary",
     "bylineColor":"white",
-    "btnStyle":"btn-ghost"
+    "btnStyle":""
   },
   "cta":{
     "height":"50vh",
     "bgOverlay": true,
-    "bgOverlayColor": "secondary",
-    "bgOverlayOpacity": ".7",
+    "bgOverlayColor": "primary",
+    "bgOverlayOpacity": ".85",
     "contentAlignment":"center",
-    "headlineColor":"primary",
+    "headlineColor":"white",
     "bylineColor":"white",
-    "btnStyle":"btn-ghost"
+    "btnStyle":"btn-secondary"
   }
 }

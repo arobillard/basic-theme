@@ -24,7 +24,7 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>{{siteData.title}}</title>
+  <title>{% if page.meta-title %}{{page.meta-title}} · {% endif %}{{siteData.title}}</title>
   <meta name="description" content="{% unless page.meta-desc %}{{siteData.meta}}{% endunless %}">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
@@ -107,7 +107,6 @@
   </main>
 
   {% include footer.html %}
-  <h2 class="import-test">Hello</h2>
   <script src="{{site.baseurl}}/js/main.js"></script>
   {% if headerData.fixed == true %}
     <script>
