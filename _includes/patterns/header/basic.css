@@ -216,8 +216,8 @@
     transform: rotate(90deg);
   }
 
-  .nav a:hover + .icon-link,
-  .nav a:focus + .icon-link,
+  .nav .nav-link:hover + .icon-link,
+  .nav .nav-link:focus + .icon-link,
   .icon-link:hover,
   .icon-link:focus {
     color: {{colorPrimary}};
@@ -274,9 +274,9 @@
     max-height: 10rem;
   }
 
-  .dropdown:hover ~ a,
-  .dropdown:focus ~ a {
-    color: {{colorPrimary}};
+  .dropdown .nav-link:hover,
+  .dropdown .nav-link:focus {
+    color: #fff;
   }
 
 }

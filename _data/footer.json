@@ -1,0 +1,8 @@
+{
+  "footerStyle":"basic",
+  "bgColor": "greyDark",
+  "textColor": "grey",
+  "linkColor": "grey",
+  "linkHoverColor": "primary",
+  "paddingExtra": false
+}

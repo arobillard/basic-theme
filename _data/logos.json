@@ -1,0 +1,7 @@
+{
+  "type":"svg",
+  "img": "https://placehold.it/150x50",
+  "imgMobile": "https://placehold.it/100x100",
+  "svg": "svg/logo.html",
+  "widthMobile": "10rem"
+}

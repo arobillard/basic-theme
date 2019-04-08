@@ -1,0 +1,24 @@
+{
+  "links":[
+    {
+      "name":"Github",
+      "url":"#",
+      "icon":"github"
+    },
+    {
+      "name":"Instagram",
+      "url":"#",
+      "icon":"instagram"
+    },
+    {
+      "name":"LinkedIn",
+      "url":"#",
+      "icon":"linkedin"
+    },
+    {
+      "name":"Vimeo",
+      "url":"#",
+      "icon":"vimeo"
+    }
+  ]
+}

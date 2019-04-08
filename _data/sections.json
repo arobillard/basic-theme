@@ -1,0 +1,23 @@
+{
+  "hero":{
+    "height":"90vh",
+    "bgOverlay": true,
+    "bgOverlayColor": "greyDark",
+    "bgOverlayOpacity": ".7",
+    "contentAlignment":"left",
+    "headlineColor":"primary",
+    "bylineColor":"white",
+    "btnStyle":"btn-ghost"
+  },
+  "cta":{
+    "height":"50vh",
+    "bgPosition":"center",
+    "bgOverlay": true,
+    "bgOverlayColor": "secondary",
+    "bgOverlayOpacity": ".7",
+    "contentAlignment":"center",
+    "headlineColor":"primary",
+    "bylineColor":"white",
+    "btnStyle":"btn-ghost"
+  }
+}

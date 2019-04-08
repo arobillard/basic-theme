@@ -1,0 +1,11 @@
+{
+  "buttons": {
+    "styleOption":"rounded"
+  },
+  "shadows":{
+    "primary": "0 2px 3px rgba(50, 50, 50, .15)"
+  },
+  "transitions":{
+    "primary": ".25s ease-in-out"
+  }
+}

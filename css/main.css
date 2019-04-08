@@ -3,6 +3,9 @@
 
 {% assign themeData=site.data.theme %}
 {% assign homeData=site.data.home %}
+{% assign colorData=site.data.colors %}
+{% assign fontData=site.data.fonts %}
+{% assign otherStylesData=site.data.other-styles %}
 
 
 /* Universal CSS */

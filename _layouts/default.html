@@ -1,25 +1,31 @@
+<!-- Shorthand Variables -->
 {% assign homeData=site.data.home %}
 {% assign themeData=site.data.theme %}
-{% assign colorPrimary=themeData.colors.primary %}
-{% assign colorPrimaryDark=themeData.colors.primaryDark %}
-{% assign colorPrimaryLight=themeData.colors.primaryLight %}
-{% assign colorSecondary=themeData.colors.secondary %}
-{% assign colorSecondaryDark=themeData.colors.secondaryDark %}
-{% assign colorSecondaryLight=themeData.colors.secondaryLight %}
-{% assign colorGrey=themeData.colors.grey %}
-{% assign colorGreyDark=themeData.colors.greyDark %}
-{% assign colorGreyLight=themeData.colors.greyLight %}
+{% assign colorData=site.data.colors %}
+{% assign fontData=site.data.fonts %}
+{% assign otherStylesData=site.data.other-styles %}
+<!-- Color Variables -->
+{% assign colorPrimary=colorData.primary %}
+{% assign colorPrimaryDark=colorData.primaryDark %}
+{% assign colorPrimaryLight=colorData.primaryLight %}
+{% assign colorSecondary=colorData.secondary %}
+{% assign colorSecondaryDark=colorData.secondaryDark %}
+{% assign colorSecondaryLight=colorData.secondaryLight %}
+{% assign colorGrey=colorData.grey %}
+{% assign colorGreyDark=colorData.greyDark %}
+{% assign colorGreyLight=colorData.greyLight %}
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
   <title>{{site.data.theme.title}}</title>
+  <meta name="description" content="{% unless page.meta-desc %}{{themeData.meta}}{% endunless %}">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
   {% if site.data.user-css.css %}
-    <link href="{{site.baseurl}}/{{site.data.user-css.css}}" rel="stylesheet">
+    <link href="{{site.baseurl}}{{site.data.user-css.css}}" rel="stylesheet">
   {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>

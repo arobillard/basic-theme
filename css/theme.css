@@ -1,17 +1,17 @@
 /* Color Variables */
-{% assign colorPrimary=themeData.colors.primary %}
-{% assign colorPrimaryDark=themeData.colors.primaryDark %}
-{% assign colorPrimaryLight=themeData.colors.primaryLight %}
-{% assign colorSecondary=themeData.colors.secondary %}
-{% assign colorSecondaryDark=themeData.colors.secondaryDark %}
-{% assign colorSecondaryLight=themeData.colors.secondaryLight %}
-{% assign colorGrey=themeData.colors.grey %}
-{% assign colorGreyDark=themeData.colors.greyDark %}
-{% assign colorGreyLight=themeData.colors.greyLight %}
+{% assign colorPrimary=colorData.primary %}
+{% assign colorPrimaryDark=colorData.primaryDark %}
+{% assign colorPrimaryLight=colorData.primaryLight %}
+{% assign colorSecondary=colorData.secondary %}
+{% assign colorSecondaryDark=colorData.secondaryDark %}
+{% assign colorSecondaryLight=colorData.secondaryLight %}
+{% assign colorGrey=colorData.grey %}
+{% assign colorGreyDark=colorData.greyDark %}
+{% assign colorGreyLight=colorData.greyLight %}
 
 /* Font Variables */
-{% assign fontPrimary=themeData.fonts.primary %}
-{% assign fontSecondary=themeData.fonts.secondary %}
+{% assign fontPrimary=fontData.primary %}
+{% assign fontSecondary=fontData.secondary %}
 
 /* Shadows */
 {% assign shadow=themeData.shadows.primary %}
@@ -24,7 +24,7 @@ html {
 }
 
 h1, h2, h3, .font-alt {
-  {% if fontsecondary %}
+  {% if fontSecondary %}
     font-family: {{fontSecondary}};
   {% else %}
     font-family: {{fontPrimary}};
