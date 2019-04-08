@@ -1,8 +1,8 @@
-{% if themeData.header.headerStyle == 'basic' %}
+{% if headerData.headerStyle == 'basic' %}
   {% include patterns/header/basic.css %}
-{% elsif themeData.header.headerStyle == 'alt' %}
+{% elsif headerData.headerStyle == 'alt' %}
   {% include patterns/header/alt.css %}
-{% elsif themeData.header.headerStyle == 'fancy' %}
+{% elsif headerData.headerStyle == 'fancy' %}
   {% include patterns/header/fancy.css %}
 {% endif %}
 

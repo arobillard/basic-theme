@@ -2,16 +2,16 @@
   <div class="wrapper gutter pad-t-1-2 pad-b-1-2">
     <div class="mobile-navbar m-0">
       <a class="mobile-logo inline-block" href="{{site.baseurl}}/">
-        {% if themeData.logos.type == 'wordmark' %}
+        {% if logoData.type == 'wordmark' %}
           {{themeData.title}}
-        {% elsif themeData.logos.type == 'img' %}
-          {% if themeData.logos.imgMobile %}
-            <img class="img-flex" src="{{site.baseurl}}/{{themeData.logos.imgMobile}}" alt="{{themeData.title}} Logo">
+        {% elsif logoData.type == 'img' %}
+          {% if logoData.imgMobile %}
+            <img class="img-flex" src="{{site.baseurl}}/{{logoData.imgMobile}}" alt="{{themeData.title}} Logo">
           {% else %}
-            <img class="img-flex" src="{{site.baseurl}}/{{themeData.logos.img}}" alt="{{themeData.title}} Logo">
+            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{themeData.title}} Logo">
           {% endif %}
-        {% elsif themeData.logos.type == 'svg' %}
-          {% if themeData.logos.svgMobile %}
+        {% elsif logoData.type == 'svg' %}
+          {% if logoData.svgMobile %}
             {% include svg/logo.svg %}
           {% else %}
             {% include svg/logo.svg %}

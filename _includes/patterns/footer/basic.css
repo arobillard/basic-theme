@@ -1,25 +1,25 @@
 .footer {
   text-align: center;
-  {% if themeData.footer.bgColor == 'white' %}
+  {% if footerData.bgColor == 'white' %}
     background-color: #fff;
-  {% elsif themeData.footer.bgColor == 'primary' %}
+  {% elsif footerData.bgColor == 'primary' %}
     background-color: {{colorPrimary}};
-  {% elsif themeData.footer.bgColor == 'secondary' %}
+  {% elsif footerData.bgColor == 'secondary' %}
     background-color: {{colorSecondary}};
-  {% elsif themeData.footer.bgColor == 'greyDark' %}
+  {% elsif footerData.bgColor == 'greyDark' %}
     background-color: {{colorGreyDark}};
   {% else %}
     background-color: #000;
   {% endif %}
-  {% if themeData.footer.textColor == 'white' %}
+  {% if footerData.textColor == 'white' %}
     color: #fff;
-  {% elsif themeData.footer.textColor == 'primary' %}
+  {% elsif footerData.textColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif themeData.footer.textColor == 'secondary' %}
+  {% elsif footerData.textColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif themeData.footer.textColor == 'greyDark' %}
+  {% elsif footerData.textColor == 'greyDark' %}
     color: {{colorGreyDark}};
-  {% elsif themeData.footer.textColor == 'grey' %}
+  {% elsif footerData.textColor == 'grey' %}
     color: {{colorGrey}};
   {% else %}
     color: #000;
@@ -27,15 +27,15 @@
 }
 
 .footer a {
-  {% if themeData.footer.linkColor == 'white' %}
+  {% if footerData.linkColor == 'white' %}
     color: #fff;
-  {% elsif themeData.footer.linkColor == 'primary' %}
+  {% elsif footerData.linkColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif themeData.footer.linkColor == 'secondary' %}
+  {% elsif footerData.linkColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif themeData.footer.linkColor == 'greyDark' %}
+  {% elsif footerData.linkColor == 'greyDark' %}
     color: {{colorGreyDark}};
-  {% elsif themeData.footer.linkColor == 'grey' %}
+  {% elsif footerData.linkColor == 'grey' %}
     color: {{colorGrey}};
   {% else %}
     color: #000;
@@ -43,13 +43,13 @@
 }
 
 .footer a:hover {
-  {% if themeData.footer.linkHoverColor == 'white' %}
+  {% if footerData.linkHoverColor == 'white' %}
     color: #fff;
-  {% elsif themeData.footer.linkHoverColor == 'primary' %}
+  {% elsif footerData.linkHoverColor == 'primary' %}
     color: {{colorPrimary}};
-  {% elsif themeData.footer.linkHoverColor == 'secondary' %}
+  {% elsif footerData.linkHoverColor == 'secondary' %}
     color: {{colorSecondary}};
-  {% elsif themeData.footer.linkHoverColor == 'greyDark' %}
+  {% elsif footerData.linkHoverColor == 'greyDark' %}
     color: {{colorGreyDark}};
   {% else %}
     color: #000;

@@ -26,8 +26,6 @@ html {
 h1, h2, h3, .font-alt {
   {% if fontSecondary %}
     font-family: {{fontSecondary}};
-  {% else %}
-    font-family: {{fontPrimary}};
   {% endif %}
 }
 

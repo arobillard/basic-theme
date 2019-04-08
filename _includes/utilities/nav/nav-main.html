@@ -7,11 +7,11 @@
         {% endif %}
       {% endif %}
         <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
-          {% if themeData.logos.type == 'wordmark' %}
+          {% if logoData.type == 'wordmark' %}
             {{themeData.title}}
-          {% elsif themeData.logos.type == 'img' %}
-            <img class="img-flex" src="{{site.baseurl}}/{{themeData.logos.img}}" alt="{{themeData.title}} Logo">
-          {% elsif themeData.logos.type == 'svg' %}
+          {% elsif logoData.type == 'img' %}
+            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{themeData.title}} Logo">
+          {% elsif logoData.type == 'svg' %}
             {% include svg/logo.svg %}
           {% endif %}
         </a>

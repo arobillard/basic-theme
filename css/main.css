@@ -1,10 +1,13 @@
 ---
 ---
 
-{% assign themeData=site.data.theme %}
 {% assign homeData=site.data.home %}
+{% assign themeData=site.data.theme %}
+{% assign logosData=site.data.logos %}
 {% assign colorData=site.data.colors %}
 {% assign fontData=site.data.fonts %}
+{% assign headerData=site.data.header %}
+{% assign footerData=site.data.footer %}
 {% assign otherStylesData=site.data.other-styles %}
 
 

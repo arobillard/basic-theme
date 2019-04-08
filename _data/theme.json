@@ -18,10 +18,6 @@
   "buttons": {
     "styleOption":"rounded"
   },
-  "header":{
-    "headerStyle": "basic",
-    "fixed": true
-  },
   "nav":{
     "includeHome": true,
     "button":{

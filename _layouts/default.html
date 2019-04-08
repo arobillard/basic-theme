@@ -1,8 +1,11 @@
 <!-- Shorthand Variables -->
 {% assign homeData=site.data.home %}
 {% assign themeData=site.data.theme %}
+{% assign logoData=site.data.logos %}
 {% assign colorData=site.data.colors %}
 {% assign fontData=site.data.fonts %}
+{% assign headerData=site.data.header %}
+{% assign footerData=site.data.footer %}
 {% assign otherStylesData=site.data.other-styles %}
 <!-- Color Variables -->
 {% assign colorPrimary=colorData.primary %}
@@ -44,33 +47,14 @@
     {% endif %}
   {% endif %}
   @media only screen and (min-width: 38em) {
-
-    {% if themeData.sections.hero.bgOverlay == true %}
-      {% if page.sections[0].type == 'hero' %}
-        .masthead:not(.sticky) .nav > ol > li > a,
-        .masthead:not(.sticky) .nav > ol > li > h1 a {
-          color: #fff;
-        }
-
-        .masthead:not(.sticky) .nav > ol > li > a:hover {
-          color: {{colorPrimary}};
-        }
-
-        .masthead:not(.sticky) .nav > ol > li > a.current {
-          color: {{colorPrimary}};
-        }
-
-        .masthead:not(.sticky) .nav > ol > li > a.current:hover {
-          color: {{colorSecondary}};
-        }
-      {% elsif page.url == '/' %}
-        {% if homeData.sections[0].type == 'hero' %}
+    {% if headerData.fixed == true %}
+      {% if themeData.sections.hero.bgOverlay == true %}
+        {% if page.sections[0].type == 'hero' %}
           .masthead:not(.sticky) .nav > ol > li > a,
           .masthead:not(.sticky) .nav > ol > li > h1 a {
             color: #fff;
           }
 
-          .masthead:not(.sticky) .nav > ol > li > h1 > a:hover,
           .masthead:not(.sticky) .nav > ol > li > a:hover {
             color: {{colorPrimary}};
           }
@@ -82,6 +66,26 @@
           .masthead:not(.sticky) .nav > ol > li > a.current:hover {
             color: {{colorSecondary}};
           }
+        {% elsif page.url == '/' %}
+          {% if homeData.sections[0].type == 'hero' %}
+            .masthead:not(.sticky) .nav > ol > li > a,
+            .masthead:not(.sticky) .nav > ol > li > h1 a {
+              color: #fff;
+            }
+
+            .masthead:not(.sticky) .nav > ol > li > h1 > a:hover,
+            .masthead:not(.sticky) .nav > ol > li > a:hover {
+              color: {{colorPrimary}};
+            }
+
+            .masthead:not(.sticky) .nav > ol > li > a.current {
+              color: {{colorPrimary}};
+            }
+
+            .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+              color: {{colorSecondary}};
+            }
+          {% endif %}
         {% endif %}
       {% endif %}
     {% endif %}
@@ -102,7 +106,7 @@
   {% include footer.html %}
   <h2 class="import-test">Hello</h2>
   <script src="{{site.baseurl}}/js/main.js"></script>
-  {% if themeData.header.fixed == true %}
+  {% if headerData.fixed == true %}
     <script>
       if ($(this).scrollTop() > 50) {
         $('.masthead').addClass('sticky')

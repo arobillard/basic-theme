@@ -53,7 +53,7 @@
   }
 
   .mobile-logo {
-    width: {{themeData.logos.widthMobile}};
+    width: {{logoData.widthMobile}};
   }
 
   .mobile-logo svg,
@@ -160,7 +160,7 @@
 @media only screen and (min-width: 38em) {
 
   .masthead {
-    {% if themeData.header.fixed == true %}
+    {% if headerData.fixed == true %}
       position: fixed;
       width: 100%;
       top: 0;
