@@ -8,9 +8,9 @@
       {% endif %}
         <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
           {% if logoData.type == 'wordmark' %}
-            {{themeData.title}}
+            {{siteData.title}}
           {% elsif logoData.type == 'img' %}
-            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{themeData.title}} Logo">
+            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{siteData.title}} Logo">
           {% elsif logoData.type == 'svg' %}
             {% include svg/logo.svg %}
           {% endif %}
@@ -21,12 +21,12 @@
         {% endif %}
       {% endif %}
     </li>
-    {% if themeData.nav.includeHome == true %}
+    {% if navData.includeHome == true %}
       <li>
         <a class="nav-link{% if page.url == '/' %} current{% endif %}" href="/">Home</a>
       </li>
     {% endif %}
-    {% for navItems in themeData.nav.navItems %}
+    {% for navItems in navData.navItems %}
       <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}
@@ -81,8 +81,8 @@
       {% endif %}
     {% endfor %}
     {% if include.navClass == 'nav' %}
-      {% if themeData.nav.button %}
-        {% include patterns/buttons/basic.html btnText=themeData.nav.button.btnText btnUrl=themeData.nav.button.btnUrl btnStyle=themeData.nav.button.btnStyle %}
+      {% if navData.button %}
+        {% include patterns/buttons/basic.html btnText=navData.button.btnText btnUrl=navData.button.btnUrl btnStyle=navData.button.btnStyle %}
       {% endif %}
     {% endif %}
   </ol>

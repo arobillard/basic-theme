@@ -199,7 +199,7 @@
     margin-right: 1.3rem;
   }
 
-  /* {% if themeData.sections.hero.bgOverlay == true %}
+  /* {% if sectionData.hero.bgOverlay == true %}
     .masthead:not(.sticky) .nav > ol > li > a,
     .masthead:not(.sticky) .nav > ol > li > h1 a {
       color: #fff;

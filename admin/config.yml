@@ -8,202 +8,20 @@ collections:
   - label: "Theme Settings"
     name: "theme"
     files:
-      - label: "Theme Settings"
-        name: "theme-settings"
-        file: _data/theme.json
+      - label: "Site Information"
+        name: "site-info"
+        file: _data/site.json
         fields:
           - label: "Title"
             name: "title"
             widget: "string"
+          - label: "Website Description"
+            name: "meta"
+            widget: "string"
+            hint: "This description is used for Search Engine Optimization (SEO)."
           - label: "Site Owner"
             name: "owner"
             widget: "string"
-          - label: "Shadows"
-            name: "shadows"
-            widget: "object"
-            fields:
-              - label: "Primary Shadow"
-                name: "primary"
-                widget: "string"
-          - label: "Transitions"
-            name: "transitions"
-            widget: "object"
-            fields:
-              - label: "Primary Transition"
-                name: "primary"
-                widget: "string"
-                hint: "This will determine the speed and easing of transitions on site."
-          - label: "Navigation"
-            name: "nav"
-            widget: "object"
-            fields:
-              - label: "Include 'Home' link in main navigation?"
-                name: "includeHome"
-                widget: "boolean"
-                required: false
-              - label: "Extra Navigation Items"
-                name: "navItems"
-                hint: "This section is generally meant for adding secondary links to external pages such as a separate store website To include pages you have created in the main navigation, you must activate it in the individual page settings."
-                widget: "list"
-                fields:
-                  - label: "Text"
-                    name: "text"
-                    widget: "string"
-                  - label: "Link URL"
-                    name: "url"
-                    widget: "string"
-                    required: false
-                  - label: "Link to external page"
-                    name: "urlExternal"
-                    widget: "boolean"
-                    required: false
-                  - label: "Dropdown Items"
-                    name: "dropdown"
-                    widget: "list"
-                    required: false
-                    fields:
-                    - label: "Text"
-                      name: "text"
-                      widget: "string"
-                    - label: "Link URL"
-                      name: "url"
-                      widget: "string"
-                    - label: "Link to external page"
-                      name: "urlExternal"
-                      widget: "boolean"
-                      required: false
-          - label: "Sections"
-            name: "sections"
-            widget: "object"
-            fields:
-              - label: "Hero Banner"
-                name: "hero"
-                widget: "object"
-                fields:
-                  - label: "Banner Height"
-                    name: "height"
-                    widget: "string"
-                  - label: "Image Overlay"
-                    name: "bgOverlay"
-                    widget: "boolean"
-                  - label: "Image Overlay Color"
-                    name: "bgOverlayColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    required: false
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Image Overlay Opacity"
-                    name: "bgOverlayOpacity"
-                    widget: "string"
-                    hint: "Must be decimal value between 0 and 1. Ex: .7"
-                    required: false
-                  - label: "Headline Color"
-                    name: "headlineColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Byline Color"
-                    name: "bylineColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Button Style"
-                    name: "btnStyle"
-                    widget: "select"
-                    default: { label: "Primary", value: "" }
-                    options:
-                      - { label: "Primary", value: "" }
-                      - { label: "Primary Outline", value: "btn-ghost" }
-                      - { label: "Secondary", value: "btn-secondary" }
-                      - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
-              - label: "Call to Action Banner"
-                name: "cta"
-                widget: "object"
-                fields:
-                  - label: "Banner Height"
-                    name: "height"
-                    widget: "string"
-                  - label: "Image Overlay"
-                    name: "bgOverlay"
-                    widget: "boolean"
-                  - label: "Image Overlay Color"
-                    name: "bgOverlayColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    required: false
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Image Overlay Opacity"
-                    name: "bgOverlayOpacity"
-                    widget: "string"
-                    hint: "Must be decimal value between 0 and 1. Ex: .7"
-                    required: false
-                  - label: "Headline Color"
-                    name: "headlineColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Byline Color"
-                    name: "bylineColor"
-                    widget: "select"
-                    default: { label: "Black", value: "black" }
-                    options:
-                      - { label: "Black", value: "black" }
-                      - { label: "White", value: "white" }
-                      - { label: "Primary Color", value: "primary" }
-                      - { label: "Secondary Color", value: "secondary" }
-                      - { label: "Dark Grey", value: "greyDark" }
-                  - label: "Button Style"
-                    name: "btnStyle"
-                    widget: "select"
-                    default: { label: "Primary", value: "" }
-                    options:
-                      - { label: "Primary", value: "" }
-                      - { label: "Primary Outline", value: "btn-ghost" }
-                      - { label: "Secondary", value: "btn-secondary" }
-                      - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
-          - label: "Links"
-            name: "links"
-            widget: "list"
-            fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Link URL"
-                name: "url"
-                widget: "string"
-              - label: "Icon"
-                name: "icon"
-                widget: "select"
-                options:
-                  - { label: "Github", value: "github" }
-                  - { label: "Instagram", value: "instagram" }
-                  - { label: "LinkedIn", value: "linkedin" }
-                  - { label: "Vimeo", value: "vimeo" }
       - label: "Site Logos"
         name: "logos"
         file: _data/logos.json
@@ -309,6 +127,159 @@ collections:
             name: "fixed"
             widget: "boolean"
             hint: "When activated, the header will remain at the top of the browser window when scrolling."
+      - label: "Navigation Bar"
+        name: "nav"
+        file: _data/nav.json
+        fields:
+          - label: "Include 'Home' link in main navigation?"
+            name: "includeHome"
+            widget: "boolean"
+            required: false
+          - label: "Extra Navigation Items"
+            name: "navItems"
+            hint: "This section is generally meant for adding secondary links to external pages such as a separate store website. To include pages you have created in the main navigation, you must activate it in the individual page settings."
+            widget: "list"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: "string"
+              - label: "Link URL"
+                name: "url"
+                widget: "string"
+                required: false
+              - label: "Link to external page"
+                name: "urlExternal"
+                widget: "boolean"
+                required: false
+              - label: "Dropdown Items"
+                name: "dropdown"
+                widget: "list"
+                required: false
+                fields:
+                - label: "Text"
+                  name: "text"
+                  widget: "string"
+                - label: "Link URL"
+                  name: "url"
+                  widget: "string"
+                - label: "Link to external page"
+                  name: "urlExternal"
+                  widget: "boolean"
+                  required: false
+      - label: "Universal Settings for Sections"
+        name: "sections"
+        file: _data/sections.json
+        fields:
+          - label: "Hero Banner"
+            name: "hero"
+            widget: "object"
+            fields:
+              - label: "Banner Height"
+                name: "height"
+                widget: "string"
+              - label: "Image Overlay"
+                name: "bgOverlay"
+                widget: "boolean"
+              - label: "Image Overlay Color"
+                name: "bgOverlayColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                required: false
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Image Overlay Opacity"
+                name: "bgOverlayOpacity"
+                widget: "string"
+                hint: "Must be decimal value between 0 and 1. Ex: .7"
+                required: false
+              - label: "Headline Color"
+                name: "headlineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Byline Color"
+                name: "bylineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Button Style"
+                name: "btnStyle"
+                widget: "select"
+                default: { label: "Primary", value: "" }
+                options:
+                  - { label: "Primary", value: "" }
+                  - { label: "Primary Outline", value: "btn-ghost" }
+                  - { label: "Secondary", value: "btn-secondary" }
+                  - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
+          - label: "Call to Action Banner"
+            name: "cta"
+            widget: "object"
+            fields:
+              - label: "Banner Height"
+                name: "height"
+                widget: "string"
+              - label: "Image Overlay"
+                name: "bgOverlay"
+                widget: "boolean"
+              - label: "Image Overlay Color"
+                name: "bgOverlayColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                required: false
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Image Overlay Opacity"
+                name: "bgOverlayOpacity"
+                widget: "string"
+                hint: "Must be decimal value between 0 and 1. Ex: .7"
+                required: false
+              - label: "Headline Color"
+                name: "headlineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Byline Color"
+                name: "bylineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Button Style"
+                name: "btnStyle"
+                widget: "select"
+                default: { label: "Primary", value: "" }
+                options:
+                  - { label: "Primary", value: "" }
+                  - { label: "Primary Outline", value: "btn-ghost" }
+                  - { label: "Secondary", value: "btn-secondary" }
+                  - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
       - label: "Footer"
         name: "footer"
         file: _data/footer.json
@@ -364,6 +335,60 @@ collections:
           - label: "Extra padding on footer?"
             name: "paddingExtra"
             widget: "boolean"
+      - label: "Social Media and Contact Icon Links"
+        name: "social-links"
+        file: _data/social-links.json
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Link URL"
+                name: "url"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options:
+                  - { label: "Github", value: "github" }
+                  - { label: "Instagram", value: "instagram" }
+                  - { label: "LinkedIn", value: "linkedin" }
+                  - { label: "Vimeo", value: "vimeo" }
+      - label: "Button and Other Style Settings"
+        name: "other-styles"
+        file: _data/other-styles.json
+        fields:
+          - label: "Buttons"
+            name: "buttons"
+            widget: "object"
+            fields:
+              - label: "Button Style"
+                name: "styleOption"
+                widget: "select"
+                default: "rounded"
+                options:
+                  - { label: "Slightly Rounded", value: "rounded" }
+                  - { label: "Fully Rounded", value: "full-round" }
+                  - { label: "Squared Corners", value: "squared" }
+                  - { label: "Beveled", value: "beveled" }
+          - label: "Shadows"
+            name: "shadows"
+            widget: "object"
+            fields:
+              - label: "Primary Shadow"
+                name: "primary"
+                widget: "string"
+          - label: "Transitions"
+            name: "transitions"
+            widget: "object"
+            fields:
+              - label: "Primary Transition"
+                name: "primary"
+                widget: "string"
+                hint: "This will determine the speed and easing of transitions on site."
       - label: "Custom CSS"
         name: "user-css"
         file: _data/user-css.json

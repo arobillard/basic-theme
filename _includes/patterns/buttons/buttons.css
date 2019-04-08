@@ -14,16 +14,16 @@ button,
   text-transform: none;
   color: #fff;
   padding: .375em 1.5em .42em;
-  {% if themeData.buttons.styleOption == 'full-round' %}
+  {% if otherStylesData.buttons.styleOption == 'full-round' %}
     border-radius: 100px;
-  {% elsif themeData.buttons.styleOption == 'squared' %}
+  {% elsif otherStylesData.buttons.styleOption == 'squared' %}
     border-radius: 0;
-  {% elsif themeData.buttons.styleOption == 'beveled' %}
+  {% elsif otherStylesData.buttons.styleOption == 'beveled' %}
     position: relative;
     overflow: hidden;
     border: none;
   {% endif %}
-  {% unless themeData.buttons.styleOption == 'beveled' %}
+  {% unless otherStylesData.buttons.styleOption == 'beveled' %}
     overflow: visible;
     border: 3px solid {{colorPrimary}};
   {% endunless %}
@@ -34,7 +34,7 @@ button,
     color {{transition}};
 }
 
-{% if themeData.buttons.styleOption == 'beveled' %}
+{% if otherStylesData.buttons.styleOption == 'beveled' %}
   .btn::after,
   .btn::before {
     content: ' ';
@@ -96,7 +96,7 @@ button[disabled] {
   {% endif %}
 }
 
-{% unless themeData.buttons.styleOption == 'beveled' %}
+{% unless otherStylesData.buttons.styleOption == 'beveled' %}
 .btn-ghost {
   background-color: transparent;
   color: {{colorPrimary}};

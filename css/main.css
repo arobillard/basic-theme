@@ -2,13 +2,16 @@
 ---
 
 {% assign homeData=site.data.home %}
-{% assign themeData=site.data.theme %}
+{% assign siteData=site.data.site %}
 {% assign logosData=site.data.logos %}
 {% assign colorData=site.data.colors %}
 {% assign fontData=site.data.fonts %}
 {% assign headerData=site.data.header %}
+{% assign navData=site.data.nav %}
+{% assign sectionData=site.data.sections %}
 {% assign footerData=site.data.footer %}
 {% assign otherStylesData=site.data.other-styles %}
+{% assign socialLinksData=site.data.social-links %}
 
 
 /* Universal CSS */

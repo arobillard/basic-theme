@@ -8,9 +8,9 @@
       {% endif %}
         <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
           {% if logoData.type == 'wordmark' %}
-            {{themeData.title}}
+            {{siteData.title}}
           {% elsif logoData.type == 'img' %}
-            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{themeData.title}} Logo">
+            <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{siteData.title}} Logo">
           {% elsif logoData.type == 'svg' %}
             {% include svg/logo.svg %}
           {% endif %}
@@ -21,7 +21,7 @@
         {% endif %}
       {% endif %}
     </li>
-    {% for navItems in themeData.nav.navItems %}
+    {% for navItems in navData.navItems %}
       <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}

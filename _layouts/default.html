@@ -1,12 +1,15 @@
 <!-- Shorthand Variables -->
 {% assign homeData=site.data.home %}
-{% assign themeData=site.data.theme %}
+{% assign siteData=site.data.site %}
 {% assign logoData=site.data.logos %}
 {% assign colorData=site.data.colors %}
 {% assign fontData=site.data.fonts %}
 {% assign headerData=site.data.header %}
+{% assign navData=site.data.nav %}
+{% assign sectionData=site.data.sections %}
 {% assign footerData=site.data.footer %}
 {% assign otherStylesData=site.data.other-styles %}
+{% assign socialLinksData=site.data.social-links %}
 <!-- Color Variables -->
 {% assign colorPrimary=colorData.primary %}
 {% assign colorPrimaryDark=colorData.primaryDark %}
@@ -21,8 +24,8 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>{{site.data.theme.title}}</title>
-  <meta name="description" content="{% unless page.meta-desc %}{{themeData.meta}}{% endunless %}">
+  <title>{{siteData.title}}</title>
+  <meta name="description" content="{% unless page.meta-desc %}{{siteData.meta}}{% endunless %}">
   <meta name="handheldfriendly" content="true">
   <meta name="mobileoptimized" content="240">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -33,13 +36,13 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>
 <style>
-  {% if page.sections[0].type == 'hero' %}
+  {% if page.sections[0].type contains 'hero' %}
     .masthead {
       background-color: transparent;
       border-bottom: none;
     }
   {% elsif page.url == '/' %}
-    {% if homeData.sections[0].type == 'hero' %}
+    {% if homeData.sections[0].type contains 'hero' %}
       .masthead {
         background-color: transparent;
         border-bottom: none;
@@ -48,8 +51,8 @@
   {% endif %}
   @media only screen and (min-width: 38em) {
     {% if headerData.fixed == true %}
-      {% if themeData.sections.hero.bgOverlay == true %}
-        {% if page.sections[0].type == 'hero' %}
+      {% if sectionData.hero.bgOverlay == true %}
+        {% if page.sections[0].type contains 'hero' %}
           .masthead:not(.sticky) .nav > ol > li > a,
           .masthead:not(.sticky) .nav > ol > li > h1 a {
             color: #fff;
@@ -67,7 +70,7 @@
             color: {{colorSecondary}};
           }
         {% elsif page.url == '/' %}
-          {% if homeData.sections[0].type == 'hero' %}
+          {% if homeData.sections[0].type contains 'hero' %}
             .masthead:not(.sticky) .nav > ol > li > a,
             .masthead:not(.sticky) .nav > ol > li > h1 a {
               color: #fff;

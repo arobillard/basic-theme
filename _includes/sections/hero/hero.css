@@ -1,4 +1,4 @@
-{% assign hero=themeData.sections.hero %}
+{% assign hero=sectionData.hero %}
 
 .hero {
   display: flex;

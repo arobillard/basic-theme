@@ -11,7 +11,6 @@
   },
   "cta":{
     "height":"50vh",
-    "bgPosition":"center",
     "bgOverlay": true,
     "bgOverlayColor": "secondary",
     "bgOverlayOpacity": ".7",

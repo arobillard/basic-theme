@@ -14,10 +14,10 @@
 {% assign fontSecondary=fontData.secondary %}
 
 /* Shadows */
-{% assign shadow=themeData.shadows.primary %}
+{% assign shadow=otherStylesData.shadows.primary %}
 
 /* Transition */
-{% assign transition=themeData.transitions.primary %}
+{% assign transition=otherStylesData.transitions.primary %}
 
 html {
   font-family: {{fontPrimary}};
