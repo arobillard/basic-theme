@@ -14,7 +14,7 @@ nav:
     - label: Drop 3
       link: '#'
 sections:
-  - bgImage: https://cdn.pixabay.com/photo/2015/03/03/10/26/software-657188_1280.jpg
+  - bgImage: /uploads/stock-wireframes.jpg
     bgPosition: center
     bgOverlay: true
     bgOverlayColor: grey-dark
@@ -25,11 +25,11 @@ sections:
       This is the first section I have fully generated using Netlify, Jekyll,
       and ThemeBasic!
     headline: It works!
-    headlineColor: secondary
-    bylineColor: secondary
+    headlineColor: fff
+    bylineColor: fff
     id: hero
     type: hero
-    contentAlignment: right
+    contentAlignment: center
     height: 90vh;
   - type: markdown
     contentWidth: max-length
@@ -42,7 +42,7 @@ sections:
     btnText: Get started
     btnUrl: "#"
     bgColor: bg-grey-light
-    bgImage: "https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
+    bgImage: /uploads/stock-wireframes-2.jpg
     content: >-
       ## Never sweat over web design again.
 
