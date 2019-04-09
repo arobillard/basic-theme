@@ -608,7 +608,7 @@ collections:
                 name: "label"
                 widget: "string"
               - label: "Link URL"
-                name: "label"
+                name: "link"
                 widget: "string"
               - label: "Link to external page?"
                 name: "external"
