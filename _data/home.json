@@ -3,12 +3,20 @@
     {
       "id": "hero",
       "type": "hero",
-      "bgImage": "https://cdn.pixabay.com/photo/2018/03/19/10/47/e-mail-3239670_1280.jpg",
+      "bgImage": "/uploads/stock-hero.jpg",
       "bgPosition": "center",
+      "bgOverlay": false,
+      "bgOverlayColor":"secondary",
+      "bgOverlayOpacity":"8",
       "headline": "Introducing the all new ThemeBasic",
+      "headlineColor": "primary",
       "byline": "ThemeBasic is an all in one web theme featuring starter options will full customizability.",
-      "btnText": "Learn Less",
-      "btnUrl": "#"
+      "bylineColor": "black",
+      "btnText": "Learn More",
+      "btnUrl": "#",
+      "btnStyle": "btn-ghost",
+      "contentAlignment":"center",
+      "height": "90vh"
     },
     {
       "id": "company-logos",
@@ -48,11 +56,18 @@
     {
       "id": "call-to-action",
       "type": "cta",
-      "bgImage": "https://cdn.pixabay.com/photo/2016/01/19/16/49/laptop-1149412_1280.jpg",
+      "bgImage": "/uploads/stock-wireframes-2.jpg",
       "bgPosition": "center",
       "headline": "Ready to try it yourself?",
       "btnText": "Buy now",
-      "btnUrl": "#"
+      "btnUrl": "#",
+      "bgOverlay": true,
+      "bgOverlayColor":"secondary",
+      "bgOverlayOpacity":"8",
+      "headlineColor": "fff",
+      "btnStyle": "",
+      "height":"50vh",
+      "contentAlignment": "center"
     }
   ]
 }

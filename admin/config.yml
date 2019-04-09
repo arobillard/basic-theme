@@ -455,16 +455,56 @@ collections:
                   - { label: "Light Grey", value: "bg-grey-light" }
                 hint: "Used in: Markdown, Logos"
                 required: false
+              - label: "Background Image Overlay"
+                name: "bgOverlay"
+                widget: "boolean"
+                hint: "Enabling this will create a color overlay on background image."
+              - label: "Background Image Overlay Color"
+                name: "bgOverlayColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                required: false
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
+              - label: "Image Overlay Opacity"
+                name: "bgOverlayOpacity"
+                widget: "string"
+                hint: "Must be decimal value between 0 and 1. Ex: .7"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
                 hint: "Used in: Hero Banner, Call to Action Banner"
                 required: false
+              - label: "Headline Color"
+                name: "headlineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
               - label: "Byline"
                 name: "byline"
                 widget: "string"
                 hint: "Used in: Hero Banner, Call to Action Banner"
                 required: false
+              - label: "Byline Color"
+                name: "bylineColor"
+                widget: "select"
+                default: { label: "Black", value: "black" }
+                options:
+                  - { label: "Black", value: "black" }
+                  - { label: "White", value: "white" }
+                  - { label: "Primary Color", value: "primary" }
+                  - { label: "Secondary Color", value: "secondary" }
+                  - { label: "Dark Grey", value: "greyDark" }
               - label: "Button - Text"
                 name: "btnText"
                 widget: "string"
@@ -582,13 +622,13 @@ collections:
           - label: "Section ID"
             name: "id"
             widget: "string"
-            hint: "Must be lowercase with dashes instead of spaces. For example: 'about-section'"
           - label: "Section Type"
             name: "type"
             widget: "select"
             options:
               - { label: "Hero Banner", value: "hero" }
               - { label: "Call to Action Banner", value: "cta" }
+              - { label: "Code Block", value: "html" }
               - { label: "Image Block with Text", value: "half-img-text" }
               - { label: "Logo Bar", value: "logos" }
               - { label: "Markdown", value: "markdown" }
@@ -625,16 +665,56 @@ collections:
               - { label: "Light Grey", value: "bg-grey-light" }
             hint: "Used in: Markdown, Logos"
             required: false
+          - label: "Background Image Overlay"
+            name: "bgOverlay"
+            widget: "boolean"
+            hint: "Enabling this will create a color overlay on background image."
+          - label: "Background Image Overlay Color"
+            name: "bgOverlayColor"
+            widget: "select"
+            default: { label: "Black", value: "black" }
+            required: false
+            options:
+              - { label: "Black", value: "black" }
+              - { label: "White", value: "white" }
+              - { label: "Primary Color", value: "primary" }
+              - { label: "Secondary Color", value: "secondary" }
+              - { label: "Dark Grey", value: "greyDark" }
+          - label: "Image Overlay Opacity"
+            name: "bgOverlayOpacity"
+            widget: "string"
+            hint: "Must be decimal value between 0 and 1. Ex: .7"
+            required: false
           - label: "Headline"
             name: "headline"
             widget: "string"
             hint: "Used in: Hero Banner, Call to Action Banner"
             required: false
+          - label: "Headline Color"
+            name: "headlineColor"
+            widget: "select"
+            default: { label: "Black", value: "black" }
+            options:
+              - { label: "Black", value: "black" }
+              - { label: "White", value: "white" }
+              - { label: "Primary Color", value: "primary" }
+              - { label: "Secondary Color", value: "secondary" }
+              - { label: "Dark Grey", value: "greyDark" }
           - label: "Byline"
             name: "byline"
             widget: "string"
             hint: "Used in: Hero Banner, Call to Action Banner"
             required: false
+          - label: "Byline Color"
+            name: "bylineColor"
+            widget: "select"
+            default: { label: "Black", value: "black" }
+            options:
+              - { label: "Black", value: "black" }
+              - { label: "White", value: "white" }
+              - { label: "Primary Color", value: "primary" }
+              - { label: "Secondary Color", value: "secondary" }
+              - { label: "Dark Grey", value: "greyDark" }
           - label: "Button - Text"
             name: "btnText"
             widget: "string"

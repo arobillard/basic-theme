@@ -1,9 +1,9 @@
-<section id="{{include.id}}" class="cta" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}" tabindex="0">
-  <div class="wrapper">
+<section id="{{include.id}}" class="cta pad-t-2 pad-b-2{% if include.bgOverlay == true %} cta-overlay cta-overlay-opacity-{{include.bgOverlayOpacity}}0 cta-overlay-{{include.bgOverlayColor}}{% endif %}" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}; min-height: {{include.height}};" tabindex="0">
+  <div class="wrapper" style="justify-content: {% if include.contentAlignment == 'left' %}flex-start{% elsif include.contentAlignment == 'right' %}flex-end{% else %}center{% endif %}; text-align: {{include.contentAlignment}};">
     <div class="cta-content gutter max-length-no-center">
-      <h2>{{include.headline}}</h2>
-      {% if include.byline %}<p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>{% endif %}
-      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=sectionData.cta.btnStyle %}
+      <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
+      {% if include.byline %}<p class="{% unless include.btnText %}push-0 {% endunless %} mega{% if include.bylineColor %} text-{{include.bylineColor}}{% endif %}">{{include.byline}}</p>{% endif %}
+      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
     </div>
   </div>
 </section>

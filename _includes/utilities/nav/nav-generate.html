@@ -23,7 +23,7 @@
     </li>
     {% if navData.includeHome == true %}
       <li>
-        <a class="nav-link{% if page.url == '/' %} current{% endif %}" href="/">Home</a>
+        <a class="nav-link inline-block{% if page.url == '/' %} current{% endif %}{% unless include.navClass == 'nav' %} push-1-4{% endunless %}" href="/">Home</a>
       </li>
     {% endif %}
     {% for navItems in navData.navItems %}

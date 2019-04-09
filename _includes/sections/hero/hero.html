@@ -1,18 +1,18 @@
-<section class="hero" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}">
-  <div class="wrapper">
+<section id="{{include.id}}" class="hero{% if include.bgOverlay == true %} hero-overlay hero-overlay-opacity-{{include.bgOverlayOpacity}}0 hero-overlay-{{include.bgOverlayColor}}{% endif %}" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}; min-height: {{include.height}};" tabindex="0">
+  <div class="wrapper" style="justify-content: {% if include.contentAlignment == 'left' %}flex-start{% elsif include.contentAlignment == 'right' %}flex-end{% else %}center{% endif %}; text-align: {{include.contentAlignment}};">
     <div class="hero-content gutter max-length-no-center">
       {% if siteData.home.sections[0].type == 'hero' %}
         {% if page.url == '/' %}
-          <h2>{{include.headline}}</h2>
+          <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
         {% else %}
-          <h1>{{include.headline}}</h1>
+          <h1{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h1>
         {% endif %}
       {% else %}
-        <h2>{{include.headline}}</h2>
+        <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
       {% endif %}
-      <p class="{% unless include.btnText %}push-0 {% endunless %} mega">{{include.byline}}</p>
+      <p class="{% unless include.btnText %}push-0 {% endunless %} mega{% if include.bylineColor %} text-{{include.bylineColor}}{% endif %}">{{include.byline}}</p>
       {% if include.btnText %}
-        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=sectionData.hero.btnStyle %}
+        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
       {% endif %}
     </div>
   </div>

@@ -51,26 +51,9 @@
   {% endif %}
   @media only screen and (min-width: 38em) {
     {% if headerData.fixed == true %}
-      {% if sectionData.hero.bgOverlay == true %}
-        {% if page.sections[0].type contains 'hero' %}
-          .masthead:not(.sticky) .nav > ol > li > a,
-          .masthead:not(.sticky) .nav > ol > li > h1 a {
-            color: #fff;
-          }
-
-          .masthead:not(.sticky) .nav > ol > li > a:hover {
-            color: {{colorPrimary}};
-          }
-
-          .masthead:not(.sticky) .nav > ol > li > a.current {
-            color: {{colorPrimary}};
-          }
-
-          .masthead:not(.sticky) .nav > ol > li > a.current:hover {
-            color: {{colorSecondary}};
-          }
-        {% elsif page.url == '/' %}
-          {% if homeData.sections[0].type contains 'hero' %}
+      {% if page.url == '/' %}
+        {% if homeData.sections[0].type contains 'hero' %}
+          {% if homeData.sections[0].bgOverlay == true %}
             .masthead:not(.sticky) .nav > ol > li > a,
             .masthead:not(.sticky) .nav > ol > li > h1 a {
               color: #fff;
@@ -85,6 +68,31 @@
               color: {{colorPrimary}};
             }
 
+            .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+              color: {{colorSecondary}};
+            }
+          {% endif %}
+        {% endif %}
+      {% else %}
+        {% if page.sections[0].type contains 'hero' %}
+          {% if page.sections[0].bgOverlay == true %}
+            .masthead:not(.sticky) .nav > ol > li > a,
+            .masthead:not(.sticky) .nav > ol > li > h1 a {
+              color: #fff;
+            }
+
+            .masthead:not(.sticky) .nav > ol > li > a:hover {
+              color: {{colorPrimary}};
+            }
+
+            .masthead:not(.sticky) .nav > ol > li > a.current + a,
+            .masthead:not(.sticky) .nav > ol > li > a.current {
+              color: {{colorPrimary}};
+            }
+
+            .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current,
+            .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current + a,
+            .masthead:not(.sticky) .nav > ol > li > a.current:hover + a,
             .masthead:not(.sticky) .nav > ol > li > a.current:hover {
               color: {{colorSecondary}};
             }

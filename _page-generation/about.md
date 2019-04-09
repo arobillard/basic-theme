@@ -16,14 +16,21 @@ nav:
 sections:
   - bgImage: https://cdn.pixabay.com/photo/2015/03/03/10/26/software-657188_1280.jpg
     bgPosition: center
+    bgOverlay: true
+    bgOverlayColor: grey-dark
+    bgOverlayOpacity: 8
     btnText: Learn More
     btnUrl: 'https://adamrobillard.ca'
     byline: >-
       This is the first section I have fully generated using Netlify, Jekyll,
       and ThemeBasic!
     headline: It works!
+    headlineColor: secondary
+    bylineColor: secondary
     id: hero
     type: hero
+    contentAlignment: right
+    height: 90vh;
   - type: markdown
     contentWidth: max-length
     paddingExtra: true
