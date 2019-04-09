@@ -7,3 +7,4 @@
 // Patterns
 
 {% include patterns/header/header.js %}
+{% include sections/accordion/accordion.js %}

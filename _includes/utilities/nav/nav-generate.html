@@ -27,7 +27,7 @@
       </li>
     {% endif %}
     {% for navItems in navData.navItems %}
-      <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="relative has-dropdown"{% endif %}{% endif %}>
+      <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown %}
             <a class="nav-link inline-block island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>

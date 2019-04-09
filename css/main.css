@@ -8,7 +8,6 @@
 {% assign fontData=site.data.fonts %}
 {% assign headerData=site.data.header %}
 {% assign navData=site.data.nav %}
-{% assign sectionData=site.data.sections %}
 {% assign footerData=site.data.footer %}
 {% assign otherStylesData=site.data.other-styles %}
 {% assign socialLinksData=site.data.social-links %}
@@ -37,6 +36,7 @@
 {% include sections/logos/logos.css %}
 {% include sections/markdown/markdown.css %}
 {% include sections/half-img-text/half-img-text.css %}
+{% include sections/accordion/accordion.css %}
 
 /* Utilities CSS */
 

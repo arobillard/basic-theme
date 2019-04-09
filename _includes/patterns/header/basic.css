@@ -239,6 +239,7 @@
     /* padding-right: 1.05rem; */
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .has-dropdown:hover > a
@@ -256,6 +257,7 @@
     bottom: 0;
     position: absolute;
     width: max-content;
+    z-index: 10000;
     box-shadow: {{shadow}};
   }
 

@@ -14,7 +14,7 @@
       "bylineColor": "black",
       "btnText": "Learn More",
       "btnUrl": "#",
-      "btnStyle": "btn-ghost",
+      "btnStyle": "",
       "contentAlignment":"center",
       "height": "90vh"
     },
@@ -68,6 +68,16 @@
       "btnStyle": "",
       "height":"50vh",
       "contentAlignment": "center"
+    },
+    {
+      "id":"accordion",
+      "type":"accordion",
+      "accordion": [
+        {
+          "title":"Hello there",
+          "text": "General Kenobi"
+        }
+      ]
     }
   ]
 }
