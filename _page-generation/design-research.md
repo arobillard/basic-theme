@@ -4,12 +4,8 @@ title: design-research
 meta-title: Design Research
 meta-desc: This is a page about Design Research
 nav:
-  dropdown:
-    - label: Design Research
-      link: '#'
-    - label: Web Dev
-      link: '#'
-  inNavbar: false
+  dropdown: []
+  inNavbar: true
 sections:
   - bgColor: bg-white
     bgImage: /uploads/stock-hero.jpg
