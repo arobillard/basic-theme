@@ -117,7 +117,7 @@ collections:
           - label: "Header Style"
             name: "headerStyle"
             widget: "select"
-            default: { label: "Basic", value: "basic" }
+            default: "basic"
             options:
               - { label: "Basic", value: "basic" }
               - { label: "Alternate", value: "alt" }
@@ -127,6 +127,7 @@ collections:
             name: "fixed"
             widget: "boolean"
             hint: "When activated, the header will remain at the top of the browser window when scrolling."
+            required: false
       - label: "Navigation Bar"
         name: "nav"
         file: _data/nav.json
@@ -180,10 +181,11 @@ collections:
               - label: "Image Overlay"
                 name: "bgOverlay"
                 widget: "boolean"
+                required: false
               - label: "Image Overlay Color"
                 name: "bgOverlayColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 required: false
                 options:
                   - { label: "Black", value: "black" }
@@ -196,30 +198,35 @@ collections:
                 widget: "string"
                 hint: "Pick a value between 5 and 10."
                 required: false
+              - label: "Section Height"
+                name: "height"
+                widget: "string"
+                required: false
               - label: "Headline Color"
                 name: "headlineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
+                required: false
                 options:
                   - { label: "Black", value: "black" }
-                  - { label: "White", value: "white" }
+                  - { label: "White", value: "fff" }
                   - { label: "Primary Color", value: "primary" }
                   - { label: "Secondary Color", value: "secondary" }
                   - { label: "Dark Grey", value: "grey-dark" }
               - label: "Byline Color"
                 name: "bylineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 options:
                   - { label: "Black", value: "black" }
-                  - { label: "White", value: "white" }
+                  - { label: "White", value: "fff" }
                   - { label: "Primary Color", value: "primary" }
                   - { label: "Secondary Color", value: "secondary" }
                   - { label: "Dark Grey", value: "grey-dark" }
               - label: "Button Style"
                 name: "btnStyle"
                 widget: "select"
-                default: { label: "Primary", value: "" }
+                default: ""
                 options:
                   - { label: "Primary", value: "" }
                   - { label: "Primary Outline", value: "btn-ghost" }
@@ -235,10 +242,11 @@ collections:
               - label: "Image Overlay"
                 name: "bgOverlay"
                 widget: "boolean"
+                required: false
               - label: "Image Overlay Color"
                 name: "bgOverlayColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 required: false
                 options:
                   - { label: "Black", value: "black" }
@@ -251,30 +259,35 @@ collections:
                 widget: "string"
                 hint: "Pick a value between 5 and 10."
                 required: false
+              - label: "Section Height"
+                name: "height"
+                widget: "string"
+                required: false
               - label: "Headline Color"
                 name: "headlineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
+                required: false
                 options:
                   - { label: "Black", value: "black" }
-                  - { label: "White", value: "white" }
+                  - { label: "White", value: "fff" }
                   - { label: "Primary Color", value: "primary" }
                   - { label: "Secondary Color", value: "secondary" }
                   - { label: "Dark Grey", value: "grey-dark" }
               - label: "Byline Color"
                 name: "bylineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 options:
                   - { label: "Black", value: "black" }
-                  - { label: "White", value: "white" }
+                  - { label: "White", value: "fff" }
                   - { label: "Primary Color", value: "primary" }
                   - { label: "Secondary Color", value: "secondary" }
                   - { label: "Dark Grey", value: "grey-dark" }
               - label: "Button Style"
                 name: "btnStyle"
                 widget: "select"
-                default: { label: "Primary", value: "" }
+                default: ""
                 options:
                   - { label: "Primary", value: "" }
                   - { label: "Primary Outline", value: "btn-ghost" }
@@ -287,7 +300,7 @@ collections:
           - label: "Footer Style"
             name: "footerStyle"
             widget: "select"
-            default: { label: "Basic", value: "basic" }
+            default: "basic"
             options:
               - { label: "Basic", value: "basic" }
               - { label: "Alternate", value: "alt" }
@@ -335,6 +348,7 @@ collections:
           - label: "Extra padding on footer?"
             name: "paddingExtra"
             widget: "boolean"
+            required: false
       - label: "Social Media and Contact Icon Links"
         name: "social-links"
         file: _data/social-links.json
@@ -445,7 +459,7 @@ collections:
               - label: "Background Color"
                 name: "bgColor"
                 widget: "select"
-                default: { label: "White", value: "bg-white" }
+                default: "bg-white"
                 options:
                   - { label: "White", value: "bg-white" }
                   - { label: "Primary Color", value: "bg-primary" }
@@ -458,11 +472,12 @@ collections:
               - label: "Background Image Overlay"
                 name: "bgOverlay"
                 widget: "boolean"
+                required: false
                 hint: "Enabling this will create a color overlay on background image."
               - label: "Background Image Overlay Color"
                 name: "bgOverlayColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 required: false
                 options:
                   - { label: "Black", value: "black" }
@@ -475,6 +490,10 @@ collections:
                 widget: "string"
                 hint: "Pick a value between 5 and 10."
                 required: false
+              - label: "Section Height"
+                name: "height"
+                widget: "string"
+                required: false
               - label: "Headline"
                 name: "headline"
                 widget: "string"
@@ -483,7 +502,8 @@ collections:
               - label: "Headline Color"
                 name: "headlineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
+                required: false
                 options:
                   - { label: "Black", value: "black" }
                   - { label: "White", value: "white" }
@@ -498,7 +518,7 @@ collections:
               - label: "Byline Color"
                 name: "bylineColor"
                 widget: "select"
-                default: { label: "Black", value: "black" }
+                default: "black"
                 options:
                   - { label: "Black", value: "black" }
                   - { label: "White", value: "white" }
@@ -518,7 +538,7 @@ collections:
               - label: "Button - Style"
                 name: "btnStyle"
                 widget: "select"
-                default: { label: "Primary", value: "" }
+                default: ""
                 options:
                   - { label: "Primary", value: "" }
                   - { label: "Primary Outline", value: "btn-ghost" }
@@ -528,7 +548,7 @@ collections:
               - label: "Content Alignment"
                 name: "contentAlignment"
                 widget: "select"
-                default: { label: "Left", value: "left" }
+                default: "left"
                 options:
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
@@ -599,6 +619,7 @@ collections:
           - label: "Include in main navigation (header & footer)?"
             name: "inNavbar"
             widget: "boolean"
+            required: false
           - label: "Sub-navigation Dropdown"
             name: "dropdown"
             hint: "The dropdown will only appear in navigation if at least one subnav item is added."
@@ -614,6 +635,7 @@ collections:
                 name: "external"
                 widget: "boolean"
                 hint: "Tuurn on switch if the dropdown link leads to a page not on this website."
+                required: false
       - label: "Sections"
         name: "sections"
         widget: "list"
@@ -655,7 +677,7 @@ collections:
           - label: "Background Color"
             name: "bgColor"
             widget: "select"
-            default: { label: "White", value: "bg-white" }
+            default: "bg-white"
             options:
               - { label: "White", value: "bg-white" }
               - { label: "Primary Color", value: "bg-primary" }
@@ -668,11 +690,12 @@ collections:
           - label: "Background Image Overlay"
             name: "bgOverlay"
             widget: "boolean"
+            required: false
             hint: "Enabling this will create a color overlay on background image."
           - label: "Background Image Overlay Color"
             name: "bgOverlayColor"
             widget: "select"
-            default: { label: "Black", value: "black" }
+            default: "black"
             required: false
             options:
               - { label: "Black", value: "black" }
@@ -685,6 +708,10 @@ collections:
             widget: "string"
             hint: "Pick a value between 5 and 10."
             required: false
+          - label: "Section Height"
+            name: "height"
+            widget: "string"
+            required: false
           - label: "Headline"
             name: "headline"
             widget: "string"
@@ -693,10 +720,11 @@ collections:
           - label: "Headline Color"
             name: "headlineColor"
             widget: "select"
-            default: { label: "Black", value: "black" }
+            default: "black"
+            required: false
             options:
               - { label: "Black", value: "black" }
-              - { label: "White", value: "white" }
+              - { label: "White", value: "fff" }
               - { label: "Primary Color", value: "primary" }
               - { label: "Secondary Color", value: "secondary" }
               - { label: "Dark Grey", value: "greyDark" }
@@ -708,10 +736,11 @@ collections:
           - label: "Byline Color"
             name: "bylineColor"
             widget: "select"
-            default: { label: "Black", value: "black" }
+            default: "black"
+            required: false
             options:
               - { label: "Black", value: "black" }
-              - { label: "White", value: "white" }
+              - { label: "White", value: "fff" }
               - { label: "Primary Color", value: "primary" }
               - { label: "Secondary Color", value: "secondary" }
               - { label: "Dark Grey", value: "grey-dark" }
@@ -728,7 +757,7 @@ collections:
           - label: "Button - Style"
             name: "btnStyle"
             widget: "select"
-            default: { label: "Primary", value: "" }
+            default: ""
             options:
               - { label: "Primary", value: "" }
               - { label: "Primary Outline", value: "btn-ghost" }
@@ -738,7 +767,7 @@ collections:
           - label: "Content Alignment"
             name: "contentAlignment"
             widget: "select"
-            default: { label: "Left", value: "left" }
+            default: "left"
             options:
               - { label: "Left", value: "left" }
               - { label: "Right", value: "right" }
