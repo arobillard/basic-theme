@@ -9,7 +9,7 @@ nav:
       link: '#'
     - label: Web Dev
       link: '#'
-  inNavbar: true
+  inNavbar: false
 sections:
   - bgColor: bg-white
     bgImage: /uploads/stock-hero.jpg
