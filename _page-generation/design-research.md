@@ -23,10 +23,11 @@ sections:
     btnText: Learn More
     btnUrl: '#'
     byline: This is a semester long project with a real client!
-    bylineColor: white
-    contentAlignment: right
+    bylineColor: fff
+    contentAlignment: Center
     headline: Design Research
-    headlineColor: white
+    headlineColor: fff
+    height: 90vh
     id: hero-banner
     logos: []
     type: hero
