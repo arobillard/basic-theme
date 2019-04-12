@@ -5,7 +5,12 @@
       "text": "Design",
       "url": "#",
       "urlExternal": true,
-      "dropdown": []
+      "dropdown": [
+        {
+          "text": "Hello There",
+          "url": "#"
+        }
+      ]
     }
   ]
 }
