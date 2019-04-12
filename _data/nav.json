@@ -1,21 +1,9 @@
 {
   "includeHome": true,
-  "button":{
-    "btnText":"Log In",
-    "btnUrl":"#",
-    "btnStyle":""
+  "button": {
+    "btnText": "Log In",
+    "btnUrl": "#",
+    "btnStyle": ""
   },
-  "navItems": [
-    {
-      "text": "Design",
-      "url": "#",
-      "urlExternal": true,
-      "dropdown": [
-        {
-          "text": "Hello There",
-          "url": "#"
-        }
-      ]
-    }
-  ]
+  "navItems": []
 }
