@@ -145,7 +145,7 @@ collections:
                 name: "btnText"
                 widget: "string"
               - label: "Button URL"
-                name: "btnText"
+                name: "btnUrl"
                 widget: "string"
               - label: "Button URL"
                 name: "btnStyle"
