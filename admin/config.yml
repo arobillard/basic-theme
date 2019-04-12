@@ -151,6 +151,7 @@ collections:
                 name: "btnStyle"
                 widget: "select"
                 default: ""
+                required: false
                 options:
                   - { label: "Primary", value: "" }
                   - { label: "Primary Outline", value: "btn-ghost" }
