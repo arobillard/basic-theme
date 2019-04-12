@@ -1,5 +1,10 @@
 {
   "includeHome": true,
+  "button":{
+    "btnText":"Log In",
+    "btnUrl":"#",
+    "btnStyle":""
+  },
   "navItems": [
     {
       "text": "Design",

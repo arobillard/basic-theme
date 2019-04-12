@@ -136,6 +136,26 @@ collections:
             name: "includeHome"
             widget: "boolean"
             required: false
+          - label: "Highlight Button"
+            name: "button"
+            widget: "object"
+            hint: "Filling in the details will create a button in the navigtion to highlight a specific link."
+            fields:
+              - label: "Button Text"
+                name: "btnText"
+                widget: "string"
+              - label: "Button URL"
+                name: "btnText"
+                widget: "string"
+              - label: "Button URL"
+                name: "btnStyle"
+                widget: "select"
+                default: ""
+                options:
+                  - { label: "Primary", value: "" }
+                  - { label: "Primary Outline", value: "btn-ghost" }
+                  - { label: "Secondary", value: "btn-secondary" }
+                  - { label: "Secondary Outline", value: "btn-ghost btn-secondary" }
           - label: "Extra Navigation Items"
             name: "navItems"
             hint: "This section is generally meant for adding secondary links to external pages such as a separate store website. To include pages you have created in the main navigation, you must activate it in the individual page settings."

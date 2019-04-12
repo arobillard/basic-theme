@@ -68,16 +68,6 @@
       "btnStyle": "",
       "height":"50vh",
       "contentAlignment": "center"
-    },
-    {
-      "id":"accordion",
-      "type":"accordion",
-      "accordion": [
-        {
-          "title":"Hello there",
-          "text": "General Kenobi"
-        }
-      ]
     }
   ]
 }

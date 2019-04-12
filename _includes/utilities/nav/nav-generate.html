@@ -27,10 +27,10 @@
       </li>
     {% endif %}
     {% for navItems in navData.navItems %}
-      <li{% if navItems.dropdown %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
+      <li{% if navItems.dropdown[0] %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
-          {% if navItems.dropdown %}
-            <a class="nav-link inline-block island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
+          {% if navItems.dropdown[0] %}
+            <a class="nav-link{% unless navItems.dropdown[0] %} inline-block{% endunless %} island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
             <a class="icon-link m-no-focus" href="#">
               <i class="icon i-1">
                 <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
@@ -54,10 +54,10 @@
     {% endfor %}
     {% for navItems in site.page-generation %}
       {% if navItems.nav.inNavbar == true %}
-        <li{% if navItems.nav.dropdown %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
+        <li{% if navItems.nav.dropdown[0] %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
           {% if include.navClass == 'nav' %}
-            {% if navItems.nav.dropdown %}
-              <a class="nav-link{% unless navItems.nav.dropdown %} inline-block{% endunless %} island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+            {% if navItems.nav.dropdown[0] %}
+              <a class="nav-link{% unless navItems.nav.dropdown[0] %} inline-block{% endunless %} island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
               <a class="icon-link m-no-focus" href="#">
                 <i class="icon i-1">
                   <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
