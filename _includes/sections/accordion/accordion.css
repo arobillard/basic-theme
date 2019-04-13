@@ -1,13 +1,14 @@
 .accordion-unit {
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 2px solid {{colorPrimaryLight}};
 }
 
 .accordion-label {
   font-weight: bold;
-  color: var(--color-grey-dark);
-  position: relative;
   text-decoration: none;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: {{colorGreyDark}};
 }
 
 .accordion-label,
@@ -17,20 +18,19 @@
 
 .accordion-content {
   overflow: hidden;
-  max-height: 0;
+  height: 0;
   transition:
-    max-height .25s cubic-bezier(.75, 0, .25, 1);
 }
 
 .accordion-label.open + .accordion-content {
-  max-height: 11.3rem;
+  height: auto;
 }
 
 .accordion-label .icon {
+  color: {{colorGrey}};
   transition:
-    transform .25s cubic-bezier(.75, 0, .25, 1),
-    color .25s cubic-bezier(.75, 0, .25, 1);
-  color: #ccc;
+    transform {{transition}},
+    color {{transition}};
 }
 
 .accordion-label:hover,
@@ -39,30 +39,12 @@
 .accordion-label:focus .icon,
 .accordion-label.open,
 .accordion-label.open .icon {
-  color: var(--color-primary);
+  color: {{colorPrimary}};
 }
 
 .accordion-label .icon {
-  transform: translateY(-50%) rotate(45deg);
+  transform: rotate(45deg);
 }
 .accordion-label.open .icon {
-  transform: translateY(-50%) rotate(90deg);
-}
-
-
-@media only screen and (min-width: 38em) {
-
-  .accordion-label.open + .accordion-content {
-    max-height: 6.8545454545rem;
-  }
-
-}
-
-
-@media only screen and (min-width: 60em) {
-
-  .accordion-label.open + .accordion-content {
-    max-height: 9rem;
-  }
-
+  transform: rotate(90deg);
 }
