@@ -452,11 +452,13 @@ collections:
                 widget: "select"
                 options:
                   - { label: "Hero Banner", value: "hero" }
+                  - { label: "Accordion", value: "accordion" }
                   - { label: "Call to Action Banner", value: "cta" }
                   - { label: "Code Block", value: "html" }
                   - { label: "Image Block with Text", value: "half-img-text" }
                   - { label: "Logo Bar", value: "logos" }
                   - { label: "Markdown", value: "markdown" }
+                  - { label: "Photo Gallery", value: "photo-array" }
               - label: "Background Image"
                 name: "bgImage"
                 widget: "image"
@@ -614,6 +616,36 @@ collections:
                 name: "file"
                 widget: "file"
                 required: false
+              - label: "Accordion Items"
+                name: "accordion"
+                widget: "list"
+                required: false
+                fields:
+                  - label: "Accordion Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Accordion Content"
+                    name: "text"
+                    widget: "markdown"
+              - label: "Photo Gallery Photos"
+                name: "photoArray"
+                widget: "list"
+                required: false
+                fields:
+                  - label: "Image"
+                    name: "img"
+                    widget: "image"
+                  - label: "Image Caption"
+                    name: "imgAlt"
+                    widget: "string"
+                  - label: "Image Orientation"
+                    name: "imgOrientation"
+                    widget: "select"
+                    default: "landscape"
+                    options:
+                      - { label: "Landscape", value: "landscape" }
+                      - { label: "Portrait", value: "portrait" }
+                    hint: "Required to ensure proper display in lightbox."
   - label: "Pages"
     name: "pages"
     folder: "_page-generation"

@@ -8,3 +8,4 @@
 
 {% include patterns/header/header.js %}
 {% include sections/accordion/accordion.js %}
+{% include sections/photo-array/photo-array.js %}

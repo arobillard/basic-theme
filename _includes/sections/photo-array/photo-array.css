@@ -1,0 +1,115 @@
+.card-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.photo-focus-wrap {
+  display: none;
+}
+
+.photo-focus {
+  position: fixed;
+  width: 100%;
+  height: calc(100% - 3.23625rem);
+  background-color: rgba(0, 0, 0, .85);
+  top: 3.23625rem;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.photo-focus a {
+  color: #fff;
+}
+
+.photo-focus a:hover {
+  color: var(--color-primary);
+}
+
+.photo-focused {
+  color: #fff;
+  text-align: center;
+}
+
+.landscape {
+  width: 100%;
+}
+
+.portrait {
+  width: 75%;
+}
+
+.photo-focus .previous,
+.photo-focus .next {
+  padding: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+.photo-focus .previous {
+  left: 0;
+}
+
+.photo-focus .next {
+  right: 0;
+}
+
+@media only screen and (min-width: 35em) {
+
+  .photo-focus .previous,
+  .photo-focus .next {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  .photo-focus .previous .icon-label,
+  .photo-focus .next .icon-label {
+    display: none;
+  }
+
+  /* .photo-focused figcaption {
+    position: absolute;
+    bottom: 1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 36em;
+  } */
+
+  .photo-focused img {
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .photo-focused .landscape {
+    width: 70vw;
+  }
+
+  .photo-focused .portrait {
+    height: 75vh;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .photo-focus {
+    height: calc(100% - 4.1909090909rem);
+    top: 4.1909090909rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .photo-focus {
+    height: calc(100% - 4.103125rem);
+    top: 4.103125rem;
+  }
+
+}

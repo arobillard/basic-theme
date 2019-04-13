@@ -68,6 +68,33 @@
       "btnStyle": "",
       "height":"50vh",
       "contentAlignment": "center"
+    },
+    {
+      "id": "our-photos",
+      "type": "photo-array",
+      "contentWidth": "wrapper",
+      "photoArray":[
+        {
+          "img":"https://ichef.bbci.co.uk/news/660/cpsprodpb/E9DF/production/_96317895_gettyimages-164067218.jpg",
+          "imgAlt":"A cute lil monkey.",
+          "imgOrientation":"landscape"
+        },
+        {
+          "img":"https://images1.miaminewtimes.com/imager/u/745xauto/10764041/instagram-monkey.jpg",
+          "imgAlt":"A cute lil monkey.",
+          "imgOrientation":"landscape"
+        },
+        {
+          "img":"https://img.buzzfeed.com/buzzfeed-static/static/2016-04/7/4/enhanced/webdr10/longform-original-14774-1460018894-3.jpg",
+          "imgAlt":"A cute lil monkey.",
+          "imgOrientation":"portrait"
+        },
+        {
+          "img":"https://i.pinimg.com/originals/28/e1/00/28e1001977c0a8cb5d7292a0db63d84a.jpg",
+          "imgAlt":"A cute lil monkey.",
+          "imgOrientation":"portrait"
+        }
+      ]
     }
   ]
 }
