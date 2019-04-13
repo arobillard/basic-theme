@@ -195,14 +195,16 @@
   .nav > ol {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .nav > ol > li:first-child {
     flex-grow: 2;
   }
 
-  .nav > ol > li:not(:last-child) {
-    margin-right: 1.3rem;
+  .nav > ol > li:not(:first-child) {
+    margin-left: 1.4rem;
   }
 
   /* {% if sectionData.hero.bgOverlay == true %}
@@ -294,6 +296,10 @@
 
   .has-dropdown > a:first-child {
     margin-right: .375rem;
+  }
+
+  .nav > ol > li:not(:first-child) {
+    margin-left: 1.5rem;
   }
 
 }
