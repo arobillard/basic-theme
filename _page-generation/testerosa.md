@@ -5,7 +5,7 @@ meta-title: Testerosa
 meta-desc: This is a test
 nav:
   dropdown: []
-  inNavbar: true
+  inNavbar: false
 sections: []
 ---
 
