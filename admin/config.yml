@@ -632,12 +632,12 @@ collections:
                 widget: "list"
                 required: false
                 fields:
-                  - label: "Image"
-                    name: "img"
-                    widget: "image"
                   - label: "Image Caption"
                     name: "imgAlt"
                     widget: "string"
+                  - label: "Image"
+                    name: "img"
+                    widget: "image"
                   - label: "Image Orientation"
                     name: "imgOrientation"
                     widget: "select"

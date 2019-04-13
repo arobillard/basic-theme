@@ -73,6 +73,8 @@
       "id": "our-photos",
       "type": "photo-array",
       "contentWidth": "wrapper",
+      "headline": "Our life in photos",
+      "paddingExtra": true,
       "photoArray":[
         {
           "img":"https://ichef.bbci.co.uk/news/660/cpsprodpb/E9DF/production/_96317895_gettyimages-164067218.jpg",

@@ -54,7 +54,7 @@
   }
 
   .mobile-logo {
-    width: {{logoData.widthMobile}};
+    width: {{logosData.widthMobile}};
   }
 
   .mobile-logo svg,
@@ -122,7 +122,7 @@
     display: flex;
   }
 
-  .icon-link {
+  .nav .icon-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -227,8 +227,8 @@
 
   .nav .nav-link:hover + .icon-link,
   .nav .nav-link:focus + .icon-link,
-  .icon-link:hover,
-  .icon-link:focus {
+  .nav .icon-link:hover,
+  .nav .icon-link:focus {
     color: {{colorPrimary}};
   }
 

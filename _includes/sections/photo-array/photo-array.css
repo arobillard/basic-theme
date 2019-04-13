@@ -11,9 +11,9 @@
 .photo-focus {
   position: fixed;
   width: 100%;
-  height: calc(100% - 3.23625rem);
+  height: 100%;
   background-color: rgba(0, 0, 0, .85);
-  top: 3.23625rem;
+  top: 0;
   left: 0;
   display: flex;
   align-items: center;
@@ -26,12 +26,13 @@
 }
 
 .photo-focus a:hover {
-  color: var(--color-primary);
+  color: {{colorPrimary}};
 }
 
 .photo-focused {
   color: #fff;
   text-align: center;
+  transform: translateY(2rem);
 }
 
 .landscape {
@@ -39,7 +40,7 @@
 }
 
 .portrait {
-  width: 75%;
+  width: 100%;
 }
 
 .photo-focus .previous,
@@ -55,6 +56,12 @@
 }
 
 .photo-focus .next {
+  right: 0;
+}
+
+.close {
+  position: absolute;
+  top: 0;
   right: 0;
 }
 
@@ -95,21 +102,21 @@
   }
 
 }
-
+/*
 @media only screen and (min-width: 38em) {
 
-  .photo-focus {
-    height: calc(100% - 4.1909090909rem);
-    top: 4.1909090909rem;
+
+  .close {
+    right: 1.4rem;
   }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-  .photo-focus {
-    height: calc(100% - 4.103125rem);
-    top: 4.103125rem;
+
+  .close {
+    right: 1.5rem;
   }
 
-}
+} */

@@ -1,38 +1,44 @@
 <section id="{{include.id}}" class="pad-t-2 pad-b-2 {{include.bgColor}}" tabindex="0">
-  <ul class="list-group grid island-1-2 push-0 {{include.contentWidth}}{% if include.paddingExtra %} pad-t-2 pad-b-2{% endif %}">
-    {% for images in include.photoArray %}
+  <div class="{{include.contentWidth}}{% if include.paddingExtra %} pad-t-2 pad-b-2{% endif %}">
+    {% if include.headline %}
+      <h2 class="gutter">{{include.headline}}</h2>
+    {% endif %}
+    <ul class="list-group grid island-1-2 push-0">
+      {% for images in include.photoArray %}
       <li class="unit [ xs-1-2 m-1-3 l-1-4 ] island-1-2">
         <a class="embed embed-1by1 card card-image block" style="background-image: url('{{images.img}}')" data-img="{{images.img}}" data-orientation="{{images.imgOrientation}}" data-caption="{{images.imgAlt}}" href="#">
           <img class="hidden" src="{{images.img}}" alt="{{images.imgAlt}}">
         </a>
       </li>
-    {% endfor %}
-  </ul>
-  <div class="photo-focus-wrap">
-  <div class="photo-focus">
-    <a class="icon-link close island pin-tr" href="#">
-      <i class="icon i-1-1-2">
-        <svg><use xlink:href="/images/icons.svg#close" /></svg>
-      </i>
-      <span class="icon-label hidden">Close</span>
-    </a>
-    <figure class="photo-focused gutter push-0">
-      <img class="{{include.orientation}}" src="{{include.src}}" alt="">
-      <figcaption class="pad-t-1-2">{{include.caption}}</figcaption>
-    </figure>
-    <a class="icon-link previous inline-block" href="#">
-      <i class="icon i-1-1-2">
-        <svg><use xlink:href="/images/icons.svg#left-indicator" /></svg>
-      </i>
-      <span class="icon-label">Previous</span>
-    </a>
-    <a class="icon-link next inline-block" href="#">
-      <span class="icon-label">Next</span>
-      <i class="icon i-1-1-2">
-        <svg><use xlink:href="/images/icons.svg#right-indicator" /></svg>
-      </i>
-    </a>
+      {% endfor %}
+    </ul>
+    <div class="photo-focus-wrap">
+      <div class="photo-focus">
+        <figure class="photo-focused gutter push-0">
+          <div class="relative inline-block">
+            <img class="{{include.orientation}}" src="{{include.src}}" alt="">
+            <a class="icon-link close island-1-2" href="#">
+              <i class="icon i-1">
+                <svg><use xlink:href="/images/icons.svg#close" /></svg>
+              </i>
+              <span class="icon-label hidden">Close</span>
+            </a>
+          </div>
+          <figcaption class="pad-t-1-2">{{include.caption}}</figcaption>
+        </figure>
+        <a class="icon-link previous inline-block" href="#">
+          <i class="icon i-1-1-2">
+            <svg><use xlink:href="/images/icons.svg#left-indicator" /></svg>
+          </i>
+          <span class="icon-label">Previous</span>
+        </a>
+        <a class="icon-link next inline-block" href="#">
+          <span class="icon-label">Next</span>
+          <i class="icon i-1-1-2">
+            <svg><use xlink:href="/images/icons.svg#right-indicator" /></svg>
+          </i>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-
 </section>
