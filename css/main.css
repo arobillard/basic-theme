@@ -3,7 +3,7 @@
 
 {% assign homeData=site.data.home %}
 {% assign siteData=site.data.site %}
-{% assign logosData=site.data.logos %}
+{% assign logoData=site.data.logos %}
 {% assign colorData=site.data.colors %}
 {% assign fontData=site.data.fonts %}
 {% assign headerData=site.data.header %}

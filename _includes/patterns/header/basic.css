@@ -54,7 +54,7 @@
   }
 
   .mobile-logo {
-    width: {{logosData.widthMobile}};
+    width: {{logoData.widthMobile}};
   }
 
   .mobile-logo svg,
