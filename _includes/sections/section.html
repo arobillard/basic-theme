@@ -1,5 +1,7 @@
 {% if sections.type == 'hero' %}
   {% include sections/hero/hero.html %}
+{% elsif sections.type == 'hero-markdown' %}
+  {% include sections/hero/hero-markdown.html %}
 {% elsif sections.type == 'info' %}
   {% include sections/info/info.html %}
 {% elsif sections.type == 'logos' %}
@@ -16,35 +18,8 @@
   {% include sections/accordion/accordion.html %}
 {% elsif sections.type == 'photo-array' %}
   {% include sections/photo-array/photo-array.html %}
+{% elsif sections.type == 'map' %}
+  {% include sections/map/map.html %}
+{% elsif sections.type == 'form' %}
+  {% include sections/form/form.html %}
 {% endif %}
-
-<!--
-
-Section Idea
-
-- Team Member Profiles
-- Cards
-- Accordian
-- Blog Preview
-- Divider
-- Gallery
-- Contact Form
-- Testimonials
-- Video Embed
-- Page Insert?
-
-If Shopify Theme
-
-- Collection List
-- Featured Collection
-- Featured Products
-- Featured Promotions
-- Newsletter
-
-Completed:
-- Hero Banner
-- Logo Bar
-- Markdown
-- Call to Action Banner
-- Image 1/2, Markdown 1/2
- -->

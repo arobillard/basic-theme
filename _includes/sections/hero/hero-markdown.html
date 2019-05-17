@@ -1,0 +1,7 @@
+<section id="{{include.id}}" class="hero{% if include.bgOverlay == true %} hero-overlay hero-overlay-opacity-{{include.bgOverlayOpacity}}0 hero-overlay-{{include.bgOverlayColor}}{% endif %} pad-t-2 pad-b-2" style="background-image: url('{{include.bgImage}}'); background-position: {{include.bgPosition}}; min-height: {{include.height}};" tabindex="0">
+  <div class="wrapper" style="justify-content: {% if include.contentAlignment == 'left' %}flex-start{% elsif include.contentAlignment == 'right' %}flex-end{% else %}center{% endif %}; text-align: {{include.contentAlignment}};">
+    <div class="hero-content hero-content-markdown gutter max-length-no-center">
+      {{include.content | markdownify}}
+    </div>
+  </div>
+</section>

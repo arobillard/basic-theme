@@ -1,0 +1,52 @@
+<section id="{{include.id}}" class="markdown pad-t-2 pad-b-2 {{include.bgColor}}" tabindex="0">
+  <div class="{{include.contentWidth}}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
+    <div class="form-intro gutter">
+      {{include.content | markdownify }}
+    </div>
+    {% for forms in site.forms %}
+      {% if forms.title != include.formName %}
+        {% continue %}
+      {% else %}
+        <form class="push-0" name="rsvp" method="POST" action="{{site.baseurl}}/thank-you/" netlify>
+          <fieldset class="push-0">
+            <!-- <legend class="gutter tera">R.S.V.P.</legend> -->
+            <div class="grid island-1-2">
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="fname">First Name</label>
+                <input class="push-1-4" id="fname" type="text" name="fname" required />
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="lname">Last Name</label>
+                <input class="push-1-4" id="lname" type="text" name="lname" required />
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="email">Email</label>
+                <input class="push-1-4" id="email" type="email" name="email" required />
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="phone">Phone <span class="form-optional">(Optional)</span></label>
+                <input class="push-1-4" id="phone" type="phone" name="phone" />
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="address">Address</label>
+                <textarea class="push-1-4" id="address" name="address" required></textarea>
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <label for="plus-one">Plus one & dependants</label>
+                <textarea class="push-1-4" id="plus-one" name="plus-one"></textarea>
+                <small class="block lh-tight">List your plus one and/or dependants' full names who you are RSVPing on behalf as per your invitation.</small>
+              </div>
+              <div class="unit [ xs-1 ] island-1-2">
+                <label for="message">Message <span class="form-optional">(Optional)</span></label>
+                <textarea class="push-1-4" id="message" name="message"></textarea>
+              </div>
+              <div class="unit [ xs-1 m-1-2 ] island-1-2">
+                <button type="submit">Send</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

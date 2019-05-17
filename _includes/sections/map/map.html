@@ -1,0 +1,23 @@
+<section id="{{include.id}}" class="map{% if include.mapType == small %} pad-t-2 pad-b-2 {{include.bgColor}}{% endif %}{% if include.mapType == 'full' %} map-full{% endif %}" tabindex="0">
+  {% if include.mapType == "full" %}
+    <iframe style="min-height: {{include.height}};" src="{{include.mapLink}}" frameborder="0" style="border:0" allowfullscreen></iframe>
+  {% elsif include.mapType == "half" %}
+    <div class="grid grid-stretch" style="min-height: {{include.height}};">
+      <div class="unit [ xs-1 l-1-2 ] half-text {{include.bgColor}}">
+        <div class="half-text-content max-length pad-t-2 pad-b-2 gutter">
+          {{include.content | markdownify }}
+          {% if include.btnText %}
+            {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="unit [ xs-1 l-1-2 ] half-map">
+        <iframe src="{{include.mapLink}}" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  {% else %}
+    <div class="gutter {{include.contentWidth}}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
+
+    </div>
+  {% endif %}
+</section>

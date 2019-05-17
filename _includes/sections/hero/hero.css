@@ -64,7 +64,7 @@
   background-color: {{colorGreyDark}};
 }
 
-.hero-overlay-white::after {
+.hero-overlay-black::after {
   background-color: #000;
 }
 
@@ -77,6 +77,10 @@
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.hero-content-markdown img {
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 38em) {

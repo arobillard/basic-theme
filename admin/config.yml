@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: arobillard/basic-theme # Path to your GitHub repository
+  repo: andrew-kyla-2019/basic-theme # Path to your GitHub repository
 
 media_folder: "uploads"
 
@@ -452,11 +452,13 @@ collections:
                 widget: "select"
                 options:
                   - { label: "Hero Banner", value: "hero" }
+                  - { label: "Hero Banner with Markdown Content", value: "hero-markdown" }
                   - { label: "Accordion", value: "accordion" }
                   - { label: "Call to Action Banner", value: "cta" }
                   - { label: "Code Block", value: "html" }
                   - { label: "Image Block with Text", value: "half-img-text" }
                   - { label: "Logo Bar", value: "logos" }
+                  - { label: "Map", value: "map" }
                   - { label: "Markdown", value: "markdown" }
                   - { label: "Photo Gallery", value: "photo-array" }
               - label: "Background Image"
@@ -576,7 +578,7 @@ collections:
                 options:
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
-                  - { label: "Center", value: "Center" }
+                  - { label: "Center", value: "center" }
                 hint: "Used in: Markdown"
                 required: false
               - label: "Content Width"
@@ -647,6 +649,20 @@ collections:
                       - { label: "Landscape", value: "landscape" }
                       - { label: "Portrait", value: "portrait" }
                     hint: "Required to ensure proper display in lightbox."
+              - label: "Map Link"
+                name: "mapLink"
+                widget: "string"
+                hint: "Copy and paste the link found in `src=''` within a Google Maps embed code."
+                required: false
+              - label: "Map Type"
+                name: "mapType"
+                widget: "select"
+                default: "half"
+                required: false
+                options:
+                  - { label: "Full width map, no text", value: "full" }
+                  - { label: "Half map, half text", value: "half" }
+                  - { label: "Text with map below", value: "small" }
   - label: "Pages"
     name: "pages"
     folder: "_page-generation"
@@ -708,6 +724,7 @@ collections:
               - { label: "Code Block", value: "html" }
               - { label: "Image Block with Text", value: "half-img-text" }
               - { label: "Logo Bar", value: "logos" }
+              - { label: "Map", value: "map" }
               - { label: "Markdown", value: "markdown" }
               - { label: "Photo Gallery", value: "photo-array" }
           - label: "Background Image"
@@ -827,7 +844,7 @@ collections:
             options:
               - { label: "Left", value: "left" }
               - { label: "Right", value: "right" }
-              - { label: "Center", value: "Center" }
+              - { label: "Center", value: "center" }
             hint: "Used in: Markdown"
             required: false
           - label: "Content Width"
@@ -898,3 +915,17 @@ collections:
                   - { label: "Landscape", value: "landscape" }
                   - { label: "Portrait", value: "portrait" }
                 hint: "Required to ensure proper display in lightbox."
+          - label: "Map Link"
+            name: "mapLink"
+            widget: "string"
+            required: false
+            hint: "Copy and paste the link found in `src=''` within a Google Maps embed code."
+          - label: "Map Type"
+            name: "mapType"
+            widget: "select"
+            default: "half"
+            required: false
+            options:
+              - { label: "Full width map, no text", value: "full" }
+              - { label: "Half map, half text", value: "half" }
+              - { label: "Text with map below", value: "small" }

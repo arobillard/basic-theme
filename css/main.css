@@ -38,6 +38,8 @@
 {% include sections/half-img-text/half-img-text.css %}
 {% include sections/accordion/accordion.css %}
 {% include sections/photo-array/photo-array.css %}
+{% include sections/map/map.css %}
+{% include sections/form/form.css %}
 
 /* Utilities CSS */
 

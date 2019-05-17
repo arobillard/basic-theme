@@ -1,0 +1,32 @@
+input,
+textarea {
+  display: block;
+  width: 100%;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid {{colorPrimary}};
+  border-radius: 7.5px;
+  box-shadow: {{shadow}};
+}
+
+.form-optional {
+  opacity: .5;
+  font-style: italic;
+  font-weight: 400;
+  color: #000;
+}
+
+fieldset {
+  border: none;
+  padding-bottom: 0;
+}
+
+legend,
+label {
+  color: {{colorPrimary}}
+}
+
+label {
+  font-weight: bold;
+}
