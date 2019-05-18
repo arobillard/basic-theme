@@ -5,7 +5,9 @@
       <h2 class="gutter">{{include.sectionTitle}}</h2>
     {% endif %}
     {% if include.content %}
-      {{include.content | markdownify }}
+      <div class="max-length">
+        {{include.content | markdownify }}
+      </div>
     {% endif %}
     <div class="grid  grid-stretch island-1-2">
       {% for cards in include.cards %}

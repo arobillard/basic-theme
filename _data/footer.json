@@ -4,5 +4,7 @@
   "textColor": "grey",
   "linkColor": "grey",
   "linkHoverColor": "primary",
-  "paddingExtra": false
+  "paddingExtra": false,
+  "message":"Follow **ThemeBasic** on social media!",
+  "messagePosition": "top"
 }

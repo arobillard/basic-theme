@@ -82,6 +82,10 @@
   background-color: rgba(0, 0, 0, .5);
 }
 
+.footer-message p:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (min-width: 38em) {
 
   .footer {
@@ -95,6 +99,18 @@
   .footer-nav .logo-wrap > a {
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .icon-list li:not(:last-child) {
+    margin-right: .7rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .icon-list li:not(:last-child) {
+    margin-right: .75rem;
   }
 
 }

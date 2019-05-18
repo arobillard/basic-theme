@@ -3,12 +3,12 @@
     <div class="hero-content gutter max-length-no-center">
       {% if siteData.home.sections[0].type == 'hero' %}
         {% if page.url == '/' %}
-          <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
+          <h2{% if include.headlineColor %} class="text-{{include.headlineColor}} exa"{% endif %}>{{include.headline}}</h2>
         {% else %}
           <h1{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h1>
         {% endif %}
       {% else %}
-        <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
+        <h2{% if include.headlineColor %} class="text-{{include.headlineColor}} exa"{% endif %}>{{include.headline}}</h2>
       {% endif %}
       <p class="{% unless include.btnText %}push-0 {% endunless %} mega{% if include.bylineColor %} text-{{include.bylineColor}}{% endif %}">{{include.byline}}</p>
       {% if include.btnText %}

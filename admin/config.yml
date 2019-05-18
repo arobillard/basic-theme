@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: andrew-kyla-2019/basic-theme # Path to your GitHub repository
+  repo: arobillard/basic-theme # Path to your GitHub repository
 
 media_folder: "uploads"
 
@@ -370,6 +370,16 @@ collections:
             name: "paddingExtra"
             widget: "boolean"
             required: false
+          - label: "Footer Message"
+            name: "message"
+            widget: markdown
+            required: false
+          - label: "Footer Message Position"
+            name: "messagePosition"
+            widget: "select"
+            options:
+              - { label: "Top", value: "top" }
+              - { label: "Bottom", value: "bottom" }
       - label: "Social Media and Contact Icon Links"
         name: "social-links"
         file: _data/social-links.json

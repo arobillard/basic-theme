@@ -55,13 +55,13 @@
     },
     {
       "id": "card-list",
-      "sectionTitle":"Cool Cards",
+      "sectionTitle":"ThemeBasic Card Types",
       "type": "card",
       "bgColor": "bg-grey-light",
       "contentAlignment": "center",
       "contentWidth": "wrapper",
       "paddingExtra": true,
-      "content": "We have so many great things to offer!",
+      "content": "**ThemeBasic** features multiple differen card options that can be used to display information or link users to content.",
       "cards": [
         {
           "title": "Photo Card",
