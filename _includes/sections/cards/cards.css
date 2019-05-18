@@ -1,0 +1,50 @@
+.card {
+	overflow: hidden;
+	position: relative;
+	border-radius: 7.5px;
+	box-shadow: {{shadow}};
+}
+
+.card-photo .background-img-center {
+	border-bottom: 2px solid {{colorPrimary}};
+}
+
+.card-overlay-opacity-50 {
+  opacity: .5;
+}
+
+.card-overlay-opacity-60 {
+  opacity: .6;
+}
+
+.card-overlay-opacity-60 {
+  opacity: .6;
+}
+
+.card-overlay-opacity-70 {
+  opacity: .7;
+}
+
+.card-overlay-opacity-80 {
+  opacity: .8;
+}
+
+.card-overlay-opacity-90 {
+  opacity: .9;
+}
+
+.card-overlay-opacity-100 {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 38em) {
+
+
+
+}
+
+@media only screen and (min-width: 60em) {
+
+
+
+}

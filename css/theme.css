@@ -33,6 +33,52 @@ h1 {
   color: {{colorPrimary}};
 }
 
+/* ---------- Utilities ---------- */
+
+.no-under {
+  text-decoration: none;
+}
+
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background-img-center {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-valign-center:not(.flex-valign-center.unit-content-distribute) {
+  align-items: center;
+}
+
+.flex-valign-bottom:not(.flex-valign-bottom.unit-content-distribute) {
+  align-items: flex-end;
+}
+
+.flex-valign-top:not(.flex-valign-top.unit-content-distribute) {
+  align-items: flex-start;
+}
+
+.flex-valign-center.unit-content-distribute {
+  justify-content: center;
+}
+
+.flex-valign-bottom.unit-content-distribute {
+  justify-content: flex-end;
+}
+
+.flex-valign-top.unit-content-distribute {
+  justify-content: flex-start;
+}
+
 /* ---------- Colors ---------- */
 
 a {
@@ -93,6 +139,10 @@ a:hover {
 
 .text-grey-dark {
   color: {{colorGreyDark}};
+}
+
+.bg-fff {
+  background-color: #fff;
 }
 
 .bg-primary {

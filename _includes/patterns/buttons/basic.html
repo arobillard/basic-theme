@@ -1,3 +1,3 @@
 <div class="btn-wrap {{include.btnPosition}}">
-  <a class="btn {{include.btnStyle}}" href="{{include.btnUrl}}">{{include.btnText}}</a>
+  <a class="btn {{include.btnStyle}}" href="{% if include.btnUrl %}{{include.btnUrl}}{% else %}#{% endif %}">{{include.btnText}}</a>
 </div>

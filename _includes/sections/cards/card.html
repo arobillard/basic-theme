@@ -1,0 +1,48 @@
+{% assign colorSecondary=colorData.secondary %}
+<section id="{{include.id}}" class="card-list pad-t-2 pad-b-2 {{include.bgColor}}" tabindex="0">
+  <div class="{{include.contentWidth}}{% if include.paddingExtra == true %} pad-t-2 pad-b-2{% endif %}{% if include.contentAlignment %} text-{{include.contentAlignment}}{% endif %}">
+    {% if include.sectionTitle %}
+      <h2 class="gutter">{{include.sectionTitle}}</h2>
+    {% endif %}
+    {% if include.content %}
+      {{include.content | markdownify }}
+    {% endif %}
+    <div class="grid  grid-stretch island-1-2">
+      {% for cards in include.cards %}
+        <div class="unit [ {{include.cardWidth}} ] unit-content-distribute island-1-2">
+          <div class="card {{cards.type}} content-fill unit-content-distribute {{cards.cardColor}}{% if cards.type == 'card-icon' %} island{% elsif cards.type == 'card-full-photo' %} island background-img-center{% endif %}{% if cards.vAlign %} flex flex-valign-{{cards.vAlign}}{% endif %}" {% if cards.type == 'card-full-photo' %}style="background-image: url('{{cards.img}}');{% endif %}">
+            {% if cards.type == 'card-full-photo' %}
+              {% if cards.bgOverlay == true %}
+                <div class="overlay pin-c h-1 w-1 {{cards.cardColor}} card-overlay-opacity-{{cards.bgOverlayOpacity}}0">
+
+                </div>
+              {% endif %}
+            {% endif %}
+            {% if cards.img %}
+              {% if cards.type == 'card-icon' %}
+                <div class="block-center w-1-2 push pad-t pad-b">
+                  <div class="embed embed-1by1">
+                    <img class="embed-item" src="{{cards.img}}" alt="">
+                  </div>
+                </div>
+              {% elsif cards.type == 'card-photo' %}
+                <div class="background-img-center embed embed-16by9" style="background-image: url('{{cards.img}}');{% if cards.cardColor == 'bg-primary' %} border-color: {{colorSecondary}};{% endif %}">
+                  <img class="embed-item hidden" src="{{cards.img}}" alt="">
+                </div>
+              {% endif %}
+            {% endif %}
+            <div class="card-content {% unless cards.type == 'card-full-photo' %}content-fill unit-content-distribute {% endunless %}{% if cards.type == 'card-photo' %} island{% elsif cards.type == 'card-full-photo' %} relative{% endif %} {{cards.contentAlignment}}">
+              <h3 class="push-0 {{cards.titleColor}}">{{cards.title}}</h3>
+              <div class="{% unless cards.type == 'card-full-photo' %}content-fill {% endunless %}{% if cards.cardColor == 'bg-primary' %}text-fff{% elsif cards.cardColor == 'bg-secondary' %}text-fff{% elsif cards.cardColor == 'bg-grey-dark' %}text-fff{% endif %}">
+                {{cards.content | markdownify }}
+              </div>
+              {% if cards.btnText %}
+                {% include patterns/buttons/basic.html btnText=cards.btnText btnUrl=cards.btnUrl btnStyle=cards.btnStyle %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

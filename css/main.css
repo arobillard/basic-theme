@@ -40,6 +40,7 @@
 {% include sections/photo-array/photo-array.css %}
 {% include sections/map/map.css %}
 {% include sections/form/form.css %}
+{% include sections/cards/cards.css %}
 
 /* Utilities CSS */
 

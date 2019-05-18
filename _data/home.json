@@ -45,13 +45,65 @@
       ]
     },
     {
-      "id": "markdown",
+      "id": "jeeper",
       "type": "markdown",
       "bgColor": "bg-white",
       "contentAlignment": "center",
       "contentWidth": "max-length",
       "paddingExtra": true,
       "content": "\n## About ThemeBasic  \n Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \n \n  ![Test](https://adamrobillard.ca/images/polished/laptop-polished-home.jpg)"
+    },
+    {
+      "id": "card-list",
+      "sectionTitle":"Cool Cards",
+      "type": "card",
+      "bgColor": "bg-grey-light",
+      "contentAlignment": "center",
+      "contentWidth": "wrapper",
+      "paddingExtra": true,
+      "content": "We have so many great things to offer!",
+      "cards": [
+        {
+          "title": "Photo Card",
+          "titleColor":"text-primary",
+          "type":"card-photo",
+          "img": "https://placehold.it/1600x800",
+          "content": "This is a radical card with a sweet photo on top. Wow cool.",
+          "contentAlignment":"text-left",
+          "btnText": "I can dig it.",
+          "btnUrl": "#",
+          "btnStyle": "btn-secondary",
+          "cardColor": "bg-fff"
+        },
+        {
+          "title": "Icon Card",
+          "titleColor":"text-primary",
+          "type":"card-icon",
+          "img": "https://cdn0.iconfinder.com/data/icons/faticons-2/25/world8-512.png",
+          "content": "This card is iconic, legendary, and beloved by all throughout time.",
+          "contentAlignment":"text-left",
+          "btnText": "Wowzers",
+          "btnUrl": "#",
+          "btnStyle": "",
+          "cardColor": "bg-fff"
+        },
+        {
+          "title": "Full Image Card",
+          "titleColor":"text-fff",
+          "type":"card-full-photo",
+          "img": "https://placehold.it/1600x900",
+          "content": "This card is picturesque, beautiful, and majestic.",
+          "contentAlignment":"text-center",
+          "vAlign": "center",
+          "bgOverlay": true,
+          "bgOverlayOpacity": "7",
+          "btnText": "Be in awe",
+          "btnUrl": "#",
+          "btnStyle": "btn-secondary",
+          "cardColor": "bg-primary"
+        }
+      ],
+      "cardWidth": "xs-1-2 m-1-3"
     },
     {
       "bgOverlayOpacity": "8",
