@@ -11,7 +11,7 @@ nav:
       external: true
     - label: Drop 2
       link: '#'
-    - label: Drop 3
+    - label: Super unnecessarily long drop
       link: '#'
 sections:
   - bgImage: /uploads/stock-wireframes.jpg

@@ -135,8 +135,16 @@
   }
 
   .nav .icon-link.open {
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
     color: {{colorPrimary}};
+  }
+
+  .nav .icon-link svg {
+    transition: {{transition}};
+  }
+
+  .nav .icon-link.open svg {
+    transform: rotate(90deg);
   }
 
   .nav .icon-link:hover,

@@ -35,7 +35,7 @@
             {% endif %}
             <div class="card-content {% unless cards.type == 'card-full-photo' %}content-fill unit-content-distribute {% endunless %}{% if cards.type == 'card-photo' %} island{% elsif cards.type == 'card-full-photo' %} relative{% endif %} {{cards.contentAlignment}}">
               <h3 class="push-0 {{cards.titleColor}}">{{cards.title}}</h3>
-              <div class="{% unless cards.type == 'card-full-photo' %}content-fill {% endunless %}{% if cards.cardColor == 'bg-primary' %}text-fff{% elsif cards.cardColor == 'bg-secondary' %}text-fff{% elsif cards.cardColor == 'bg-grey-dark' %}text-fff{% endif %}">
+              <div class="{% unless cards.type == 'card-full-photo' %}content-fill {% endunless %}{% if cards.cardColor == 'bg-primary' or cards.cardColor == 'bg-secondary' or cards.cardColor == 'bg-grey-dark' %}text-fff{% endif %}">
                 {{cards.content | markdownify }}
               </div>
               {% if cards.btnText %}

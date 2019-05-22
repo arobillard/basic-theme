@@ -3,5 +3,6 @@
   "img": "https://placehold.it/150x50",
   "imgMobile": "https://placehold.it/100x100",
   "svg": "svg/logo.html",
-  "widthMobile": "10rem"
+  "widthMobile": "10rem",
+  "widthDesktop": "15rem"
 }

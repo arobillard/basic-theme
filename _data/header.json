@@ -1,4 +1,9 @@
 {
-  "headerStyle": "basic",
-  "fixed": true
+  "headerStyle": "alt",
+  "fixed": false,
+  "altOptions": {
+    "navBg": "bg-primary",
+    "stickyBg": "primary",
+    "stickyBgOpacity": "10"
+  }
 }

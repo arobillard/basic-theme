@@ -34,74 +34,76 @@
   {% endif %}
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700|Bree+Serif" rel="stylesheet">
 </head>
-<style>
-  {% if page.sections[0].type contains 'hero' %}
-    .masthead {
-      background-color: transparent;
-      border-bottom: none;
-    }
-  {% elsif page.url == '/' %}
-    {% if homeData.sections[0].type contains 'hero' %}
+{% if headerData.headerStyle == 'basic' %}
+  <style>
+    {% if page.sections[0].type contains 'hero' %}
       .masthead {
         background-color: transparent;
         border-bottom: none;
       }
+    {% elsif page.url == '/' %}
+      {% if homeData.sections[0].type contains 'hero' %}
+        .masthead {
+          background-color: transparent;
+          border-bottom: none;
+        }
+      {% endif %}
     {% endif %}
-  {% endif %}
-  @media only screen and (min-width: 38em) {
-    {% if headerData.fixed == true %}
-      {% if page.url == '/' %}
-        {% if homeData.sections[0].type contains 'hero' %}
-          {% if homeData.sections[0].bgOverlay == true %}
-            .masthead:not(.sticky) .nav > ol > li > a,
-            .masthead:not(.sticky) .nav > ol > li > h1 a {
-              color: #fff;
-            }
+    @media only screen and (min-width: 38em) {
+      {% if headerData.fixed == true %}
+        {% if page.url == '/' %}
+          {% if homeData.sections[0].type contains 'hero' %}
+            {% if homeData.sections[0].bgOverlay == true %}
+              .masthead:not(.sticky) .nav > ol > li > a,
+              .masthead:not(.sticky) .nav > ol > li > h1 a {
+                color: #fff;
+              }
 
-            .masthead:not(.sticky) .nav > ol > li > h1 > a:hover,
-            .masthead:not(.sticky) .nav > ol > li > a:hover {
-              color: {{colorPrimary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li > h1 > a:hover,
+              .masthead:not(.sticky) .nav > ol > li > a:hover {
+                color: {{colorPrimary}};
+              }
 
-            .masthead:not(.sticky) .nav > ol > li > a.current {
-              color: {{colorPrimary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li > a.current {
+                color: {{colorPrimary}};
+              }
 
-            .masthead:not(.sticky) .nav > ol > li > a.current:hover {
-              color: {{colorSecondary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+                color: {{colorSecondary}};
+              }
+            {% endif %}
           {% endif %}
-        {% endif %}
-      {% else %}
-        {% if page.sections[0].type contains 'hero' %}
-          {% if page.sections[0].bgOverlay == true %}
-            .masthead:not(.sticky) .nav > ol > li > a,
-            .masthead:not(.sticky) .nav > ol > li > h1 a {
-              color: #fff;
-            }
+        {% else %}
+          {% if page.sections[0].type contains 'hero' %}
+            {% if page.sections[0].bgOverlay == true %}
+              .masthead:not(.sticky) .nav > ol > li > a,
+              .masthead:not(.sticky) .nav > ol > li > h1 a {
+                color: #fff;
+              }
 
-            .masthead:not(.sticky) .nav > ol > li > a:hover {
-              color: {{colorPrimary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li > a:hover {
+                color: {{colorPrimary}};
+              }
 
-            .masthead:not(.sticky) .nav > ol > li > a.current + a,
-            .masthead:not(.sticky) .nav > ol > li > a.current {
-              color: {{colorPrimary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li > a.current + a,
+              .masthead:not(.sticky) .nav > ol > li > a.current {
+                color: {{colorPrimary}};
+              }
 
-            .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current,
-            .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current + a,
-            .masthead:not(.sticky) .nav > ol > li > a.current:hover + a,
-            .masthead:not(.sticky) .nav > ol > li > a.current:hover {
-              color: {{colorSecondary}};
-            }
+              .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current,
+              .masthead:not(.sticky) .nav > ol > li.has-dropdown:hover > a.current + a,
+              .masthead:not(.sticky) .nav > ol > li > a.current:hover + a,
+              .masthead:not(.sticky) .nav > ol > li > a.current:hover {
+                color: {{colorSecondary}};
+              }
+            {% endif %}
           {% endif %}
         {% endif %}
       {% endif %}
-    {% endif %}
 
-  }
-</style>
+    }
+  </style>
+{% endif %}
 <body>
   <ul class="skip-links">
     <li><a href="#main">Jump to main content</a></li>
@@ -115,7 +117,7 @@
 
   {% include footer.html %}
   <script src="{{site.baseurl}}/js/main.js"></script>
-  {% if headerData.fixed == true %}
+  {% if headerData.fixed == true or headerData.headerStyle == 'alt' %}
     <script>
       if ($(this).scrollTop() > 50) {
         $('.masthead').addClass('sticky')

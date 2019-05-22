@@ -3,6 +3,7 @@ backend:
   repo: arobillard/basic-theme # Path to your GitHub repository
 
 media_folder: "uploads"
+display_url: https://basic.theme
 
 collections:
   - label: "Theme Settings"

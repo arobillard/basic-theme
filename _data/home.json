@@ -103,7 +103,7 @@
           "cardColor": "bg-primary"
         }
       ],
-      "cardWidth": "xs-1-2 m-1-3"
+      "cardWidth": "xs-1 s-1-2 m-1-3"
     },
     {
       "bgOverlayOpacity": "8",

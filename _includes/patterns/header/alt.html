@@ -1,4 +1,29 @@
-<header class="masthead" role="banner">
-<p>Alternative Rock</p>
-{% include utilities/nav/nav-main.html navClass="nav" %}
+{% assign alt=headerData.altOptions %}
+
+<header class="masthead mh-bg-{{alt.stickyBg}} mh-bg-opacity-{{alt.stickyBgOpacity}}0" role="banner">
+	<div class="wrapper flex flex-halign-between flex-valign-center gutter pad-t-1-2 pad-b-1-2">
+    <a class="mh-logo inline-block" href="{{site.baseurl}}/">
+      {% if logoData.type == 'wordmark' %}
+        {{siteData.title}}
+      {% elsif logoData.type == 'img' %}
+        {% if logoData.imgMobile %}
+          <img class="img-flex" src="{{site.baseurl}}/{{logoData.imgMobile}}" alt="{{siteData.title}} Logo">
+        {% else %}
+          <img class="img-flex" src="{{site.baseurl}}/{{logoData.img}}" alt="{{siteData.title}} Logo">
+        {% endif %}
+      {% elsif logoData.type == 'svg' %}
+        {% if logoData.svgMobile %}
+          {% include svg/logo.svg %}
+        {% else %}
+          {% include svg/logo.svg %}
+        {% endif %}
+      {% endif %}
+    </a>
+    <a class="tog-nav inline-block" href="#nav-footer">
+      <span class="tog tog-top"></span>
+      <span class="tog tog-middle"></span>
+      <span class="tog tog-bottom"></span>
+    </a>
+    {% include utilities/nav/nav-generate.html navId='nav' navClass='nav' navStyles='' listClass='list-group push-0 wrapper gutter' removeLogo=true aClass='exa' aDropClass='tera' %}
+  </div>
 </header>

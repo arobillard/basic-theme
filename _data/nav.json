@@ -1,9 +1,23 @@
 {
   "includeHome": true,
-  "button": {
-    "btnText": "Log In",
-    "btnUrl": "#",
-    "btnStyle": ""
-  },
-  "navItems": []
+  "navItems": [
+    {
+      "text": "Second Drop",
+      "url": "#",
+      "dropdown": [
+        {
+          "text": "Drop 1",
+          "url": "#"
+        },
+        {
+          "text": "Drop 2",
+          "url": "#"
+        },
+        {
+          "text": "Drop 3",
+          "url": "#"
+        }
+      ]
+    }
+  ]
 }

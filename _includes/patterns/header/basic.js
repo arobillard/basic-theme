@@ -1,10 +1,3 @@
-// Toggle Nav
-
-$('.tog-nav').on('click', function (e) {
-  e.preventDefault();
-  $('.masthead').toggleClass('nav-open');
-});
-
 $('.nav .icon-link').on('click', function(e) {
   e.preventDefault();
   $(this).toggleClass('open');

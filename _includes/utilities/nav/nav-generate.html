@@ -1,54 +1,59 @@
-<nav id="{{include.navId}}" {% if include.navClass %} class="{{include.navClass}}{% endif %}">
+{% assign alt=headerData.altOptions %}
+<nav id="{{include.navId}}" class="{{include.navClass}} {{include.navStyles}}{% if headerData.headerStyle == 'alt' %}{% if include.navClass == 'nav' %} {{alt.navBg}}{% endif %}{% endif %}">
   <ol{% if include.listClass %} class="{{include.listClass}}{% endif %}">
-    <li class="logo-wrap">
-      {% if page.url == '/' %}
-        {% if include.navClass == 'nav' %}
-          <h1 class="push-0 kilo">
-        {% endif %}
-      {% endif %}
-        <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
-          {% if logoData.type == 'wordmark' %}
-            {{siteData.title}}
-          {% elsif logoData.type == 'img' %}
-            <img class="img-flex" src="{{site.baseurl}}{{logoData.img}}" alt="{{siteData.title}} Logo">
-          {% elsif logoData.type == 'svg' %}
-            {% include svg/logo.svg %}
+    {% unless include.removeLogo == true %}
+      <li class="logo-wrap">
+        {% if page.url == '/' %}
+          {% if include.navClass == 'nav' %}
+            <h1 class="push-0 kilo">
           {% endif %}
-        </a>
-      {% if page.url == '/' %}
-        {% if include.navClass == 'nav' %}
-          </h1>
         {% endif %}
-      {% endif %}
-    </li>
+          <a class="{% if include.navClass == 'nav' %}inline-{% endif %}block{% unless include.navClass == 'nav' %} push-1-2{% endunless %}" href="{{site.baseurl}}/">
+            {% if logoData.type == 'wordmark' %}
+              {{siteData.title}}
+            {% elsif logoData.type == 'img' %}
+              <img class="img-flex" src="{{site.baseurl}}{{logoData.img}}" alt="{{siteData.title}} Logo">
+            {% elsif logoData.type == 'svg' %}
+              {% include svg/logo.svg %}
+            {% endif %}
+          </a>
+        {% if page.url == '/' %}
+          {% if include.navClass == 'nav' %}
+            </h1>
+          {% endif %}
+        {% endif %}
+      </li>
+    {% endunless %}
     {% if navData.includeHome == true %}
       <li>
-        <a class="nav-link inline-block{% if include.navClass == 'nav' %} island-1-4{% endif %}{% if page.url == '/' %} current{% endif %}{% unless include.navClass == 'nav' %} milli push-1-4{% endunless %}" href="/">Home</a>
+        <a class="nav-link {{include.aClass}} inline-block{% if include.navClass == 'nav' %} island-1-4{% endif %}{% if page.url == '/' %} current{% endif %}{% unless include.navClass == 'nav' %} milli push-1-4{% endunless %}" href="/">Home</a>
       </li>
     {% endif %}
     {% for navItems in navData.navItems %}
       <li{% if navItems.dropdown[0] %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
         {% if include.navClass == 'nav' %}
           {% if navItems.dropdown[0] %}
-            <a class="nav-link{% unless navItems.dropdown[0] %} inline-block{% endunless %} island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{{navItems.text}}</a>
-            <a class="icon-link m-no-focus" href="#">
-              <i class="icon i-1">
-                <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
-              </i>
-              <span class="icon-label hidden">Open sub navigation</span>
-            </a>
+            <a class="nav-link {{include.aClass}}{% unless navItems.dropdown[0] %} inline-block{% endunless %} island-1-4{% if page.url contains navItems.url %} current{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{{navItems.url}}">{% if headerData.headerStyle == 'alt' %}<span class="highlight-line">{% endif %}{{navItems.text}}{% if headerData.headerStyle == 'alt' %}</span>{% endif %}</a>
+            {% if headerData.headerStyle == 'basic' %}
+              <a class="icon-link m-no-focus" href="#">
+                <i class="icon i-1">
+                  <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
+                </i>
+                <span class="icon-label hidden">Open sub navigation</span>
+              </a>
+            {% endif %}
             <ol class="dropdown list-group push-0">
               {% for dropItems in navItems.dropdown %}
                 <li>
-                  <a class="nav-link block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{{site.baseurl}}{{dopItems.url}}">{{dropItems.text}}</a>
+                  <a class="nav-link {{include.aDropClass}} block{% if headerData.headerStyle == 'basic' %} gutter-1-2{% elsif headerData.headerStyle == 'alt' %} gutter-1-4{% endif %} pad-t-1-4 pad-b-1-4" href="{{site.baseurl}}{{dopItems.url}}">{{dropItems.text}}</a>
                 </li>
               {% endfor %}
             </ol>
           {% else %}
-            <a class="nav-link inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+            <a class="nav-link {{include.aClass}} inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
           {% endif %}
         {% else %}
-          <a class="nav-link inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
+          <a class="nav-link {{include.aClass}} inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}/{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.text}}</a>
         {% endif %}
       </li>
     {% endfor %}
@@ -57,25 +62,27 @@
         <li{% if navItems.nav.dropdown[0] %}{% if include.navClass == 'nav' %} class="has-dropdown"{% endif %}{% endif %}>
           {% if include.navClass == 'nav' %}
             {% if navItems.nav.dropdown[0] %}
-              <a class="nav-link{% unless navItems.nav.dropdown[0] %} inline-block{% endunless %} island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
-              <a class="icon-link m-no-focus" href="#">
-                <i class="icon i-1">
-                  <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
-                </i>
-                <span class="icon-label hidden">Open sub navigation</span>
-              </a>
+              <a class="nav-link {{include.aClass}} {% unless navItems.nav.dropdown[0] %} inline-block{% endunless %} island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{% if headerData.headerStyle == 'alt' %}<span class="highlight-line">{% endif %}{{navItems.meta-title}}{% if headerData.headerStyle == 'alt' %}</span>{% endif %}</a>
+              {% if headerData.headerStyle == 'basic' %}
+                <a class="icon-link m-no-focus" href="#">
+                  <i class="icon i-1">
+                    <svg><use xlink:href="{{site.baseurl}}/images/icons.svg#right-indicator" /></svg>
+                  </i>
+                  <span class="icon-label hidden">Open sub navigation</span>
+                </a>
+              {% endif %}
               <ol class="dropdown list-group push-0">
                 {% for dropItems in navItems.nav.dropdown %}
                   <li>
-                    <a class="nav-link block gutter-1-2 pad-t-1-4 pad-b-1-4" href="{% unless dropItems.external == true %}{{site.baseurl}}/{% endunless %}{{dropItems.link}}">{{dropItems.label}}</a>
+                    <a class="nav-link {{include.aDropClass}} block{% if headerData.headerStyle == 'basic' %} gutter-1-2{% elsif headerData.headerStyle == 'alt' %} gutter-1-4{% endif %} pad-t-1-4 pad-b-1-4" href="{% unless dropItems.external == true %}{{site.baseurl}}/{% endunless %}{{dropItems.link}}">{{dropItems.label}}</a>
                   </li>
                 {% endfor %}
               </ol>
             {% else %}
-              <a class="nav-link inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+              <a class="nav-link {{include.aClass}} inline-block island-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
             {% endif %}
           {% else %}
-            <a class="nav-link inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
+            <a class="nav-link {{include.aClass}} inline-block milli push-1-4{% if navItems.url %}{% if page.url contains navItems.url %} current{% endif %}{% else %}{% if page.url == '/' %} current{% endif %}{% endif %}" href="{% unless navItems.urlExternal == true %}{{site.baseurl}}{% endunless %}{% unless navItems.text == 'Home' %}{{navItems.url}}{% endunless %}">{{navItems.meta-title}}</a>
           {% endif %}
         </li>
       {% endif %}

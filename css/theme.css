@@ -55,15 +55,15 @@ h1 {
   display: flex;
 }
 
-.flex-valign-center:not(.flex-valign-center.unit-content-distribute) {
+.flex-valign-center:not(.unit-content-distribute) {
   align-items: center;
 }
 
-.flex-valign-bottom:not(.flex-valign-bottom.unit-content-distribute) {
+.flex-valign-bottom:not(.unit-content-distribute) {
   align-items: flex-end;
 }
 
-.flex-valign-top:not(.flex-valign-top.unit-content-distribute) {
+.flex-valign-top:not(.unit-content-distribute) {
   align-items: flex-start;
 }
 
@@ -77,6 +77,10 @@ h1 {
 
 .flex-valign-top.unit-content-distribute {
   justify-content: flex-start;
+}
+
+.flex-halign-between {
+  justify-content: space-between;
 }
 
 .width-third, .w-1-3 {
