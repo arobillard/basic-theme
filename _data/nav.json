@@ -1,23 +1,4 @@
 {
   "includeHome": true,
-  "navItems": [
-    {
-      "text": "Second Drop",
-      "url": "#",
-      "dropdown": [
-        {
-          "text": "Drop 1",
-          "url": "#"
-        },
-        {
-          "text": "Drop 2",
-          "url": "#"
-        },
-        {
-          "text": "Drop 3",
-          "url": "#"
-        }
-      ]
-    }
-  ]
+  "navItems": []
 }

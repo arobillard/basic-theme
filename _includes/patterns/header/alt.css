@@ -216,11 +216,17 @@
 
 @media only screen and (min-width: 60em) {
 
+
+	.has-dropdown > a {
+		width: 33.3333%;
+	}
+
 	.has-dropdown > a .highlight-line::before {
 		top: 3rem;
 	}
 
 	.dropdown {
+		width: 66.6666%;
 		padding: 1.2rem 0 0;
 	}
 
