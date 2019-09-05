@@ -12,7 +12,7 @@
       {% endif %}
       <p class="{% unless include.btnText %}push-0 {% endunless %} mega{% if include.bylineColor %} text-{{include.bylineColor}}{% endif %}">{{include.byline}}</p>
       {% if include.btnText %}
-        {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
+        {% include patterns/buttons/basic.liquid btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
       {% endif %}
     </div>
   </div>

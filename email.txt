@@ -1,0 +1,17 @@
+PHP, SQL, SASS, Liquid, and more!
+
+Hi Thomas!
+
+Hope your summer has been going well. I have been going pretty hard on a variety of different web dev related tutorials the past little while and was hoping it is ok if I share some thoughts/questions with you.
+
+I was wondering if you had much experience with PHP and SQL? I've been focusing on PHP because I unfortunately work in WordPress a lot at work. I'm starting to feel fairly confident with PHP, reaching a similar skill level to Jekyll where I can generate content from a dataset, create reusable patterns, implement loops and if statements that kind of stuff. I started on some basic SQL database tutorials that worked with PHP but hit a bit of a snag with some PHP errors and terminal knowledge I was lacking (which has added a new potential line of tutorials for me to add to the list). I am not sure if you have used PHP much, as I know the Learn to Web site is Jekyll, but if you have any thoughts on language or any recommendations for learning resources, I welcome the suggestions!
+
+I also recently starting using SASS for my CSS. I find some of the features like being able to easily combine files, add loops and if statements, nesting styles, and variables super handy. I do however find the output code can be repetitive and inefficient. Do you write in SASS or regular CSS usually?
+
+I also figured out a few new tricks when working in Jekyll/Liquid that I thought were helpful. I started using liquid variables instead of CSS variables, which allowed me to use a data file to set up values in the CSS and the site brand (which also can integrate with Netlify fairly well). I also found a cool Atom package that adds Liquid style highlighting called `language-liquid`, which could be helpful for students. Unfortunately, it only works in .md and .liquid filetypes (which is a bit of a flaw).
+
+IF you have any thoughts or suggestions I'd love to hear them!
+
+Also, Hannah told me you asked her to be a TA, I'm so proud!
+
+Hope you enjoy the last bit of your summer!

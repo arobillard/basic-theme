@@ -14,7 +14,7 @@ layout: default
 {% assign socialLinksData=site.data.social-links %}
 
 {% for sections in page.sections %}
-  {% include sections/section.html id=sections.id sectionTitle=sections.sectionTitle bgImage=sections.bgImage bgPosition=sections.bgPosition bgOverlay=sections.bgOverlay bgOverlayOpacity=sections.bgOverlayOpacity bgOverlayColor=sections.bgOverlayColor bgColor=sections.bgColor height=sections.height headline=sections.headline headlineColor=sections.headlineColor byline=sections.byline bylineColor=sections.bylineColor btnText=sections.btnText btnUrl=sections.btnUrl btnStyle=sections.btnStyle contentAlignment=sections.contentAlignment content=sections.content contentWidth=sections.contentWidth paddingExtra=sections.paddingExtra logos=sections.logos file=sections.file accordion=sections.accordion photoArray=sections.photoArray cards=sections.cards cardWidth=sections.cardWidth %}
+  {% include sections/section.liquid id=sections.id sectionTitle=sections.sectionTitle bgImage=sections.bgImage bgPosition=sections.bgPosition bgOverlay=sections.bgOverlay bgOverlayOpacity=sections.bgOverlayOpacity bgOverlayColor=sections.bgOverlayColor bgColor=sections.bgColor height=sections.height headline=sections.headline headlineColor=sections.headlineColor byline=sections.byline bylineColor=sections.bylineColor btnText=sections.btnText btnUrl=sections.btnUrl btnStyle=sections.btnStyle contentAlignment=sections.contentAlignment content=sections.content contentWidth=sections.contentWidth paddingExtra=sections.paddingExtra logos=sections.logos file=sections.file accordion=sections.accordion photoArray=sections.photoArray cards=sections.cards cardWidth=sections.cardWidth %}
 {% endfor %}
 
 {% comment %}

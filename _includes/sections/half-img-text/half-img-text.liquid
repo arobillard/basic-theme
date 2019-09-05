@@ -7,7 +7,7 @@
       <div class="half-text-content max-length pad-t-2 pad-b-2 gutter">
         {{include.content | markdownify }}
         {% if include.btnText %}
-          {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
+          {% include patterns/buttons/basic.liquid btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
         {% endif %}
       </div>
     </div>

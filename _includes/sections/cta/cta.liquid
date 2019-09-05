@@ -3,7 +3,7 @@
     <div class="cta-content gutter max-length-no-center">
       <h2{% if include.headlineColor %} class="text-{{include.headlineColor}}"{% endif %}>{{include.headline}}</h2>
       {% if include.byline %}<p class="{% unless include.btnText %}push-0 {% endunless %} mega{% if include.bylineColor %} text-{{include.bylineColor}}{% endif %}">{{include.byline}}</p>{% endif %}
-      {% include patterns/buttons/basic.html btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
+      {% include patterns/buttons/basic.liquid btnText=include.btnText btnUrl=include.btnUrl btnStyle=include.btnStyle %}
     </div>
   </div>
 </section>
